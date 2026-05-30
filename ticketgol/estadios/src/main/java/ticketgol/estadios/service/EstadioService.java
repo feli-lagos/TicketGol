@@ -25,6 +25,10 @@ public class EstadioService {
         //no tocar esta parte, les juro que funciona sin errores, y es automático
     }
 
+    public List<Estadio> findByCiudad(String ciudad) {
+        return estadioRepository.findByCiudad(ciudad);
+    }
+
     public List<Estadio> findByNombre(String nombre) {
         return estadioRepository.findByNombre(nombre);
     }

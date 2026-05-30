@@ -18,7 +18,7 @@ public class EstadioController {
     private EstadioService estadioService;
 
     @GetMapping
-    public ResponseEntity<List<Estadio>> lista() {
+    public ResponseEntity<List<Estadio>> listar() {
         List<Estadio> estadios = estadioService.findAll();
 
         if (estadios.isEmpty()) {
@@ -34,7 +34,7 @@ public class EstadioController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Estadio> buscar(@PathVariable Long id) {
+    public ResponseEntity<Estadio> buscarPorId(@PathVariable Long id) {
         try {
             Estadio estadio = estadioService.findById(id);
             return ResponseEntity.ok(estadio);
@@ -43,15 +43,32 @@ public class EstadioController {
         }
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Estadio> actualizar(
-            @PathVariable Long id,
-            @Valid @RequestBody Estadio estadio) {
+    @GetMapping("/nombre/{nombre}")
+    public ResponseEntity<List<Estadio>> buscarPorNombre(@PathVariable String nombre) {
+        List<Estadio> estadios = estadioService.findByNombre(nombre);
 
+        if (estadios.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(estadios);
+    }
+
+    @GetMapping("/ciudad/{ciudad}")
+    public ResponseEntity<List<Estadio>> buscarPorCiudad(@PathVariable String ciudad) {
+        List<Estadio> estadios = estadioService.findByCiudad(ciudad);
+
+        if (estadios.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(estadios);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Estadio> actualizar(@PathVariable Long id,
+                                              @Valid @RequestBody Estadio estadio) {
         try {
             Estadio existente = estadioService.findById(id);
 
-            existente.setId(id);
             existente.setNombre(estadio.getNombre());
             existente.setCiudad(estadio.getCiudad());
             existente.setCapacidad(estadio.getCapacidad());
@@ -60,18 +77,15 @@ public class EstadioController {
             estadioService.save(existente);
 
             return ResponseEntity.ok(existente);
+
         } catch (Exception e) {
             return ResponseEntity.notFound().build();
         }
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminar(@PathVariable Long id) {
-        try {
-            estadioService.delete(id);
-            return ResponseEntity.noContent().build();
-        } catch (Exception e) {
-            return ResponseEntity.notFound().build();
-        }
+    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+        estadioService.delete(id);
+        return ResponseEntity.noContent().build();
     }
 }
