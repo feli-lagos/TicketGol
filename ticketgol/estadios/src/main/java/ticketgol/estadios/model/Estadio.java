@@ -37,6 +37,6 @@ public class Estadio {
 
     @NotBlank(message = "La dirección es obligatoria")
     @Size(max = 255, message = "La dirección no puede exceder los 255 caracteres")
-    @Column(nullable = false, length = 255)
+    @Column(nullable = false)
     private String direccion;
 }

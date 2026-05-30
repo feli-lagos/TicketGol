@@ -11,15 +11,10 @@ import java.util.List;
 @Repository
 public interface EstadioRepository extends JpaRepository<Estadio, Long> {
 
-    // JPQL
-    @Query("SELECT e FROM Estadio e WHERE e.nombre = :nombre")
-    Estadio buscarPorNombre(@Param("nombre") String nombre);
-
     // Query methods (Spring Data JPA)
     List<Estadio> findByNombre(String nombre);
 
     List<Estadio> findByCiudad(String ciudad);
 
-    List<Estadio> findByCapacidad(Integer capacidad);
 
 }
