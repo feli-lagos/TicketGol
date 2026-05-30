@@ -19,7 +19,6 @@ public interface UsuarioSancionadoRepository extends JpaRepository<UsuarioSancio
     @Query(value = "SELECT * FROM usuarios_sancionados WHERE motivo = :motivo", nativeQuery = true)
     List<UsuarioSancionado> buscarPorMotivo(@Param("motivo") String motivo);
 
-    // Query methods de Spring Data JPA
     UsuarioSancionado findByRut(String rut);
 
     List<UsuarioSancionado> findByMotivo(String motivo);
