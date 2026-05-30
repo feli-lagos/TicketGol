@@ -7,7 +7,9 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import java.util.Date;
+
+import java.time.LocalDate;
+
 
 @Entity
 @Table(name = "usuarios_sancionados")
@@ -21,7 +23,7 @@ public class UsuarioSancionado {
     private Long id;
 
     @NotBlank(message = "El RUT es obligatorio")
-    @Size(min = 7, max = 13, message = "El RUN debe tener entre 7 y 13 caracteres")
+    @Size(min = 7, max = 13, message = "El RUT debe tener entre 7 y 13 caracteres")
     @Column(unique = true, length = 13, nullable = false)
     private String rut;
 
@@ -31,11 +33,9 @@ public class UsuarioSancionado {
     private String motivo;
 
     @PastOrPresent(message = "La fecha de sanción no puede ser futura")
-    @Temporal(TemporalType.DATE)
     @Column(nullable = false)
-    private Date fechaSancion;
+    private LocalDate fechaSancion;
 
-    @Temporal(TemporalType.DATE)
     @Column(nullable = false)
-    private Date fechaExpiracion;
+    private LocalDate fechaExpiracion;
 }
