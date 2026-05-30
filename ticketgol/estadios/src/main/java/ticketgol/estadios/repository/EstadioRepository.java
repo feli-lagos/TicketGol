@@ -15,10 +15,6 @@ public interface EstadioRepository extends JpaRepository<Estadio, Long> {
     @Query("SELECT e FROM Estadio e WHERE e.nombre = :nombre")
     Estadio buscarPorNombre(@Param("nombre") String nombre);
 
-    // SQL nativo
-    @Query(value = "SELECT * FROM estadios WHERE ciudad = :ciudad", nativeQuery = true)
-    List<Estadio> buscarPorCiudad(@Param("ciudad") String ciudad);
-
     // Query methods (Spring Data JPA)
     List<Estadio> findByNombre(String nombre);
 
