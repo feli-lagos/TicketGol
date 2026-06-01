@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/ticketgol/merch_ordenes_M/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ticketgol/pases_temporada_M/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/ticketgol/tickets_M/src/main/java" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.18.46" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.persistence:jakarta.persistence-api:3.2.0" level="project" />
+  </component>
+</module>

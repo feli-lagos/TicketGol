@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/ticketgol/clubes/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketgol/compras/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketgol/estadio_secciones/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketgol/estadios/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketgol/eventos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketgol/guardias/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketgol/merch/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketgol/merch_ordenes_M/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketgol/pases_temporada_M/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketgol/registro_accesos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketgol/tickets_M/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketgol/usuarios/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ticketgol/usuarios_sancionados/src/main/java" charset="UTF-8" />
+  </component>
+</project>
