@@ -2,7 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for usuarios_sancionados" enabled="true">
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for estadios" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -13,27 +14,14 @@
         <module name="usuarios_sancionados" />
         <module name="compras" />
         <module name="eventos" />
+        <module name="guardias" />
         <module name="registro_accesos" />
         <module name="estadio_secciones" />
         <module name="usuarios" />
         <module name="clubes" />
         <module name="estadios" />
       </profile>
-      <profile name="Annotation profile for guardias" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
-        </processorPath>
-        <module name="guardias" />
-      </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="merch_ordenes_M" target="25" />
-      <module name="pases_temporada_M" target="25" />
-      <module name="tickets_M" target="25" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -44,10 +32,7 @@
       <module name="eventos" options="-parameters" />
       <module name="guardias" options="-parameters" />
       <module name="merch" options="-parameters" />
-      <module name="merch_ordenes_M" options="-parameters" />
-      <module name="pases_temporada_M" options="-parameters" />
       <module name="registro_accesos" options="-parameters" />
-      <module name="tickets_M" options="-parameters" />
       <module name="usuarios" options="-parameters" />
       <module name="usuarios_sancionados" options="-parameters" />
     </option>
