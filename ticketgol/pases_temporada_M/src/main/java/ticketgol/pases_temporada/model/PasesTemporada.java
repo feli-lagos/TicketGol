@@ -26,3 +26,5 @@ public class PasesTemporada {
     private Long seccionId;
 
 }
+
+a
