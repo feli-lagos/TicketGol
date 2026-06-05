@@ -8,6 +8,7 @@ import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -28,6 +29,31 @@ public class UsuarioSancionadoService {
                                 "Usuario sancionado con ID " + id + " no encontrado"
                         )
                 );
+    }
+
+    public UsuarioSancionado findByRut(String rut) {
+
+        UsuarioSancionado usuario = usuarioSancionadoRepository.findByRut(rut);
+
+        if (usuario == null) {
+            throw new UsuarioNotFoundException(
+                    "Usuario sancionado con RUT " + rut + " no encontrado"
+            );
+        }
+
+        return usuario;
+    }
+
+    public List<UsuarioSancionado> findByMotivo(String motivo) {
+        return usuarioSancionadoRepository.findByMotivo(motivo);
+    }
+
+    public List<UsuarioSancionado> findByFechaSancion(LocalDate fechaSancion) {
+        return usuarioSancionadoRepository.findByFechaSancion(fechaSancion);
+    }
+
+    public List<UsuarioSancionado> findByFechaExpiracion(LocalDate fechaExpiracion) {
+        return usuarioSancionadoRepository.findByFechaExpiracion(fechaExpiracion);
     }
 
     public UsuarioSancionado save(UsuarioSancionado usuarioSancionado) {

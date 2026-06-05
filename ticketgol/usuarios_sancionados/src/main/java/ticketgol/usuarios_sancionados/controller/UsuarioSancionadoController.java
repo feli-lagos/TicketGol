@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import ticketgol.usuarios_sancionados.model.UsuarioSancionado;
 import ticketgol.usuarios_sancionados.service.UsuarioSancionadoService;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -21,6 +22,57 @@ public class UsuarioSancionadoController {
     public ResponseEntity<List<UsuarioSancionado>> lista() {
 
         List<UsuarioSancionado> usuarios = usuarioSancionadoService.findAll();
+
+        if (usuarios.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+
+        return ResponseEntity.ok(usuarios);
+    }
+
+    @GetMapping("/rut/{rut}")
+    public ResponseEntity<UsuarioSancionado> buscarPorRut(
+            @PathVariable String rut) {
+
+        UsuarioSancionado usuario = usuarioSancionadoService.findByRut(rut);
+
+        return ResponseEntity.ok(usuario);
+    }
+
+    @GetMapping("/motivo/{motivo}")
+    public ResponseEntity<List<UsuarioSancionado>> buscarPorMotivo(
+            @PathVariable String motivo) {
+
+        List<UsuarioSancionado> usuarios =
+                usuarioSancionadoService.findByMotivo(motivo);
+
+        if (usuarios.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+
+        return ResponseEntity.ok(usuarios);
+    }
+
+    @GetMapping("/fecha-sancion/{fecha}")
+    public ResponseEntity<List<UsuarioSancionado>> buscarPorFechaSancion(
+            @PathVariable LocalDate fecha) {
+
+        List<UsuarioSancionado> usuarios =
+                usuarioSancionadoService.findByFechaSancion(fecha);
+
+        if (usuarios.isEmpty()) {
+            return ResponseEntity.noContent().build();
+        }
+
+        return ResponseEntity.ok(usuarios);
+    }
+
+    @GetMapping("/fecha-expiracion/{fecha}")
+    public ResponseEntity<List<UsuarioSancionado>> buscarPorFechaExpiracion(
+            @PathVariable LocalDate fecha) {
+
+        List<UsuarioSancionado> usuarios =
+                usuarioSancionadoService.findByFechaExpiracion(fecha);
 
         if (usuarios.isEmpty()) {
             return ResponseEntity.noContent().build();
