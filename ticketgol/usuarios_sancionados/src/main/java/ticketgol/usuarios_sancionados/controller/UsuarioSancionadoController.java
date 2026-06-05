@@ -1,10 +1,10 @@
 package ticketgol.usuarios_sancionados.controller;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import ticketgol.usuarios_sancionados.model.UsuarioSancionado;
 import ticketgol.usuarios_sancionados.service.UsuarioSancionadoService;
 
@@ -31,7 +31,7 @@ public class UsuarioSancionadoController {
 
     @PostMapping
     public ResponseEntity<UsuarioSancionado> guardar(
-            @RequestBody UsuarioSancionado usuario) {
+            @Valid @RequestBody UsuarioSancionado usuario) {
 
         UsuarioSancionado nuevo = usuarioSancionadoService.save(usuario);
 
@@ -49,7 +49,7 @@ public class UsuarioSancionadoController {
     @PutMapping("/{id}")
     public ResponseEntity<UsuarioSancionado> actualizar(
             @PathVariable Long id,
-            @RequestBody UsuarioSancionado usuario) {
+            @Valid @RequestBody UsuarioSancionado usuario) {
 
         UsuarioSancionado actualizado =
                 usuarioSancionadoService.update(id, usuario);
@@ -58,7 +58,7 @@ public class UsuarioSancionadoController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminar(@PathVariable Long id) {
+    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
 
         usuarioSancionadoService.delete(id);
 

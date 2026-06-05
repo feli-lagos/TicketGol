@@ -5,6 +5,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ticketgol.usuarios.model.Usuario;
+import jakarta.validation.Valid;
 import ticketgol.usuarios.service.UsuarioService;
 
 import java.util.List;
@@ -28,8 +29,27 @@ public class UsuarioController {
         return ResponseEntity.ok(usuarios);
     }
 
+    @GetMapping("/rut/{rut}")
+    public ResponseEntity<Usuario> buscarPorRut(
+            @PathVariable String rut) {
+
+        Usuario usuario = usuarioService.findByRut(rut);
+
+        return ResponseEntity.ok(usuario);
+    }
+
+    @GetMapping("/correo/{correo}")
+    public ResponseEntity<Usuario> buscarPorCorreo(
+            @PathVariable String correo) {
+
+        Usuario usuario = usuarioService.findByCorreo(correo);
+
+        return ResponseEntity.ok(usuario);
+    }
+
     @PostMapping
-    public ResponseEntity<Usuario> guardar(@RequestBody Usuario usuario) {
+    public ResponseEntity<Usuario> guardar(
+            @Valid @RequestBody Usuario usuario) {
 
         Usuario nuevo = usuarioService.save(usuario);
 
@@ -47,7 +67,7 @@ public class UsuarioController {
     @PutMapping("/{id}")
     public ResponseEntity<Usuario> actualizar(
             @PathVariable Long id,
-            @RequestBody Usuario usuario) {
+            @Valid @RequestBody Usuario usuario) {
 
         Usuario actualizado = usuarioService.update(id, usuario);
 
@@ -55,7 +75,7 @@ public class UsuarioController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> eliminar(@PathVariable Long id) {
+    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
 
         usuarioService.delete(id);
 

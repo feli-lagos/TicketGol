@@ -46,6 +46,15 @@ public class UsuarioSancionadoService {
 
         UsuarioSancionado usuarioExistente = findById(id);
 
+        if (!usuarioExistente.getRut().equals(usuarioActualizado.getRut())
+                && usuarioSancionadoRepository.existsByRut(usuarioActualizado.getRut())) {
+
+            throw new UsuarioAlreadyExistsException(
+                    "Ya existe un usuario sancionado con RUT "
+                            + usuarioActualizado.getRut()
+            );
+        }
+
         usuarioExistente.setRut(usuarioActualizado.getRut());
         usuarioExistente.setMotivo(usuarioActualizado.getMotivo());
         usuarioExistente.setFechaSancion(usuarioActualizado.getFechaSancion());

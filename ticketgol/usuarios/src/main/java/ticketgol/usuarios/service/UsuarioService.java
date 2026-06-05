@@ -88,4 +88,30 @@ public class UsuarioService {
 
         usuarioRepository.deleteById(id);
     }
+
+    public Usuario findByRut(String rut) {
+
+        Usuario usuario = usuarioRepository.findByRut(rut);
+
+        if (usuario == null) {
+            throw new UsuarioNotFoundException(
+                    "Usuario con RUT " + rut + " no encontrado"
+            );
+        }
+
+        return usuario;
+    }
+
+    public Usuario findByCorreo(String correo) {
+
+        Usuario usuario = usuarioRepository.findByCorreo(correo);
+
+        if (usuario == null) {
+            throw new UsuarioNotFoundException(
+                    "Usuario con correo " + correo + " no encontrado"
+            );
+        }
+
+        return usuario;
+    }
 }
