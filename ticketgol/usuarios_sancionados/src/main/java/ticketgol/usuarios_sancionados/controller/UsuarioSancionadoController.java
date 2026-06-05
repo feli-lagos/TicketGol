@@ -1,11 +1,12 @@
 package ticketgol.usuarios_sancionados.controller;
 
-import ticketgol.usuarios_sancionados.model.UsuarioSancionado;
-import ticketgol.usuarios_sancionados.service.UsuarioSancionadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import ticketgol.usuarios_sancionados.model.UsuarioSancionado;
+import ticketgol.usuarios_sancionados.service.UsuarioSancionadoService;
 
 import java.util.List;
 
@@ -18,28 +19,31 @@ public class UsuarioSancionadoController {
 
     @GetMapping
     public ResponseEntity<List<UsuarioSancionado>> lista() {
+
         List<UsuarioSancionado> usuarios = usuarioSancionadoService.findAll();
 
         if (usuarios.isEmpty()) {
             return ResponseEntity.noContent().build();
         }
+
         return ResponseEntity.ok(usuarios);
     }
 
     @PostMapping
-    public ResponseEntity<UsuarioSancionado> guardar(@RequestBody UsuarioSancionado usuario) {
+    public ResponseEntity<UsuarioSancionado> guardar(
+            @RequestBody UsuarioSancionado usuario) {
+
         UsuarioSancionado nuevo = usuarioSancionadoService.save(usuario);
+
         return ResponseEntity.status(HttpStatus.CREATED).body(nuevo);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<UsuarioSancionado> buscar(@PathVariable Long id) {
-        try {
-            UsuarioSancionado usuario = usuarioSancionadoService.findById(id);
-            return ResponseEntity.ok(usuario);
-        } catch (Exception e) {
-            return ResponseEntity.notFound().build();
-        }
+
+        UsuarioSancionado usuario = usuarioSancionadoService.findById(id);
+
+        return ResponseEntity.ok(usuario);
     }
 
     @PutMapping("/{id}")
@@ -47,30 +51,17 @@ public class UsuarioSancionadoController {
             @PathVariable Long id,
             @RequestBody UsuarioSancionado usuario) {
 
-        try {
-            UsuarioSancionado z = usuarioSancionadoService.findById(id);
+        UsuarioSancionado actualizado =
+                usuarioSancionadoService.update(id, usuario);
 
-            z.setId(id);
-            z.setRut(usuario.getRut());
-            z.setMotivo(usuario.getMotivo());
-            z.setFechaSancion(usuario.getFechaSancion());
-            z.setFechaExpiracion(usuario.getFechaExpiracion());
-
-            usuarioSancionadoService.save(z);
-
-            return ResponseEntity.ok(z);
-        } catch (Exception e) {
-            return ResponseEntity.notFound().build();
-        }
+        return ResponseEntity.ok(actualizado);
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<?> eliminar(@PathVariable Long id) {
-        try {
-            usuarioSancionadoService.delete(id);
-            return ResponseEntity.noContent().build();
-        } catch (Exception e) {
-            return ResponseEntity.notFound().build();
-        }
+
+        usuarioSancionadoService.delete(id);
+
+        return ResponseEntity.noContent().build();
     }
 }
