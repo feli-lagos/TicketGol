@@ -3,16 +3,16 @@ package ticketgol.registro_accesos.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ticketgol.registro_accesos.Modelo.RegistroAcceso;
-import ticketgol.registro_accesos.Repository.RegistroAccesoRepository; // <-- Importa tu repositorio en inglés
+import ticketgol.registro_accesos.Repository.RegistroAccesoRepository;
+import ticketgol.registro_accesos.Exception.RegistroAccesoNotFoundException;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class RegistroAccesoService {
     @Autowired
-    private RegistroAccesoRepository repositorio; // <-- Conectado a tu interfaz de repositorio
+    private RegistroAccesoRepository repositorio;
 
     public RegistroAcceso guardarAcceso(RegistroAcceso registroAcceso) {
         if (registroAcceso.getScantime() == null) {
@@ -21,13 +21,13 @@ public class RegistroAccesoService {
         return repositorio.save(registroAcceso);
     }
 
-    // 2. Obtener todo el historial de accesos
     public List<RegistroAcceso> obtenerTodos() {
         return repositorio.findAll();
     }
 
-    public Optional<RegistroAcceso> obtenerPorId(Long id) {
-        return repositorio.findById(id);
+    public RegistroAcceso obtenerPorId(Long id) {
+        return repositorio.findById(id)
+                .orElseThrow(() -> new RegistroAccesoNotFoundException("El registro de acceso con ID " + id + " no existe."));
     }
 
     public List<RegistroAcceso> obtenerPorGuardia(Long guardiaid) {
@@ -35,7 +35,9 @@ public class RegistroAccesoService {
     }
 
     public void eliminar(Long id) {
+        if (!repositorio.existsById(id)) {
+            throw new RegistroAccesoNotFoundException("No se puede eliminar. El registro de acceso con ID " + id + " no existe.");
+        }
         repositorio.deleteById(id);
     }
-
 }

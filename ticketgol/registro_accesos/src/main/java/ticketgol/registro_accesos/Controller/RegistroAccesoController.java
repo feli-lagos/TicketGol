@@ -7,14 +7,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import ticketgol.registro_accesos.Modelo.RegistroAcceso;
 import ticketgol.registro_accesos.Service.RegistroAccesoService;
-
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/registro-accesos")
 public class RegistroAccesoController {
     @Autowired
-    private RegistroAccesoService service; // <-- Cambiado al tipo de clase correcto
+    private RegistroAccesoService service;
 
     @GetMapping
     public List<RegistroAcceso> listarAccesos() {
@@ -23,9 +22,8 @@ public class RegistroAccesoController {
 
     @GetMapping("/{id}")
     public ResponseEntity<RegistroAcceso> buscarPorId(@PathVariable Long id) {
-        return service.obtenerPorId(id)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+        RegistroAcceso acceso = service.obtenerPorId(id);
+        return ResponseEntity.ok(acceso);
     }
 
     @GetMapping("/guardia/{guardiaid}")
@@ -41,11 +39,7 @@ public class RegistroAccesoController {
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminarAcceso(@PathVariable Long id) {
-        if (service.obtenerPorId(id).isPresent()) {
-            service.eliminar(id);
-            return ResponseEntity.ok().build();
-        }
-        return ResponseEntity.notFound().build();
+        service.eliminar(id);
+        return ResponseEntity.noContent().build();
     }
-
 }
