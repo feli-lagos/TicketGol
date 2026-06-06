@@ -1,12 +1,12 @@
 package ticketgol.estadios.controller;
 
-import ticketgol.estadios.model.Estadio;
-import ticketgol.estadios.service.EstadioService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import ticketgol.estadios.model.Estadio;
+import ticketgol.estadios.service.EstadioService;
 
 import java.util.List;
 
@@ -18,57 +18,26 @@ public class EstadioController {
     private EstadioService estadioService;
 
     @GetMapping
-    public ResponseEntity<List<Estadio>> listar() {
-        List<Estadio> estadios = estadioService.findAll();
-        if (estadios.isEmpty()) {
-            return ResponseEntity.noContent().build();
-        }
-        return ResponseEntity.ok(estadios);
+    public ResponseEntity<List<Estadio>> listarTodos() {
+        return ResponseEntity.ok(estadioService.findAll());
     }
 
     @PostMapping
     public ResponseEntity<Estadio> guardar(@Valid @RequestBody Estadio estadio) {
-        Estadio nuevo = estadioService.save(estadio);
-        return ResponseEntity.status(HttpStatus.CREATED).body(nuevo);
+        return ResponseEntity.status(HttpStatus.CREATED).body(estadioService.save(estadio));
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Estadio> buscarPorId(@PathVariable Long id) {
-        // No try-catch needed. If not found, GlobalExceptionHandler handles the 404 JSON response.
+        // Al usar tu service con orElseThrow, el Handler atrapa el 404 limpiamente
         Estadio estadio = estadioService.findById(id);
         return ResponseEntity.ok(estadio);
     }
 
-    @GetMapping("/nombre/{nombre}")
-    public ResponseEntity<List<Estadio>> buscarPorNombre(@PathVariable String nombre) {
-        List<Estadio> estadios = estadioService.findByNombre(nombre);
-        if (estadios.isEmpty()) {
-            return ResponseEntity.noContent().build();
-        }
-        return ResponseEntity.ok(estadios);
-    }
-
-    @GetMapping("/ciudad/{ciudad}")
-    public ResponseEntity<List<Estadio>> buscarPorCiudad(@PathVariable String ciudad) {
-        List<Estadio> estadios = estadioService.findByCiudad(ciudad);
-        if (estadios.isEmpty()) {
-            return ResponseEntity.noContent().build();
-        }
-        return ResponseEntity.ok(estadios);
-    }
-
     @PutMapping("/{id}")
     public ResponseEntity<Estadio> actualizar(@PathVariable Long id, @Valid @RequestBody Estadio estadio) {
-        // Cleaned up try-catch. Service handles the presence check automatically.
-        Estadio existente = estadioService.findById(id);
-
-        existente.setNombre(estadio.getNombre());
-        existente.setCiudad(estadio.getCiudad());
-        existente.setCapacidad(estadio.getCapacidad());
-        existente.setDireccion(estadio.getDireccion());
-
-        estadioService.save(existente);
-        return ResponseEntity.ok(existente);
+        Estadio actualizado = estadioService.update(id, estadio);
+        return ResponseEntity.ok(actualizado);
     }
 
     @DeleteMapping("/{id}")

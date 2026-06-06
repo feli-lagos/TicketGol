@@ -21,17 +21,8 @@ public class EstadioService {
     }
 
     public Estadio findById(Long id) {
-        // Replaced RuntimeException with your custom exception so the handler can catch it
         return estadioRepository.findById(id).orElseThrow(()
                 -> new EstadioNotFoundException("Estadio no encontrado con el ID: " + id));
-    }
-
-    public List<Estadio> findByCiudad(String ciudad) {
-        return estadioRepository.findByCiudad(ciudad);
-    }
-
-    public List<Estadio> findByNombre(String nombre) {
-        return estadioRepository.findByNombre(nombre);
     }
 
     public Estadio save(Estadio estadio) {
@@ -43,5 +34,16 @@ public class EstadioService {
             throw new EstadioNotFoundException("No se puede eliminar. Estadio no encontrado con el ID: " + id);
         }
         estadioRepository.deleteById(id);
+    }
+
+    // agregué este method de los últimos porque me tiraba errores en el estadio secciones
+    public Estadio update(Long id, Estadio estadioDatos) {
+        Estadio existente = findById(id);
+        existente.setNombre(estadioDatos.getNombre());
+        existente.setCiudad(estadioDatos.getCiudad());
+        existente.setCapacidad(estadioDatos.getCapacidad());
+        existente.setDireccion(estadioDatos.getDireccion());
+
+        return estadioRepository.save(existente);
     }
 }

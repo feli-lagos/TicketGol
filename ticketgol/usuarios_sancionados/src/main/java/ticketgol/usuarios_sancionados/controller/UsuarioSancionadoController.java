@@ -5,6 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
 import ticketgol.usuarios_sancionados.model.UsuarioSancionado;
 import ticketgol.usuarios_sancionados.service.UsuarioSancionadoService;
 
@@ -19,101 +21,75 @@ public class UsuarioSancionadoController {
     private UsuarioSancionadoService usuarioSancionadoService;
 
     @GetMapping
-    public ResponseEntity<List<UsuarioSancionado>> lista() {
-
-        List<UsuarioSancionado> usuarios = usuarioSancionadoService.findAll();
-
-        if (usuarios.isEmpty()) {
-            return ResponseEntity.noContent().build();
-        }
-
-        return ResponseEntity.ok(usuarios);
+    public Mono<ResponseEntity<List<UsuarioSancionado>>> lista() {
+        return Mono.fromCallable(() -> usuarioSancionadoService.findAll())
+                .subscribeOn(Schedulers.boundedElastic())
+                .map(usuarios -> usuarios.isEmpty()
+                        ? ResponseEntity.noContent().build()
+                        : ResponseEntity.ok(usuarios));
     }
 
     @GetMapping("/rut/{rut}")
-    public ResponseEntity<UsuarioSancionado> buscarPorRut(
-            @PathVariable String rut) {
-
-        UsuarioSancionado usuario = usuarioSancionadoService.findByRut(rut);
-
-        return ResponseEntity.ok(usuario);
+    public Mono<ResponseEntity<UsuarioSancionado>> buscarPorRut(@PathVariable String rut) {
+        return Mono.fromCallable(() -> usuarioSancionadoService.findByRut(rut))
+                .subscribeOn(Schedulers.boundedElastic())
+                .map(ResponseEntity::ok);
     }
 
     @GetMapping("/motivo/{motivo}")
-    public ResponseEntity<List<UsuarioSancionado>> buscarPorMotivo(
-            @PathVariable String motivo) {
-
-        List<UsuarioSancionado> usuarios =
-                usuarioSancionadoService.findByMotivo(motivo);
-
-        if (usuarios.isEmpty()) {
-            return ResponseEntity.noContent().build();
-        }
-
-        return ResponseEntity.ok(usuarios);
+    public Mono<ResponseEntity<List<UsuarioSancionado>>> buscarPorMotivo(@PathVariable String motivo) {
+        return Mono.fromCallable(() -> usuarioSancionadoService.findByMotivo(motivo))
+                .subscribeOn(Schedulers.boundedElastic())
+                .map(usuarios -> usuarios.isEmpty()
+                        ? ResponseEntity.noContent().build()
+                        : ResponseEntity.ok(usuarios));
     }
 
     @GetMapping("/fecha-sancion/{fecha}")
-    public ResponseEntity<List<UsuarioSancionado>> buscarPorFechaSancion(
-            @PathVariable LocalDate fecha) {
-
-        List<UsuarioSancionado> usuarios =
-                usuarioSancionadoService.findByFechaSancion(fecha);
-
-        if (usuarios.isEmpty()) {
-            return ResponseEntity.noContent().build();
-        }
-
-        return ResponseEntity.ok(usuarios);
+    public Mono<ResponseEntity<List<UsuarioSancionado>>> buscarPorFechaSancion(@PathVariable LocalDate fecha) {
+        return Mono.fromCallable(() -> usuarioSancionadoService.findByFechaSancion(fecha))
+                .subscribeOn(Schedulers.boundedElastic())
+                .map(usuarios -> usuarios.isEmpty()
+                        ? ResponseEntity.noContent().build()
+                        : ResponseEntity.ok(usuarios));
     }
 
     @GetMapping("/fecha-expiracion/{fecha}")
-    public ResponseEntity<List<UsuarioSancionado>> buscarPorFechaExpiracion(
-            @PathVariable LocalDate fecha) {
-
-        List<UsuarioSancionado> usuarios =
-                usuarioSancionadoService.findByFechaExpiracion(fecha);
-
-        if (usuarios.isEmpty()) {
-            return ResponseEntity.noContent().build();
-        }
-
-        return ResponseEntity.ok(usuarios);
+    public Mono<ResponseEntity<List<UsuarioSancionado>>> buscarPorFechaExpiracion(@PathVariable LocalDate fecha) {
+        return Mono.fromCallable(() -> usuarioSancionadoService.findByFechaExpiracion(fecha))
+                .subscribeOn(Schedulers.boundedElastic())
+                .map(usuarios -> usuarios.isEmpty()
+                        ? ResponseEntity.noContent().build()
+                        : ResponseEntity.ok(usuarios));
     }
 
     @PostMapping
-    public ResponseEntity<UsuarioSancionado> guardar(
-            @Valid @RequestBody UsuarioSancionado usuario) {
-
-        UsuarioSancionado nuevo = usuarioSancionadoService.save(usuario);
-
-        return ResponseEntity.status(HttpStatus.CREATED).body(nuevo);
+    public Mono<ResponseEntity<UsuarioSancionado>> guardar(@Valid @RequestBody UsuarioSancionado usuario) {
+        return Mono.fromCallable(() -> usuarioSancionadoService.save(usuario))
+                .subscribeOn(Schedulers.boundedElastic())
+                .map(nuevo -> ResponseEntity.status(HttpStatus.CREATED).body(nuevo));
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<UsuarioSancionado> buscar(@PathVariable Long id) {
-
-        UsuarioSancionado usuario = usuarioSancionadoService.findById(id);
-
-        return ResponseEntity.ok(usuario);
+    public Mono<ResponseEntity<UsuarioSancionado>> buscar(@PathVariable Long id) {
+        return Mono.fromCallable(() -> usuarioSancionadoService.findById(id))
+                .subscribeOn(Schedulers.boundedElastic())
+                .map(ResponseEntity::ok);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<UsuarioSancionado> actualizar(
+    public Mono<ResponseEntity<UsuarioSancionado>> actualizar(
             @PathVariable Long id,
             @Valid @RequestBody UsuarioSancionado usuario) {
-
-        UsuarioSancionado actualizado =
-                usuarioSancionadoService.update(id, usuario);
-
-        return ResponseEntity.ok(actualizado);
+        return Mono.fromCallable(() -> usuarioSancionadoService.update(id, usuario))
+                .subscribeOn(Schedulers.boundedElastic())
+                .map(ResponseEntity::ok);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
-
-        usuarioSancionadoService.delete(id);
-
-        return ResponseEntity.noContent().build();
+    public Mono<ResponseEntity<Void>> eliminar(@PathVariable Long id) {
+        return Mono.<Void>fromRunnable(() -> usuarioSancionadoService.delete(id))
+                .subscribeOn(Schedulers.boundedElastic())
+                .then(Mono.just(ResponseEntity.noContent().build()));
     }
 }

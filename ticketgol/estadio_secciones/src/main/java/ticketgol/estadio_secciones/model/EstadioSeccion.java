@@ -1,10 +1,7 @@
 package ticketgol.estadio_secciones.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Min;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,6 +28,7 @@ public class EstadioSeccion {
 
     @NotNull(message = "La cantidad de asientos es obligatoria")
     @Min(value = 1, message = "La cantidad de asientos debe ser mayor a 0")
+    @Max(value = 200000, message = "La cantidad de asientos no puede ser una locura (máximo 200.000)")
     @Column(name = "cantidad_asientos", nullable = false)
     private Integer cantidadAsientos;
 }

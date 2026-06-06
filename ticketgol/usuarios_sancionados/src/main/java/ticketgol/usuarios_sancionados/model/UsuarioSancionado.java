@@ -2,6 +2,7 @@ package ticketgol.usuarios_sancionados.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -9,7 +10,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-
 
 @Entity
 @Table(name = "usuarios_sancionados")
@@ -32,10 +32,12 @@ public class UsuarioSancionado {
     @Column(nullable = false)
     private String motivo;
 
+    @NotNull(message = "La fecha de sanción es obligatoria")
     @PastOrPresent(message = "La fecha de sanción no puede ser futura")
     @Column(nullable = false)
     private LocalDate fechaSancion;
 
+    @NotNull(message = "La fecha de expiración es obligatoria")
     @Column(nullable = false)
     private LocalDate fechaExpiracion;
 }

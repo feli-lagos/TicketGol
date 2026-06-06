@@ -2,12 +2,15 @@ package ticketgol.usuarios_sancionados.service;
 
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.WebClientResponseException;
+import reactor.core.publisher.Mono;
 import ticketgol.usuarios_sancionados.dto.UsuarioDTO;
 import ticketgol.usuarios_sancionados.exception.UsuarioAlreadyExistsException;
 import ticketgol.usuarios_sancionados.exception.UsuarioNotFoundException;
+import ticketgol.usuarios_sancionados.exception.UsuarioSancionadoNotFoundException;
 import ticketgol.usuarios_sancionados.model.UsuarioSancionado;
 import ticketgol.usuarios_sancionados.repository.UsuarioSancionadoRepository;
 
@@ -25,18 +28,18 @@ public class UsuarioSancionadoService {
             .baseUrl("http://localhost:8080/api/v1/usuarios")
             .build();
 
-    private void validarUsuarioExternoPorRut(String rut) {
-        try {
-            webClient.get()
-                    .uri("/rut/" + rut)
-                    .retrieve()
-                    .bodyToMono(UsuarioDTO.class)
-                    .block();
-        } catch (WebClientResponseException.NotFound e) {
-            throw new UsuarioNotFoundException("Validación fallida: No se puede procesar el registro porque el usuario con RUT " + rut + " no existe en el sistema.");
-        } catch (Exception e) {
-            throw new RuntimeException("Error en la pasarela de comunicación con el microservicio de Usuarios: " + e.getMessage());
-        }
+    private Mono<UsuarioDTO> validarUsuarioExternoPorRut(String rut) {
+        return webClient.get()
+                .uri("/rut/" + rut)
+                .retrieve()
+                .onStatus(HttpStatusCode::is4xxClientError, clientResponse ->
+                        Mono.error(new UsuarioNotFoundException("Validación fallida: No se puede procesar el registro porque el usuario con RUT " + rut + " no existe en el sistema."))
+                )
+                .bodyToMono(UsuarioDTO.class)
+                .onErrorMap(WebClientResponseException.class, e -> e.getStatusCode().value() == 404
+                        ? new UsuarioNotFoundException("Validación fallida: No se puede procesar el registro porque el usuario con RUT " + rut + " no existe en el sistema.")
+                        : new RuntimeException("Error en la pasarela de comunicación con el microservicio de Usuarios: " + e.getMessage())
+                );
     }
 
     public List<UsuarioSancionado> findAll() {
@@ -45,7 +48,7 @@ public class UsuarioSancionadoService {
 
     public UsuarioSancionado findById(Long id) {
         return usuarioSancionadoRepository.findById(id)
-                .orElseThrow(() -> new UsuarioNotFoundException(
+                .orElseThrow(() -> new UsuarioSancionadoNotFoundException(
                         "Usuario sancionado con ID " + id + " no encontrado"
                 ));
     }
@@ -53,7 +56,7 @@ public class UsuarioSancionadoService {
     public UsuarioSancionado findByRut(String rut) {
         UsuarioSancionado usuario = usuarioSancionadoRepository.findByRut(rut);
         if (usuario == null) {
-            throw new UsuarioNotFoundException(
+            throw new UsuarioSancionadoNotFoundException(
                     "Usuario sancionado con RUT " + rut + " no encontrado"
             );
         }
@@ -73,7 +76,7 @@ public class UsuarioSancionadoService {
     }
 
     public UsuarioSancionado save(UsuarioSancionado usuarioSancionado) {
-        validarUsuarioExternoPorRut(usuarioSancionado.getRut());
+        validarUsuarioExternoPorRut(usuarioSancionado.getRut()).block();
 
         if (usuarioSancionadoRepository.existsByRut(usuarioSancionado.getRut())) {
             throw new UsuarioAlreadyExistsException(
@@ -87,7 +90,7 @@ public class UsuarioSancionadoService {
     public UsuarioSancionado update(Long id, UsuarioSancionado usuarioActualizado) {
         UsuarioSancionado usuarioExistente = findById(id);
 
-        validarUsuarioExternoPorRut(usuarioActualizado.getRut());
+        validarUsuarioExternoPorRut(usuarioActualizado.getRut()).block();
 
         if (!usuarioExistente.getRut().equals(usuarioActualizado.getRut())
                 && usuarioSancionadoRepository.existsByRut(usuarioActualizado.getRut())) {
@@ -106,7 +109,7 @@ public class UsuarioSancionadoService {
 
     public void delete(Long id) {
         if (!usuarioSancionadoRepository.existsById(id)) {
-            throw new UsuarioNotFoundException(
+            throw new UsuarioSancionadoNotFoundException(
                     "Usuario sancionado con ID " + id + " no encontrado"
             );
         }

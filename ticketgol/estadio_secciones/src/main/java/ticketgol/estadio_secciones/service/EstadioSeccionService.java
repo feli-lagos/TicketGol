@@ -3,8 +3,8 @@ package ticketgol.estadio_secciones.service;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.reactive.function.client.WebClientResponseException;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.server.ResponseStatusException;
 import ticketgol.estadio_secciones.dto.EstadioDTO;
 import ticketgol.estadio_secciones.exception.EstadioNotFoundException;
 import ticketgol.estadio_secciones.exception.EstadioSeccionNotFoundException;
@@ -20,20 +20,18 @@ public class EstadioSeccionService {
     @Autowired
     private EstadioSeccionRepository seccionRepository;
 
-    // acá dejé hardcodeada no más las URL según lo q acordamos
-    private final WebClient webClient = WebClient.builder()
-            .baseUrl("http://localhost:8090/api/v1/estadios")
-            .build();
+    private final RestTemplate restTemplate = new RestTemplate();
+    private final String baseUrl = "http://localhost:8090/api/v1/estadios";
 
     private void validarEstadioExterno(Long estadioId) {
         try {
-            webClient.get()
-                    .uri("/" + estadioId)
-                    .retrieve()
-                    .bodyToMono(EstadioDTO.class)
-                    .block();
-        } catch (WebClientResponseException.NotFound e) {
+            String url = baseUrl + "/" + estadioId;
+            restTemplate.getForObject(url, EstadioDTO.class);
+
+        } catch (org.springframework.web.client.HttpClientErrorException.NotFound e) {
             throw new EstadioNotFoundException("Validación fallida: El Estadio con ID " + estadioId + " no existe.");
+        } catch (org.springframework.web.client.HttpClientErrorException.BadRequest e) {
+            throw new ResponseStatusException(org.springframework.http.HttpStatus.BAD_REQUEST, "El formato del ID enviado es inválido.");
         } catch (Exception e) {
             throw new RuntimeException("Error de comunicación con el microservicio de Estadios: " + e.getMessage());
         }
