@@ -9,22 +9,23 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="merch" />
         <module name="usuarios_sancionados" />
-        <module name="compras" />
         <module name="eventos" />
         <module name="registro_accesos" />
-        <module name="guardias" />
         <module name="estadio_secciones" />
         <module name="usuarios" />
+        <module name="merch" />
+        <module name="compras" />
+        <module name="pases_temporada_M" />
+        <module name="tickets_M" />
+        <module name="guardias" />
+        <module name="merch_ordenes_m" />
         <module name="clubes" />
         <module name="estadios" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="merch_ordenes_M" target="25" />
-      <module name="pases_temporada_M" target="25" />
-      <module name="tickets_M" target="25" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -37,6 +38,7 @@
       <module name="guardias" options="-parameters" />
       <module name="merch" options="-parameters" />
       <module name="merch_ordenes_M" options="-parameters" />
+      <module name="merch_ordenes_m" options="-parameters" />
       <module name="pases_temporada_M" options="-parameters" />
       <module name="registro_accesos" options="-parameters" />
       <module name="tickets_M" options="-parameters" />

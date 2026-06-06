@@ -17,6 +17,9 @@
         <option value="$PROJECT_DIR$/ticketgol/registro_accesos/pom.xml" />
         <option value="$PROJECT_DIR$/ticketgol/estadio_secciones/pom.xml" />
         <option value="$PROJECT_DIR$/ticketgol/usuarios_sancionados/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/merch_ordenes_M/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/pases_temporada_M/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/tickets_M/pom.xml" />
       </list>
     </option>
   </component>

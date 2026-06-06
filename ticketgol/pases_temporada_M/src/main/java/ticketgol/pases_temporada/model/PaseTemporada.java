@@ -7,7 +7,6 @@ import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Generated;
 import lombok.NoArgsConstructor;
 
 import java.sql.Date;
@@ -17,7 +16,7 @@ import java.sql.Date;
 @AllArgsConstructor
 @Table(name = "pases_temporada")
 @Entity
-public class PasesTemporada {
+public class PaseTemporada {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -16,5 +16,6 @@
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.25.1" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:7.0.7" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:4.0.5" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.transaction:jakarta.transaction-api:2.0.1" level="project" />
   </component>
 </module>
