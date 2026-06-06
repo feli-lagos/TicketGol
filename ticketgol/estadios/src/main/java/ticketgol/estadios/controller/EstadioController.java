@@ -20,7 +20,6 @@ public class EstadioController {
     @GetMapping
     public ResponseEntity<List<Estadio>> listar() {
         List<Estadio> estadios = estadioService.findAll();
-
         if (estadios.isEmpty()) {
             return ResponseEntity.noContent().build();
         }
@@ -35,18 +34,14 @@ public class EstadioController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Estadio> buscarPorId(@PathVariable Long id) {
-        try {
-            Estadio estadio = estadioService.findById(id);
-            return ResponseEntity.ok(estadio);
-        } catch (Exception e) {
-            return ResponseEntity.notFound().build();
-        }
+        // No try-catch needed. If not found, GlobalExceptionHandler handles the 404 JSON response.
+        Estadio estadio = estadioService.findById(id);
+        return ResponseEntity.ok(estadio);
     }
 
     @GetMapping("/nombre/{nombre}")
     public ResponseEntity<List<Estadio>> buscarPorNombre(@PathVariable String nombre) {
         List<Estadio> estadios = estadioService.findByNombre(nombre);
-
         if (estadios.isEmpty()) {
             return ResponseEntity.noContent().build();
         }
@@ -56,7 +51,6 @@ public class EstadioController {
     @GetMapping("/ciudad/{ciudad}")
     public ResponseEntity<List<Estadio>> buscarPorCiudad(@PathVariable String ciudad) {
         List<Estadio> estadios = estadioService.findByCiudad(ciudad);
-
         if (estadios.isEmpty()) {
             return ResponseEntity.noContent().build();
         }
@@ -64,23 +58,17 @@ public class EstadioController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Estadio> actualizar(@PathVariable Long id,
-                                              @Valid @RequestBody Estadio estadio) {
-        try {
-            Estadio existente = estadioService.findById(id);
+    public ResponseEntity<Estadio> actualizar(@PathVariable Long id, @Valid @RequestBody Estadio estadio) {
+        // Cleaned up try-catch. Service handles the presence check automatically.
+        Estadio existente = estadioService.findById(id);
 
-            existente.setNombre(estadio.getNombre());
-            existente.setCiudad(estadio.getCiudad());
-            existente.setCapacidad(estadio.getCapacidad());
-            existente.setDireccion(estadio.getDireccion());
+        existente.setNombre(estadio.getNombre());
+        existente.setCiudad(estadio.getCiudad());
+        existente.setCapacidad(estadio.getCapacidad());
+        existente.setDireccion(estadio.getDireccion());
 
-            estadioService.save(existente);
-
-            return ResponseEntity.ok(existente);
-
-        } catch (Exception e) {
-            return ResponseEntity.notFound().build();
-        }
+        estadioService.save(existente);
+        return ResponseEntity.ok(existente);
     }
 
     @DeleteMapping("/{id}")

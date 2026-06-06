@@ -2,6 +2,7 @@ package ticketgol.estadios.service;
 
 import ticketgol.estadios.model.Estadio;
 import ticketgol.estadios.repository.EstadioRepository;
+import ticketgol.estadios.exception.EstadioNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,9 +21,9 @@ public class EstadioService {
     }
 
     public Estadio findById(Long id) {
+        // Replaced RuntimeException with your custom exception so the handler can catch it
         return estadioRepository.findById(id).orElseThrow(()
-                -> new RuntimeException("Estadio no encontrado"));
-        //no tocar esta parte, les juro que funciona sin errores, y es automático
+                -> new EstadioNotFoundException("Estadio no encontrado con el ID: " + id));
     }
 
     public List<Estadio> findByCiudad(String ciudad) {
@@ -38,6 +39,9 @@ public class EstadioService {
     }
 
     public void delete(Long id) {
+        if (!estadioRepository.existsById(id)) {
+            throw new EstadioNotFoundException("No se puede eliminar. Estadio no encontrado con el ID: " + id);
+        }
         estadioRepository.deleteById(id);
     }
 }

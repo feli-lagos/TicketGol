@@ -1,10 +1,8 @@
 package ticketgol.usuarios_sancionados.repository;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
-import ticketgol.usuarios_sancionados.model.UsuarioSancionado;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
+import ticketgol.usuarios_sancionados.model.UsuarioSancionado;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -20,5 +18,5 @@ public interface UsuarioSancionadoRepository extends JpaRepository<UsuarioSancio
 
     List<UsuarioSancionado> findByFechaExpiracion(LocalDate fechaExpiracion);
 
-    boolean existsByRut(@NotBlank(message = "El RUT es obligatorio") @Size(min = 7, max = 13, message = "El RUT debe tener entre 7 y 13 caracteres") String rut);
+    boolean existsByRut(String rut);
 }
