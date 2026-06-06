@@ -13,8 +13,6 @@
         <module name="merch" />
         <module name="usuarios_sancionados" />
         <module name="eventos" />
-        <module name="guardias" />
-        <module name="registro_accesos" />
         <module name="estadio_secciones" />
         <module name="usuarios" />
         <module name="clubes" />
@@ -25,6 +23,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="compras" />
+        <module name="guardias" />
+        <module name="registro_accesos" />
       </profile>
     </annotationProcessing>
   </component>

@@ -3,7 +3,7 @@ package ticketgol.guardias.service;
 import org.springframework.stereotype.Service;
 import ticketgol.guardias.model.Guardias;
 import ticketgol.guardias.repository.GuardiasRepository;
-import ticketgol.guardias.exception.GuardiaNotFoundException;
+import ticketgol.guardias.Exception.GuardiaNotFoundException;
 
 import java.util.List;
 
