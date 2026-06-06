@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for tickets" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="usuarios_sancionados" />
+        <module name="tickets" />
+        <module name="eventos" />
+        <module name="estadio_secciones" />
+        <module name="registro_accesos" />
+        <module name="usuarios" />
+        <module name="merch_ordenes" />
+        <module name="merch" />
+        <module name="compras" />
+        <module name="guardias" />
+        <module name="clubes" />
+        <module name="pases_temporada" />
+        <module name="estadios" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="clubes" options="-parameters" />
+      <module name="compras" options="-parameters" />
+      <module name="estadio_secciones" options="-parameters" />
+      <module name="estadios" options="-parameters" />
+      <module name="eventos" options="-parameters" />
+      <module name="guardias" options="-parameters" />
+      <module name="merch" options="-parameters" />
+      <module name="merch_ordenes" options="-parameters" />
+      <module name="pases_temporada" options="-parameters" />
+      <module name="registro_accesos" options="-parameters" />
+      <module name="tickets" options="-parameters" />
+      <module name="usuarios" options="-parameters" />
+      <module name="usuarios_sancionados" options="-parameters" />
+    </option>
+  </component>
+</project>
