@@ -1,44 +1,40 @@
 package ticketgol.compras.Service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ticketgol.compras.Model.Compras;
 import ticketgol.compras.Repository.ComprasRepository;
-import ticketgol.compras.Exception.ComprasNotFoundException; // <-- Importante: Importar la excepción
+import ticketgol.compras.Exception.ComprasNotFoundException;
 
 import java.util.List;
 
 @Service
 public class ComprasService {
 
-    private final ComprasRepository repository;
-
-    public ComprasService(ComprasRepository repository) {
-        this.repository = repository;
-    }
+    @Autowired
+    private ComprasRepository repositorio;
 
     public List<Compras> obtenerTodos() {
-        return repository.findAll();
+        return repositorio.findAll();
     }
 
-    // Retorna la compra encontrada o lanza la excepción si no existe
     public Compras obtenerPorId(Long id) {
-        return repository.findById(id)
+        return repositorio.findById(id)
                 .orElseThrow(() -> new ComprasNotFoundException("La compra con ID " + id + " no existe."));
     }
 
-    public List<Compras> obtenerPorUsuario(String usuarioId) {
-        return repository.findByUsuarioId(usuarioId);
-    }
-
     public Compras guardar(Compras compras) {
-        return repository.save(compras);
+        return repositorio.save(compras);
     }
 
-    // Verifica la existencia antes de borrar para evitar errores silenciosos
+    public List<Compras> obtenerPorUsuario(String usuarioId) {
+        return repositorio.findByUsuarioId(usuarioId);
+    }
+
     public void eliminar(Long id) {
-        if (!repository.existsById(id)) {
+        if (!repositorio.existsById(id)) {
             throw new ComprasNotFoundException("No se puede eliminar. La compra con ID " + id + " no existe.");
         }
-        repository.deleteById(id);
+        repositorio.deleteById(id);
     }
 }

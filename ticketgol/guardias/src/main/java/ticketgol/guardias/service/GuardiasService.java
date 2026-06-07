@@ -1,5 +1,6 @@
 package ticketgol.guardias.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ticketgol.guardias.model.Guardias;
 import ticketgol.guardias.repository.GuardiasRepository;
@@ -9,11 +10,9 @@ import java.util.List;
 
 @Service
 public class GuardiasService {
-    private final GuardiasRepository repository;
 
-    public GuardiasService(GuardiasRepository repository) {
-        this.repository = repository;
-    }
+    @Autowired
+    private GuardiasRepository repository;
 
     public List<Guardias> obtenerTodos() {
         return repository.findAll();
