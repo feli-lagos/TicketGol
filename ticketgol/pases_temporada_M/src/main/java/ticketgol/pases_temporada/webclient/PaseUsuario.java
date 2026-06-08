@@ -13,7 +13,7 @@ import java.util.Map;
 @Component
 public class PaseUsuario {
     private final WebClient webClient;
-    public PaseUsuario(@Value("${usuario.service.url}") String clienteServidor){
+    public PaseUsuario(@Value("${usuario-service.url}") String clienteServidor){
         this.webClient = WebClient.builder().baseUrl(clienteServidor).build();
     }
 
