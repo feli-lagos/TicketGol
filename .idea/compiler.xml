@@ -2,41 +2,16 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for pases_temporada_M" enabled="true">
+      <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-        </processorPath>
-        <module name="pases_temporada_M" />
-      </profile>
-      <profile name="Annotation profile for usuarios_sancionados" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-        </processorPath>
-        <module name="usuarios_sancionados" />
-        <module name="eventos" />
-        <module name="registro_accesos" />
-        <module name="estadio_secciones" />
-        <module name="usuarios" />
-        <module name="merch" />
         <module name="compras" />
-        <module name="tickets_M" />
+        <module name="usuarios_sancionados" />
         <module name="guardias" />
-        <module name="merch_ordenes_m" />
-        <module name="clubes" />
-        <module name="pases_temporada_M (1)" />
-        <module name="estadios" />
+        <module name="registro_accesos" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="merch_ordenes_M" target="25" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -47,7 +22,6 @@
       <module name="eventos" options="-parameters" />
       <module name="guardias" options="-parameters" />
       <module name="merch" options="-parameters" />
-      <module name="merch_ordenes_M" options="-parameters" />
       <module name="merch_ordenes_m" options="-parameters" />
       <module name="pases_temporada_M" options="-parameters" />
       <module name="pases_temporada_M (1)" options="-parameters" />
