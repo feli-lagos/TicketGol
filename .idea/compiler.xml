@@ -8,20 +8,26 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="compras" />
-        <module name="usuarios_sancionados" />
-        <module name="guardias" />
-        <module name="registro_accesos" />
       </profile>
-      <profile name="Annotation profile for tickets_M" enabled="true">
+      <profile name="Annotation profile for usuarios_sancionados" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="merch_ordenes_m" />
+        <module name="merch" />
+        <module name="usuarios_sancionados" />
         <module name="pases_temporada_M" />
         <module name="tickets_M" />
+        <module name="eventos" />
+        <module name="registro_accesos" />
+        <module name="guardias" />
+        <module name="estadio_secciones" />
+        <module name="usuarios" />
+        <module name="merch_ordenes_m" />
+        <module name="clubes" />
+        <module name="estadios" />
       </profile>
     </annotationProcessing>
   </component>
