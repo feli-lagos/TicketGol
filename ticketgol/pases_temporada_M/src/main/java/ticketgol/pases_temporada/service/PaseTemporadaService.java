@@ -20,14 +20,18 @@ public class PaseTemporadaService {
     private PaseTemporadaRepository ptRepository;
 
     @Autowired
-    private PaseUsuario paseUsuario
+    private PaseUsuario paseUsuario;
 
     public List<PaseTemporada> findAllPasesTemporada() {
         return ptRepository.findAll();
     }
 
     public PaseTemporada savePaseTemporada(PaseTemporada pt) {
-        Map<String, Object> usuario = paseUsuario.getUsuarioById(usuario.get())
+        Map<String, Object> usuario = paseUsuario.getUsuarioById(pt.getId());
+        if (usuario == null || usuario.isEmpty()) {
+            throw new RuntimeException("Usuario con id" + pt.getId() + " no existe");
+        }
+        usuario.get()
     }
 
 

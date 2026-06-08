@@ -1,13 +1,10 @@
 package ticketgol.pases_temporada.webclient;
 
-
-import lombok.Value;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
-import reactor.core.publisher.Mono;
 import ticketgol.pases_temporada.model.PaseTemporada;
-
 import java.util.Map;
 
 @Component

@@ -2,6 +2,16 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile name="Annotation profile for pases_temporada_M" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="pases_temporada_M" />
+      </profile>
       <profile name="Annotation profile for usuarios_sancionados" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -20,17 +30,8 @@
         <module name="guardias" />
         <module name="merch_ordenes_m" />
         <module name="clubes" />
+        <module name="pases_temporada_M (1)" />
         <module name="estadios" />
-      </profile>
-      <profile name="Annotation profile for pases_temporada_M" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-        </processorPath>
-        <module name="pases_temporada_M" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -49,6 +50,7 @@
       <module name="merch_ordenes_M" options="-parameters" />
       <module name="merch_ordenes_m" options="-parameters" />
       <module name="pases_temporada_M" options="-parameters" />
+      <module name="pases_temporada_M (1)" options="-parameters" />
       <module name="registro_accesos" options="-parameters" />
       <module name="tickets_M" options="-parameters" />
       <module name="usuarios" options="-parameters" />
