@@ -25,7 +25,6 @@ public class Ticket {
     private int seatNumber;
 
     @NotNull
-    @DecimalMin(value = , message = "El precio no puede ser negativo")
     @Column(name = "precio", nullable = false)
     private int precio;
 

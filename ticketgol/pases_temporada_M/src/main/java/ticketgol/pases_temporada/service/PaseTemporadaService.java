@@ -31,6 +31,7 @@ public class PaseTemporadaService {
 
     private static final Logger log = LoggerFactory.getLogger(PaseTemporadaService.class.getName());
 
+    //Método en caso de tener que buscar en la lista de sancionados
     private boolean tieneSancionVigente(Map<String, Object> usuario) {
         if (usuario == null || usuario.isEmpty()) {
             return false;
@@ -46,14 +47,12 @@ public class PaseTemporadaService {
 
     public PaseTemporada savePaseTemporada(PaseTemporada pt) {
         Map<String, Object> usuarioSancionado = paseUsuario.getUsuarioById(pt.getId());
-        if (tieneSancionVigente(usuarioSancionado)){
-            throw new RuntimeException("el usuario está sancionado");
+        if (usuarioSancionado == null || usuarioSancionado.isEmpty()) {
+            throw new UsuarioNotFoundException("el usuario no existe en la lista de usuarios");
         }
+            log.info("pase creado para el usuario {}", usuarioSancionado.get().get());
             return ptRepository.save(pt);
     }
 
-    public PaseTemporada findPaseTemporadaById(int id) {
-        return ptRepository.findById(id);
-    }
 }
 
