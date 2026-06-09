@@ -50,4 +50,7 @@ public class Usuario {
     public void createdAt() {
         this.fechaCreacion = LocalDateTime.now();
     }
+
+    @Transient
+    private String estadoSancion;
 }
