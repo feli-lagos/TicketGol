@@ -12,7 +12,7 @@ import java.util.Map;
 @ControllerAdvice
 public class ComprasGlobalException {
 
-    // CORREGIDO: Ahora usa ComprasNotFoundException (Con S)
+
     @ExceptionHandler(ComprasNotFoundException.class)
     public ResponseEntity<Map<String, Object>> handleCompraNotFoundException(ComprasNotFoundException ex) {
         Map<String, Object> errorResponse = new HashMap<>();
