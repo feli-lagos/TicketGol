@@ -2,6 +2,8 @@ package ticketgol.pases_temporada.service;
 
 
 import jakarta.transaction.Transactional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ticketgol.pases_temporada.model.PaseTemporada;
@@ -27,6 +29,8 @@ public class PaseTemporadaService {
         return ptRepository.findAll();
     }
 
+    private static final Logger log = LoggerFactory.getLogger(PaseTemporadaService.class.getName());
+
     private boolean tieneSancionVigente(Map<String, Object> usuario) {
         if (usuario == null || usuario.isEmpty()) {
             return false;
@@ -46,6 +50,10 @@ public class PaseTemporadaService {
             throw new RuntimeException("el usuario está sancionado");
         }
             return ptRepository.save(pt);
+    }
+
+    public PaseTemporada findPaseTemporadaById(int id) {
+        return ptRepository.findById(id);
     }
 }
 

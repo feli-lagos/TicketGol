@@ -1,8 +1,9 @@
 package ticketgol.tickets.model;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import jakarta.validation.constraints.DecimalMin;
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,11 +13,35 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table(name = "ticket")
-public class ticket {
+public class Ticket {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotNull
+    @Min(value = 1, message = "El número de asiento debe ser igual o mayor a 1")
+    @Column(name = "seat_number", nullable = false)
     private int seatNumber;
-    private double precio;
+
+    @NotNull
+    @DecimalMin(value = , message = "El precio no puede ser negativo")
+    @Column(name = "precio", nullable = false)
+    private int precio;
+
+    @Column(name = "status", nullable = false)
     private boolean status;
+
+    @NotNull
+    @Column(name = "section_id", nullable = false)
     private Long sectionId;
+
+    @NotNull
+    @Column(name = "event_id", nullable = false)
     private Long eventId;
+
+    @PrePersist
+    protected void onCreate() {
+        this.status = true;
+    }
 }
