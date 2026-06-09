@@ -8,7 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="compras" />
       </profile>
-      <profile name="Annotation profile for usuarios_sancionados" enabled="true">
+      <profile name="Annotation profile for pases_temporada_M" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />

@@ -6,14 +6,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ticketgol.pases_temporada.exception.UserSanctionedException;
+import ticketgol.pases_temporada.mapper.UsuarioMapper;
 import ticketgol.pases_temporada.model.PaseTemporada;
+import ticketgol.pases_temporada.model.UsuarioEstadoDto;
 import ticketgol.pases_temporada.repository.PaseTemporadaRepository;
 import ticketgol.pases_temporada.webclient.PaseUsuario;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 @Transactional
 @Service
@@ -25,13 +27,16 @@ public class PaseTemporadaService {
     @Autowired
     private PaseUsuario paseUsuario;
 
+    @Autowired
+    private UsuarioMapper userMapper;
+
     public List<PaseTemporada> findAllPasesTemporada() {
         return ptRepository.findAll();
     }
 
     private static final Logger log = LoggerFactory.getLogger(PaseTemporadaService.class.getName());
 
-    //Método en caso de tener que buscar en la lista de sancionados
+    /* metodo en caso de tener que buscar en la lista de sancionados
     private boolean tieneSancionVigente(Map<String, Object> usuario) {
         if (usuario == null || usuario.isEmpty()) {
             return false;
@@ -43,16 +48,19 @@ public class PaseTemporadaService {
         } else {
             return true;
         }
+    }*/
+
+
+    //guardar pase de temporada, conexión con webclient trayendo usuario convertido a Dto
+    public PaseTemporada savePaseTemporada(PaseTemporada pt) {
+        UsuarioEstadoDto usuarioEstadoDto = paseUsuario.getUsuarioDtoById(pt.getUserId());
+        if ("SANCIONADO".equals(usuarioEstadoDto.getEstadoSancion())){
+            throw new UserSanctionedException("usuario rut: " + usuarioEstadoDto.getRut() + "se encuentra sancionado");
+        }
+        log.info("Pase creado para el usuario con rut: " + usuarioEstadoDto.getRut());
+        return ptRepository.save(pt);
     }
 
-    public PaseTemporada savePaseTemporada(PaseTemporada pt) {
-        Map<String, Object> usuarioSancionado = paseUsuario.getUsuarioById(pt.getId());
-        if (usuarioSancionado == null || usuarioSancionado.isEmpty()) {
-            throw new UsuarioNotFoundException("el usuario no existe en la lista de usuarios");
-        }
-            log.info("pase creado para el usuario {}", usuarioSancionado.get().get());
-            return ptRepository.save(pt);
-    }
 
 }
 
