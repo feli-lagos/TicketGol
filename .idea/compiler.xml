@@ -2,7 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for clubes" enabled="true">
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Annotation profile for merch" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -10,7 +11,9 @@
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
+        <module name="merch" />
         <module name="clubes" />
+        <module name="eventos" />
       </profile>
       <profile name="Annotation profile for usuarios_sancionados" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -19,10 +22,8 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="merch" />
         <module name="usuarios_sancionados" />
         <module name="compras" />
-        <module name="eventos" />
         <module name="registro_accesos" />
         <module name="guardias" />
         <module name="estadio_secciones" />
