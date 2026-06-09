@@ -2,6 +2,9 @@ package ticketgol.pases_temporada.mapper;
 
 
 import org.mapstruct.Mapper;
+import org.mapstruct.MappingTarget;
+import ticketgol.pases_temporada.model.PaseTemporada;
+import ticketgol.pases_temporada.model.PaseTemporadaDtoFront;
 import ticketgol.pases_temporada.model.UsuarioEstadoDto;
 
 import java.util.Map;
