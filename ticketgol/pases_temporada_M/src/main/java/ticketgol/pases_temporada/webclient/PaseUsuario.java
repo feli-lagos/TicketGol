@@ -1,28 +1,25 @@
 package ticketgol.pases_temporada.webclient;
 
-
-import lombok.Value;
-import org.springframework.http.MediaType;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
-import ticketgol.pases_temporada.model.PaseTemporada;
-
 import java.util.Map;
 
 @Component
 public class PaseUsuario {
+
     private final WebClient webClient;
-    public PaseUsuario(@Value("${usuario.service.url}") String clienteServidor){
+
+    public PaseUsuario(@Value("${usuario.service.url}") String clienteServidor) {
         this.webClient = WebClient.builder().baseUrl(clienteServidor).build();
     }
 
-    public Map<String, Object> getUsuarioById(Long id){
+    public Mono<Map<String, Object>> getUsuarioByRut(String rut) {
         return this.webClient.get()
-                .uri("/{id}", id)
+                .uri("/rut/{rut}", rut)
                 .retrieve()
-                .onStatus(httpStatusCode -> httpStatusCode.is4xxClientError(),
-                clientResponse -> clientResponse.bodyToMono(String.class)
-                .map(body -> new RuntimeException("cliente no encontrado"))).bodyToMono(Map.class).block();
+                .bodyToMono(new ParameterizedTypeReference<>() {});
     }
 }

@@ -1,6 +1,5 @@
 package ticketgol.pases_temporada.model;
 
-
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -8,8 +7,8 @@ import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.sql.Date;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -27,28 +26,32 @@ public class PaseTemporada {
     @NotBlank(message = "la temporada no puede estar en blanco")
     private String temporada;
 
-    @Column(name = "fecha_inicio", length = 50, nullable = false)
+    @JsonProperty("fecha_inicio")
+    @Column(name = "fecha_inicio", nullable = false)
     @NotNull(message = "la fecha no puede estar vacía")
-    private Date fecha_inicio;
+    private LocalDate fecha_inicio;
 
-    @Column(name = "fecha_final", length = 50, nullable = false)
+    @JsonProperty("fecha_final")
+    @Column(name = "fecha_final", nullable = false)
     @NotNull(message = "el pase de temporada debe tener fecha de término")
-    private Date fecha_final;
+    private LocalDate fecha_final;
 
-    @Column(name = "estado", length = 50, nullable = false)
+    @Column(name = "estado", nullable = false)
     @NotNull(message = "el estado debe estar vigente o no")
     private boolean estado;
 
-    @Column(name = "user_id", nullable = false)
-    @NotNull(message = "el id no puede estar en blanco")
-    private Long userId;
+    @JsonProperty("userRut")
+    @Column(name = "user_rut", nullable = false)
+    @NotBlank(message = "el RUT del usuario no puede estar en blanco")
+    private String userRut;
 
+    @JsonProperty("clubId")
     @Column(name = "club_id", nullable = false)
     @NotNull(message = "el id no puede estar en blanco")
     private Long clubId;
 
+    @JsonProperty("seccionId")
     @Column(name = "seccion_id", nullable = false)
     @NotNull(message = "el id no puede estar en blanco")
     private Long seccionId;
-
 }
