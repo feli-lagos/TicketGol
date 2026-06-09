@@ -17,10 +17,13 @@
         <option value="$PROJECT_DIR$/ticketgol/registro_accesos/pom.xml" />
         <option value="$PROJECT_DIR$/ticketgol/estadio_secciones/pom.xml" />
         <option value="$PROJECT_DIR$/ticketgol/usuarios_sancionados/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/merch_ordenes_M/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/pases_temporada_M/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/tickets_M/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="25" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" default="true" project-jdk-name="25" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

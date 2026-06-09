@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/merch/pom.xml" />
+        <option value="$PROJECT_DIR$/clubes/pom.xml" />
+        <option value="$PROJECT_DIR$/compras/pom.xml" />
+        <option value="$PROJECT_DIR$/eventos/pom.xml" />
+        <option value="$PROJECT_DIR$/tickets/pom.xml" />
+        <option value="$PROJECT_DIR$/estadios/pom.xml" />
+        <option value="$PROJECT_DIR$/guardias/pom.xml" />
+        <option value="$PROJECT_DIR$/usuarios/pom.xml" />
+        <option value="$PROJECT_DIR$/merch_ordenes/pom.xml" />
+        <option value="$PROJECT_DIR$/pases_temporada/pom.xml" />
+        <option value="$PROJECT_DIR$/registro_accesos/pom.xml" />
+        <option value="$PROJECT_DIR$/estadio_secciones/pom.xml" />
+        <option value="$PROJECT_DIR$/usuarios_sancionados/pom.xml" />
+        <option value="$PROJECT_DIR$/pases_temporada_M/pom.xml" />
+        <option value="$PROJECT_DIR$/merch_ordenes_M/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="25" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
