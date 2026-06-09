@@ -8,27 +8,41 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="compras" />
+        <module name="usuarios_sancionados" />
+        <module name="guardias" />
+        <module name="registro_accesos" />
       </profile>
-      <profile name="Annotation profile for usuarios_sancionados" enabled="true">
+      <profile name="Annotation profile for merch" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="usuarios_sancionados" />
-        <module name="pases_temporada_M" />
-        <module name="tickets_M" />
+        <module name="merch" />
         <module name="eventos" />
         <module name="registro_accesos" />
         <module name="guardias" />
         <module name="estadio_secciones" />
-        <module name="usuarios" />
-        <module name="merch_ordenes_m" />
         <module name="clubes" />
         <module name="estadios" />
       </profile>
+      <profile name="Annotation profile for usuarios" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="usuarios" />
+      </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="21">
+      <module name="merch_ordenes_m" target="24" />
+      <module name="pases_temporada_M" target="24" />
+      <module name="tickets_M" target="24" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
