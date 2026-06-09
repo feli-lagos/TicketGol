@@ -71,12 +71,9 @@ public class UsuarioService {
 
     public Usuario findById(Long id) {
         Usuario usuario = usuarioRepository.findById(id)
-                .orElseThrow(() -> new org.springframework.web.server.ResponseStatusException(
-                        org.springframework.http.HttpStatus.NOT_FOUND, "Usuario no encontrado"
-                ));
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado con ID: " + id));
 
         checkSanctionStatus(usuario);
-
         return usuario;
     }
 
