@@ -1,31 +1,20 @@
 package ticketgol.pases_temporada.mapper;
 
-import org.springframework.stereotype.Component;
+
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+import org.mapstruct.MappingTarget;
+import ticketgol.pases_temporada.model.PaseTemporada;
+import ticketgol.pases_temporada.model.PaseTemporadaDtoFront;
 import ticketgol.pases_temporada.model.UsuarioEstadoDto;
+
 import java.util.Map;
 
-@Component
-public class UsuarioMapper {
+@Mapper(componentModel = "spring", unmappedTargetPolicy = org.mapstruct.ReportingPolicy.IGNORE)
+public interface UsuarioMapper {
+    @Mapping(target = "id", expression = "java(((Number) externalUser.get(\"id\")).longValue())")
+    @Mapping(target = "rut", expression = "java((String) externalUser.get(\"rut\"))")
+    @Mapping(target = "estadoSancion", expression = "java((String) externalUser.get(\"estadoSancion\"))")
 
-    public UsuarioEstadoDto toDto(Map<String, Object> externalUser) {
-        if (externalUser == null) {
-            return null;
-        }
-
-        UsuarioEstadoDto dto = new UsuarioEstadoDto();
-
-        if (externalUser.get("id") != null) {
-            dto.setId(((Number) externalUser.get("id")).longValue());
-        }
-
-        if (externalUser.get("rut") != null) {
-            dto.setRut((String) externalUser.get("rut"));
-        }
-
-        if (externalUser.get("estadoSancion") != null) {
-            dto.setEstadoSancion((String) externalUser.get("estadoSancion"));
-        }
-
-        return dto;
-    }
+    UsuarioEstadoDto toDto(Map<String,Object> externalUser);
 }
