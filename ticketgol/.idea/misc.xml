@@ -19,6 +19,8 @@
         <option value="$PROJECT_DIR$/usuarios_sancionados/pom.xml" />
         <option value="$PROJECT_DIR$/pases_temporada_M/pom.xml" />
         <option value="$PROJECT_DIR$/merch_ordenes_M/pom.xml" />
+        <option value="$PROJECT_DIR$/tickets_M/pom.xml" />
+        <option value="$PROJECT_DIR$/pases_temporada/pases_temporada/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
