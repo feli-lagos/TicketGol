@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
 import ticketgol.pases_temporada.mapper.UsuarioMapper;
 import ticketgol.pases_temporada.model.UsuarioEstadoDto;
 
@@ -18,7 +19,6 @@ public class PaseUsuario {
     private final WebClient webClient;
     private final WebClient.Builder webClientBuilder;
 
-
     public PaseUsuario(@Value("${usuario-service.url}") String clienteServidor, WebClient.Builder webClientBuilder, UsuarioMapper usuarioMapper){
         this.webClient = WebClient.builder().baseUrl(clienteServidor).build();
         this.webClientBuilder = webClientBuilder;
@@ -31,7 +31,9 @@ public class PaseUsuario {
                 .retrieve()
                 .onStatus(httpStatusCode -> httpStatusCode.is4xxClientError(),
                         clientResponse -> clientResponse.bodyToMono(String.class)
-                                .map(body -> new RuntimeException("cliente no encontrado"))).bodyToMono(Map.class).block();
+                                .flatMap(body -> Mono.error(new RuntimeException("cliente no encontrado")))) // Corregido el mapeo
+                .bodyToMono(Map.class)
+                .block();
     }
 
     public UsuarioEstadoDto getUsuarioDtoById(Long id){
@@ -40,7 +42,8 @@ public class PaseUsuario {
                 .retrieve()
                 .onStatus(httpStatusCode -> httpStatusCode.is4xxClientError(),
                         clientResponse -> clientResponse.bodyToMono(String.class)
-                                .map(body -> new RuntimeException("cliente no encontrado"))).bodyToMono(Map.class)
+                                .flatMap(body -> Mono.error(new RuntimeException("cliente no encontrado")))) // Corregido el mapeo
+                .bodyToMono(Map.class)
                 .block();
         return usuarioMapper.toDto(respuestaUsuario);
     }

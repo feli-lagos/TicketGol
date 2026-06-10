@@ -9,7 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="compras (1)" />
       </profile>
-      <profile name="Annotation profile for usuarios_sancionados" enabled="true">
+      <profile name="Annotation profile for pases_temporada" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -33,6 +33,8 @@
     </annotationProcessing>
     <bytecodeTargetLevel target="21">
       <module name="pases_temporada_M" target="24" />
+      <module name="pases_temporada_M (1)" target="25" />
+      <module name="pases_temporada_M (2)" target="25" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
