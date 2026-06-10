@@ -14,7 +14,7 @@ import java.util.Map;
 public interface UsuarioMapper {
     @Mapping(target = "id", expression = "java(((Number) externalUser.get(\"id\")).longValue())")
     @Mapping(target = "rut", expression = "java((String) externalUser.get(\"rut\"))")
-    @Mapping(target = "estadoSancion", expression = "java((String) externalUser.get(\"estadoSancion\"))")
+    @Mapping(target = "estadoSancion", expression = "java(externalUser.get(\"estadoSancion\") != null ? (String) externalUser.get(\"estadoSancion\") : \"SIN_SANCION\")")
 
     UsuarioEstadoDto toDto(Map<String,Object> externalUser);
 }
