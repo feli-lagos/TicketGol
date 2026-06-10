@@ -21,6 +21,12 @@
         <option value="$PROJECT_DIR$/merch_ordenes_M/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/merch_ordenes_M/pom.xml" />
+        <option value="$PROJECT_DIR$/pases_temporada_M/pom.xml" />
+      </set>
+    </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="25" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
