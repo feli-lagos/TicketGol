@@ -39,7 +39,7 @@ public class PaseUsuario {
                 .uri("/{id}", id)
                 .retrieve()
                 .onStatus(httpStatusCode -> httpStatusCode.is4xxClientError(),
-                        clientResponse -> clientResponse.bodyToMono(UsuarioEstadoDto.class)
+                        clientResponse -> clientResponse.bodyToMono(String.class)
                                 .map(body -> new RuntimeException("cliente no encontrado"))).bodyToMono(Map.class)
                 .block();
         return usuarioMapper.toDto(respuestaUsuario);

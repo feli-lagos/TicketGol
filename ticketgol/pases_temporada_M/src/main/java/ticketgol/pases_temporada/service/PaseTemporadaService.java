@@ -83,7 +83,7 @@ public class PaseTemporadaService {
         ptRepository.findById(id)
                 .orElseThrow(() -> {
                     log.warn("Pase con id: " + id + " no se pudo eliminar porque no existe");
-                    return new PassNotFoundException("el pase con id: " + id + " no existe");
+                    return new PassNotFoundException("el pase con id: " + id + " no se puede eliminar porque no existe");
                 });
         ptRepository.deleteById(id);
         return "el pase con id: " + id + " fue eliminado";

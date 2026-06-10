@@ -7,7 +7,7 @@ import ticketgol.pases_temporada.model.PaseTemporadaDtoFront;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-06-09T20:41:37-0400",
+    date = "2026-06-09T20:52:35-0400",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 26 (Oracle Corporation)"
 )
 @Component
