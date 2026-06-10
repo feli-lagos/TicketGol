@@ -25,7 +25,6 @@
     </option>
     <option name="ignoredFiles">
       <set>
-        <option value="$PROJECT_DIR$/merch_ordenes_M/pom.xml" />
         <option value="$PROJECT_DIR$/pases_temporada_M/pom.xml" />
       </set>
     </option>

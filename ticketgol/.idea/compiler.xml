@@ -9,6 +9,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="compras" />
       </profile>
+      <profile name="Annotation profile for pases_temporada" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="pases_temporada" />
+      </profile>
       <profile name="Annotation profile for usuarios_sancionados" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -19,21 +28,20 @@
         </processorPath>
         <module name="merch" />
         <module name="usuarios_sancionados" />
-        <module name="pases_temporada_M" />
         <module name="tickets_M" />
         <module name="eventos" />
         <module name="registro_accesos" />
         <module name="guardias" />
         <module name="estadio_secciones" />
         <module name="usuarios" />
+        <module name="merch_ordenes_m" />
         <module name="clubes" />
         <module name="estadios" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="merch_ordenes" target="25" />
-      <module name="merch_ordenes_m" target="25" />
-      <module name="pases_temporada" target="25" />
+      <module name="pases_temporada_M" target="25" />
       <module name="tickets" target="25" />
     </bytecodeTargetLevel>
   </component>
