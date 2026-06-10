@@ -14,22 +14,38 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
         </processorPath>
+        <module name="pases_temporada" />
+      </profile>
+      <profile name="Annotation profile for tickets_M" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="merch_ordenes_m" />
+        <module name="tickets_M" />
+      </profile>
+      <profile name="Annotation profile for usuarios_sancionados" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="merch" />
         <module name="usuarios_sancionados" />
+        <module name="compras" />
         <module name="eventos" />
         <module name="registro_accesos" />
+        <module name="guardias" />
         <module name="estadio_secciones" />
         <module name="usuarios" />
-        <module name="merch" />
-        <module name="compras" />
-        <module name="tickets_M" />
-        <module name="guardias" />
-        <module name="merch_ordenes_m" />
         <module name="clubes" />
-        <module name="pases_temporada" />
         <module name="estadios" />
       </profile>
     </annotationProcessing>
