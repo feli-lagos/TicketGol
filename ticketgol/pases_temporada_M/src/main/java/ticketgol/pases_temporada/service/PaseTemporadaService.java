@@ -44,7 +44,7 @@ public class PaseTemporadaService {
         return ptRepository.findAll();
     }
 
-    public PaseTemporada getPaseTemporadaById(long id) {
+    public PaseTemporada findPaseTemporadaById(long id) {
         log.info("buscando pase con id: {}", id);
         return ptRepository.findById(id)
                 .orElseThrow(() -> new PassNotFoundException("el pase con id: " + id + " no fue encontrado"));

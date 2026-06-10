@@ -19,9 +19,10 @@ public class PaseUsuario {
     private final WebClient.Builder webClientBuilder;
 
 
-    public PaseUsuario(@Value("${sancionado-service.url}") String clienteServidor, WebClient.Builder webClientBuilder){
+    public PaseUsuario(@Value("${usuario-service.url}") String clienteServidor, WebClient.Builder webClientBuilder, UsuarioMapper usuarioMapper){
         this.webClient = WebClient.builder().baseUrl(clienteServidor).build();
         this.webClientBuilder = webClientBuilder;
+        this.usuarioMapper = usuarioMapper;
     }
 
     public Map<String, Object> getUsuarioById(Long id){
@@ -38,7 +39,7 @@ public class PaseUsuario {
                 .uri("/{id}", id)
                 .retrieve()
                 .onStatus(httpStatusCode -> httpStatusCode.is4xxClientError(),
-                        clientResponse -> clientResponse.bodyToMono(String.class)
+                        clientResponse -> clientResponse.bodyToMono(UsuarioEstadoDto.class)
                                 .map(body -> new RuntimeException("cliente no encontrado"))).bodyToMono(Map.class)
                 .block();
         return usuarioMapper.toDto(respuestaUsuario);
