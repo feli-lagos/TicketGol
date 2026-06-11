@@ -2,20 +2,110 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+<<<<<<< HEAD
+        <module name="compras" />
+      </profile>
       <profile name="Annotation profile for pases_temporada_M" enabled="true">
+=======
+        <module name="compras (1)" />
+      </profile>
+      <profile name="Annotation profile for pases_temporada" enabled="true">
+>>>>>>> main
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+<<<<<<< HEAD
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
+        </processorPath>
+        <module name="pases_temporada_M" />
+      </profile>
+      <profile name="Annotation profile for pases_temporada_M (1)" enabled="true">
+=======
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
+        </processorPath>
+        <module name="pases_temporada" />
+      </profile>
+      <profile name="Annotation profile for tickets_M" enabled="true">
+>>>>>>> main
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="pases_temporada_M" />
+<<<<<<< HEAD
+        <module name="pases_temporada_M (1)" />
+=======
+        <module name="merch_ordenes_m" />
+        <module name="tickets_M" />
+>>>>>>> main
+      </profile>
+      <profile name="Annotation profile for usuarios_sancionados" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
+        </processorPath>
+        <module name="merch" />
+        <module name="usuarios_sancionados" />
+<<<<<<< HEAD
+        <module name="tickets_M" />
+=======
+        <module name="compras" />
+>>>>>>> main
+        <module name="eventos" />
+        <module name="registro_accesos" />
+        <module name="guardias" />
+        <module name="estadio_secciones" />
+        <module name="usuarios" />
+<<<<<<< HEAD
+        <module name="merch_ordenes_m" />
+=======
+>>>>>>> main
+        <module name="clubes" />
+        <module name="estadios" />
       </profile>
     </annotationProcessing>
+<<<<<<< HEAD
+=======
+    <bytecodeTargetLevel target="21">
+      <module name="pases_temporada_M" target="24" />
+      <module name="pases_temporada_M (1)" target="25" />
+      <module name="pases_temporada_M (2)" target="25" />
+    </bytecodeTargetLevel>
+>>>>>>> main
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="clubes" options="-parameters" />
+      <module name="compras" options="-parameters" />
+      <module name="compras (1)" options="-parameters" />
+      <module name="estadio_secciones" options="-parameters" />
+      <module name="estadios" options="-parameters" />
+      <module name="eventos" options="-parameters" />
+      <module name="guardias" options="-parameters" />
+      <module name="merch" options="-parameters" />
+      <module name="merch_ordenes_m" options="-parameters" />
+      <module name="pases_temporada" options="-parameters" />
       <module name="pases_temporada_M" options="-parameters" />
+      <module name="pases_temporada_M (1)" options="-parameters" />
+      <module name="registro_accesos" options="-parameters" />
+      <module name="tickets_M" options="-parameters" />
+      <module name="usuarios" options="-parameters" />
+      <module name="usuarios_sancionados" options="-parameters" />
     </option>
   </component>
 </project>
