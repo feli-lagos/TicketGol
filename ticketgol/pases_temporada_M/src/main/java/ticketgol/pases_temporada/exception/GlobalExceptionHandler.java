@@ -12,11 +12,7 @@ import java.util.Map;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-<<<<<<< HEAD:ticketgol/pases_temporada_M/src/main/java/ticketgol/pases_temporada/exception/GlobalExceptionHandler.java
     
-=======
-
->>>>>>> main:ticketgol/pases_temporada/src/main/java/ticketgol/pases_temporada/exception/GlobalExceptionHandler.java
     @ExceptionHandler(UserSanctionedException.class)
     public ResponseEntity<Map<String, Object>>  handleUserSanctionedException(UserSanctionedException ex){
         Map<String, Object> response = new HashMap<>();
@@ -32,26 +28,8 @@ public class GlobalExceptionHandler {
         Map<String, Object> response = new HashMap<>();
         response.put("timestamp", LocalDateTime.now());
         response.put("status", HttpStatus.NOT_FOUND.value());
-<<<<<<< HEAD:ticketgol/pases_temporada_M/src/main/java/ticketgol/pases_temporada/exception/GlobalExceptionHandler.java
         response.put("error", "No encontrado");
         response.put("message", ex.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
     }
 }
-=======
-        response.put("error", "Pase no encontrado");
-        response.put("message", ex.getMessage());
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
-    }
-
-    @ExceptionHandler(UserNotFoundException.class)
-    public ResponseEntity<Map<String, Object>>  handleUserNotFoundException(UserNotFoundException ex){
-        Map<String, Object> response = new HashMap<>();
-        response.put("timestamp", LocalDateTime.now());
-        response.put("status", HttpStatus.NOT_FOUND.value());
-        response.put("error", "Usuario no encontrado");
-        response.put("message", ex.getMessage());
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
-    }
-}
->>>>>>> main:ticketgol/pases_temporada/src/main/java/ticketgol/pases_temporada/exception/GlobalExceptionHandler.java

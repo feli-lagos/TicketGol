@@ -16,13 +16,11 @@ public class ComprasController {
     private final ComprasService service;
 
     public ComprasController(ComprasService service){
-
         this.service = service;
     }
 
     @GetMapping
     public List<Compras> listarCompras(){
-
         return service.obtenerTodos();
     }
 
