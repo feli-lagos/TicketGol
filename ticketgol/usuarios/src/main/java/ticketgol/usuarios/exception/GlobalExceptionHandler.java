@@ -24,7 +24,6 @@ public class GlobalExceptionHandler {
         return buildErrorResponse(HttpStatus.CONFLICT, "Conflict", ex.getMessage());
     }
 
-    // This explicitly intercepts WebFlux Reactive validation failures!
     @ExceptionHandler(WebExchangeBindException.class)
     public ResponseEntity<Map<String, Object>> handleValidationExceptions(WebExchangeBindException ex) {
         Map<String, Object> errorResponse = new HashMap<>();

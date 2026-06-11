@@ -51,4 +51,8 @@ public class PaseTemporada {
     @NotNull(message = "el id no puede estar en blanco")
     private Long seccionId;
 
+<<<<<<< HEAD:ticketgol/pases_temporada_M/src/main/java/ticketgol/pases_temporada/model/PaseTemporada.java
 }
+=======
+}
+>>>>>>> main:ticketgol/pases_temporada/src/main/java/ticketgol/pases_temporada/model/PaseTemporada.java

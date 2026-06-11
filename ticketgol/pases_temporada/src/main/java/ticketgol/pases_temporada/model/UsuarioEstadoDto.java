@@ -13,4 +13,8 @@ public class UsuarioEstadoDto {
     private Long id;
     private String rut;
     private String estadoSancion;
+<<<<<<< HEAD:ticketgol/pases_temporada_M/src/main/java/ticketgol/pases_temporada/model/UsuarioEstadoDto.java
 }
+=======
+}
+>>>>>>> main:ticketgol/pases_temporada/src/main/java/ticketgol/pases_temporada/model/UsuarioEstadoDto.java
