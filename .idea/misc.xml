@@ -4,27 +4,22 @@
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/ticketgol/merch/pom.xml" />
-        <option value="$PROJECT_DIR$/ticketgol/clubes/pom.xml" />
         <option value="$PROJECT_DIR$/ticketgol/compras/pom.xml" />
-        <option value="$PROJECT_DIR$/ticketgol/eventos/pom.xml" />
-        <option value="$PROJECT_DIR$/ticketgol/tickets/pom.xml" />
-        <option value="$PROJECT_DIR$/ticketgol/estadios/pom.xml" />
-        <option value="$PROJECT_DIR$/ticketgol/guardias/pom.xml" />
-        <option value="$PROJECT_DIR$/ticketgol/usuarios/pom.xml" />
-        <option value="$PROJECT_DIR$/ticketgol/merch_ordenes/pom.xml" />
-        <option value="$PROJECT_DIR$/ticketgol/pases_temporada/pom.xml" />
-        <option value="$PROJECT_DIR$/ticketgol/registro_accesos/pom.xml" />
-        <option value="$PROJECT_DIR$/ticketgol/estadio_secciones/pom.xml" />
         <option value="$PROJECT_DIR$/ticketgol/usuarios_sancionados/pom.xml" />
-        <option value="$PROJECT_DIR$/ticketgol/merch_ordenes_M/pom.xml" />
-        <option value="$PROJECT_DIR$/ticketgol/pases_temporada_M/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/usuarios/pom.xml" />
         <option value="$PROJECT_DIR$/ticketgol/tickets_M/pom.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/registro_accesos/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/pases_temporada/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/merch_ordenes_M/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/merch/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/guardias/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/eventos/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/estadios/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/estadio_secciones/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/clubes/pom.xml" />
+        <option value="$PROJECT_DIR$/ticketgol/pases_temporada/pases_temporada/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" default="true" project-jdk-name="25" project-jdk-type="JavaSDK">
-    <output url="file://$PROJECT_DIR$/out" />
-  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_25" project-jdk-name="25" project-jdk-type="JavaSDK" />
 </project>

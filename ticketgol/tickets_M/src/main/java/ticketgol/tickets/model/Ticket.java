@@ -1,7 +1,6 @@
 package ticketgol.tickets.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
@@ -32,8 +31,12 @@ public class Ticket {
     private boolean status;
 
     @NotNull
+    @Column(name = "user_id", nullable = false)
+    private Long userId;
+
+    @NotNull
     @Column(name = "section_id", nullable = false)
-    private Long sectionId;
+    private Long estadioId;
 
     @NotNull
     @Column(name = "event_id", nullable = false)
