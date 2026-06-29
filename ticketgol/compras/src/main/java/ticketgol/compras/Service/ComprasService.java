@@ -1,79 +1,126 @@
 package ticketgol.compras.Service;
 
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
+import jakarta.transaction.Transactional;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.reactive.function.client.WebClient;
-import org.springframework.web.server.ResponseStatusException;
-import ticketgol.compras.Model.Compras;
-import ticketgol.compras.Repository.ComprasRepository;
+import reactor.core.publisher.Mono;
+import reactor.core.scheduler.Schedulers;
 import ticketgol.compras.Exception.ComprasNotFoundException;
-import java.util.List;
+import ticketgol.compras.Model.Compras;
+import ticketgol.compras.Dto.CompraRequestDTO;
+import ticketgol.compras.Dto.CompraResponseDTO;
+import ticketgol.compras.Dto.UsuarioEstadoDto;
+import ticketgol.compras.Repository.ComprasRepository;
+import ticketgol.compras.Webclient.ComprasCliente;
 
-@Slf4j
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
+@Transactional
 public class ComprasService {
 
-    private final ComprasRepository repositorio;
-    private final WebClient webClient;
+    @Autowired
+    private ComprasRepository comprasRepository;
 
-    public ComprasService(ComprasRepository repositorio, WebClient.Builder webClientBuilder) {
-        this.repositorio = repositorio;
-        this.webClient = webClientBuilder.build();
+    @Autowired
+    private ComprasCliente comprasCliente;
+
+    private static final Logger log = LoggerFactory.getLogger(ComprasService.class.getName());
+
+    // ------------------------------------- MAPPER INTERNO --------------------------------------------
+    private CompraResponseDTO convertToResponseDTO(Compras compra) {
+        CompraResponseDTO response = new CompraResponseDTO();
+        response.setId(compra.getId());
+        response.setUsuarioId(compra.getUsuarioId());
+        response.setTicketId(compra.getTicketId());
+        response.setCodigoQr(compra.getCodigoQr());
+        response.setFechaCompra(compra.getFechaCompra());
+        response.setMetodoPago(compra.getMetodoPago());
+        response.setEstado(compra.getEstado());
+        return response;
     }
 
-    public List<Compras> obtenerTodos() {
-        log.info("Solicitando todas las compras.");
-        return repositorio.findAll();
+    // ------------------------------------- CRUD: READ ALL --------------------------------------------
+    public List<CompraResponseDTO> findAllCompras() {
+        log.info("Obteniendo el listado completo de compras.");
+        return comprasRepository.findAll().stream()
+                .map(this::convertToResponseDTO)
+                .collect(Collectors.toList());
     }
 
-    public Compras obtenerPorId(Long id) {
-        return repositorio.findById(id)
-                .orElseThrow(() -> new ComprasNotFoundException("La compra con ID " + id + " no existe."));
+    // ------------------------------------- CRUD: READ BY ID ------------------------------------------
+    public CompraResponseDTO findCompraById(Long id) {
+        log.info("Buscando compra con ID: {}", id);
+        Compras compra = comprasRepository.findById(id)
+                .orElseThrow(() -> new ComprasNotFoundException("La compra con id: " + id + " no fue encontrada"));
+        return convertToResponseDTO(compra);
     }
 
-    public List<Compras> obtenerPorUsuario(String usuarioId) {
-        return repositorio.findByUsuarioId(usuarioId);
+    // ---------------------------- ADICIONAL: READ BY USUARIO ID ---------------------------------------
+    public List<CompraResponseDTO> findComprasByUsuarioId(String usuarioId) {
+        log.info("Buscando compras vinculadas al usuario ID: {}", usuarioId);
+        return comprasRepository.findAll().stream()
+                .filter(compra -> usuarioId.equals(compra.getUsuarioId()))
+                .map(this::convertToResponseDTO)
+                .collect(Collectors.toList());
     }
 
-    public void eliminar(Long id) {
-        if (!repositorio.existsById(id)) {
-            throw new ComprasNotFoundException("La compra con ID " + id + " no existe.");
+    // ------------------------------------- CRUD: CREATE (POST) ---------------------------------------
+    public CompraResponseDTO saveCompra(CompraRequestDTO request) {
+        log.info("Iniciando proceso de guardado de compra para el usuario: {}", request.getUsuarioId());
+
+
+        UsuarioEstadoDto usuarioEstadoDto = comprasCliente.getUsuarioDtoById(request.getUsuarioId())
+                .subscribeOn(Schedulers.boundedElastic())
+                .block();
+
+
+        if (usuarioEstadoDto != null && "SANCIONADO".equals(usuarioEstadoDto.getEstadoSancion())) {
+            throw new RuntimeException("El usuario se encuentra SANCIONADO y no puede realizar compras.");
         }
-        repositorio.deleteById(id);
+
+
+        Compras compra = new Compras();
+        compra.setUsuarioId(request.getUsuarioId());
+        compra.setTicketId(request.getTicketId());
+        compra.setCodigoQr(request.getCodigoQr());
+        compra.setFechaCompra(request.getFechaCompra());
+        compra.setMetodoPago(request.getMetodoPago());
+        compra.setEstado(request.getEstado());
+
+        Compras compraGuardada = comprasRepository.save(compra);
+        log.info("Compra registrada de forma exitosa con ID: {}", compraGuardada.getId());
+
+        return convertToResponseDTO(compraGuardada);
     }
 
-    public Compras guardar(Compras compras) {
-        log.info("Iniciando validación para usuario: {}", compras.getUsuarioId());
+    // ------------------------------------- CRUD: UPDATE (PUT) ----------------------------------------
+    public CompraResponseDTO updateCompra(Long id, CompraRequestDTO request) {
+        log.info("Actualizando datos de la compra con ID: {}", id);
+        Compras compraReal = comprasRepository.findById(id)
+                .orElseThrow(() -> new ComprasNotFoundException("La compra con id: " + id + " no fue encontrada"));
 
+        compraReal.setUsuarioId(request.getUsuarioId());
+        compraReal.setTicketId(request.getTicketId());
+        compraReal.setCodigoQr(request.getCodigoQr());
+        compraReal.setFechaCompra(request.getFechaCompra());
+        compraReal.setMetodoPago(request.getMetodoPago());
+        compraReal.setEstado(request.getEstado());
 
-        Boolean existeUsuario = webClient.get()
-                .uri("http://localhost:8087/api/v1/usuarios/" + compras.getUsuarioId())
-                .retrieve().toBodilessEntity().map(r -> r.getStatusCode().is2xxSuccessful())
-                .onErrorReturn(false).block();
+        Compras compraGuardada = comprasRepository.save(compraReal);
+        return convertToResponseDTO(compraGuardada);
+    }
 
-        if (existeUsuario == null || !existeUsuario) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Usuario inexistente.");
-        }
+    // ------------------------------------- CRUD: DELETE ----------------------------------------------
+    public String deleteCompra(Long id) {
+        log.info("Eliminando compra con ID: {}", id);
+        comprasRepository.findById(id)
+                .orElseThrow(() -> new ComprasNotFoundException("La compra con id: " + id + " no se puede eliminar porque no existe"));
 
-        Boolean estaSancionado = webClient.get()
-                .uri("http://localhost:8085/api/v1/usuarios-sancionados/" + compras.getUsuarioId())
-                .retrieve().toBodilessEntity().map(r -> r.getStatusCode().is2xxSuccessful())
-                .onErrorReturn(false).block();
-
-        if (estaSancionado != null && estaSancionado) {
-            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Usuario sancionado. Compra denegada.");
-        }
-
-        Boolean existeTicket = webClient.get()
-                .uri("http://localhost:8089/api/v1/tickets/" + compras.getTicketId())
-                .retrieve().toBodilessEntity().map(r -> r.getStatusCode().is2xxSuccessful())
-                .onErrorReturn(false).block();
-
-        if (existeTicket == null || !existeTicket) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Ticket inválido.");
-        }
-
-        return repositorio.save(compras);
+        comprasRepository.deleteById(id);
+        return "La compra con id: " + id + " fue eliminada exitosamente";
     }
 }
