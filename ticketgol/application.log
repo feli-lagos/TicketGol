@@ -20212,3 +20212,1066 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.lang.Thread.run(Thread.java:1474) ~[na:na]
 
 2026-06-29T00:17:49.325-04:00  INFO 12972 --- [servicio-usuarios-sancionados] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-29T01:12:10.270-04:00  INFO 6384 --- [servicio-tickets] [main] ticketgol.tickets.TicketsApplication     : Starting TicketsApplication using Java 25.0.3 with PID 6384 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\tickets_M\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:12:10.272-04:00  INFO 6384 --- [servicio-tickets] [main] ticketgol.tickets.TicketsApplication     : The following 1 profile is active: "dev"
+2026-06-29T01:12:10.563-04:00  INFO 5236 --- [servicio-usuarios] [main] ticketgol.usuarios.UsuariosApplication   : Starting UsuariosApplication using Java 25.0.3 with PID 5236 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\usuarios\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:12:10.563-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] t.u.UsuariosSancionadosApplication       : Starting UsuariosSancionadosApplication using Java 25.0.3 with PID 5432 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\usuarios_sancionados\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:12:10.567-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] t.u.UsuariosSancionadosApplication       : The following 1 profile is active: "dev"
+2026-06-29T01:12:10.567-04:00  INFO 5236 --- [servicio-usuarios] [main] ticketgol.usuarios.UsuariosApplication   : The following 1 profile is active: "dev"
+2026-06-29T01:12:11.373-04:00  INFO 6384 --- [servicio-tickets] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:12:11.514-04:00  INFO 6384 --- [servicio-tickets] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 1 JPA repository interface.
+2026-06-29T01:12:11.637-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:12:11.642-04:00  INFO 5236 --- [servicio-usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:12:11.796-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 148 ms. Found 1 JPA repository interface.
+2026-06-29T01:12:11.800-04:00  INFO 5236 --- [servicio-usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146 ms. Found 1 JPA repository interface.
+2026-06-29T01:12:11.826-04:00  INFO 6384 --- [servicio-tickets] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=18ff88c5-187c-35e5-bc9b-d322e3779ed8
+2026-06-29T01:12:12.010-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ac4415b0-3add-3675-aba7-e026a706e0cc
+2026-06-29T01:12:12.010-04:00  INFO 5236 --- [servicio-usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6fa3ea02-f772-3fe4-88b8-1d86bf7dd7ad
+2026-06-29T01:12:12.009-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] t.merch_ordenes.MerchOrdenesApplication  : Starting MerchOrdenesApplication using Java 25.0.3 with PID 29264 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\merch_ordenes_M\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:12:12.012-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] t.merch_ordenes.MerchOrdenesApplication  : The following 1 profile is active: "dev"
+2026-06-29T01:12:12.255-04:00  INFO 6384 --- [servicio-tickets] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8101 (http)
+2026-06-29T01:12:12.272-04:00  INFO 6384 --- [servicio-tickets] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-29T01:12:12.273-04:00  INFO 6384 --- [servicio-tickets] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-29T01:12:12.353-04:00  INFO 6384 --- [servicio-tickets] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2047 ms
+2026-06-29T01:12:12.528-04:00  INFO 5236 --- [servicio-usuarios] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:12:12.528-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:12:12.548-04:00  INFO 6384 --- [servicio-tickets] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:12:12.594-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T01:12:12.595-04:00  INFO 5236 --- [servicio-usuarios] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T01:12:12.612-04:00  INFO 6384 --- [servicio-tickets] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T01:12:13.004-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] t.p.PasesTemporadaApplication            : Starting PasesTemporadaApplication using Java 25.0.3 with PID 15960 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\pases_temporada\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:12:13.009-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] t.p.PasesTemporadaApplication            : The following 1 profile is active: "dev"
+2026-06-29T01:12:13.079-04:00  INFO 6384 --- [servicio-tickets] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:12:13.097-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:12:13.097-04:00  INFO 5236 --- [servicio-usuarios] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:12:13.108-04:00  INFO 6384 --- [servicio-tickets] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:12:13.127-04:00  INFO 5236 --- [servicio-usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:12:13.128-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:12:13.137-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:12:13.301-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 1 JPA repository interface.
+2026-06-29T01:12:13.473-04:00  INFO 6384 --- [servicio-tickets] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@79636080
+2026-06-29T01:12:13.477-04:00  INFO 6384 --- [servicio-tickets] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:12:13.510-04:00  INFO 5236 --- [servicio-usuarios] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7131d668
+2026-06-29T01:12:13.510-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11a67420
+2026-06-29T01:12:13.512-04:00  INFO 5236 --- [servicio-usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:12:13.512-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:12:13.523-04:00  WARN 6384 --- [servicio-tickets] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:12:13.533-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fba7a8af-c925-36d8-ba96-6aa40f6853f1
+2026-06-29T01:12:13.542-04:00  INFO 6384 --- [servicio-tickets] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_tickets?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_tickets/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:12:13.565-04:00  WARN 5432 --- [servicio-usuarios-sancionados] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:12:13.566-04:00  WARN 5236 --- [servicio-usuarios] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:12:13.588-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_sancionados?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_sancionados/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:12:13.589-04:00  INFO 5236 --- [servicio-usuarios] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_usuarios?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:12:14.091-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:12:14.142-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T01:12:14.157-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:12:14.297-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 1 JPA repository interface.
+2026-06-29T01:12:14.494-04:00  INFO 6384 --- [servicio-tickets] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:12:14.548-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8692c27b-58ae-335a-b08e-f9ef65214052
+2026-06-29T01:12:14.551-04:00  INFO 6384 --- [servicio-tickets] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:12:14.607-04:00  INFO 5236 --- [servicio-usuarios] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:12:14.608-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:12:14.622-04:00  INFO 6384 --- [servicio-tickets] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:12:14.624-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:12:14.657-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:12:14.662-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:12:14.662-04:00  INFO 5236 --- [servicio-usuarios] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:12:14.791-04:00  INFO 5236 --- [servicio-usuarios] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:12:14.853-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:12:14.959-04:00  WARN 6384 --- [servicio-tickets] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-29T01:12:14.995-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:12:15.000-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b423f90
+2026-06-29T01:12:15.002-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:12:15.048-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-29T01:12:15.056-04:00  WARN 29264 --- [servicio-merch-ordenes] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:12:15.089-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_merchordenes?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_merchordenes/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:12:15.569-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:12:15.581-04:00  INFO 18336 --- [servicio-eventos] [main] ticketgol.eventos.EventosApplication     : Starting EventosApplication using Java 25.0.3 with PID 18336 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\eventos\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:12:15.585-04:00  INFO 18336 --- [servicio-eventos] [main] ticketgol.eventos.EventosApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T01:12:15.604-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:12:15.762-04:00  INFO 6384 --- [servicio-tickets] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:12:15.807-04:00  INFO 5236 --- [servicio-usuarios] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:12:15.818-04:00  WARN 6384 --- [servicio-tickets] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:12:15.823-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:12:15.856-04:00  INFO 6384 --- [servicio-tickets] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:12:15.885-04:00  WARN 5236 --- [servicio-usuarios] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:12:15.893-04:00  INFO 6384 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:12:15.898-04:00  INFO 6384 --- [servicio-tickets] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:12:15.905-04:00  INFO 6384 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:15.905-04:00  INFO 6384 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:15.905-04:00  INFO 6384 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:15.905-04:00  INFO 6384 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:15.905-04:00  INFO 6384 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:15.905-04:00  INFO 6384 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:12:15.905-04:00  INFO 6384 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:15.911-04:00  WARN 5432 --- [servicio-usuarios-sancionados] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:12:15.925-04:00  INFO 5236 --- [servicio-usuarios] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:12:15.947-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:12:15.978-04:00  INFO 5236 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:12:15.981-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:12:15.983-04:00  INFO 5236 --- [servicio-usuarios] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:12:15.986-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:12:15.995-04:00  INFO 5236 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:15.996-04:00  INFO 5236 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:15.996-04:00  INFO 5236 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:15.996-04:00  INFO 5236 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:15.996-04:00  INFO 5236 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:15.996-04:00  INFO 5236 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:12:15.997-04:00  INFO 5236 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:15.997-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:15.997-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:15.997-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:15.997-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:15.997-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:15.997-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:12:15.997-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:15.997-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3883b5e9
+2026-06-29T01:12:15.999-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:12:16.049-04:00  WARN 15960 --- [servicio-pasestemporadas] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:12:16.065-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_pasestemporadas?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_pasestemporadas/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:12:16.115-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:12:16.201-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:12:16.299-04:00  INFO 6384 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:16.303-04:00  INFO 6384 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:12:16.303-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:12:16.306-04:00  INFO 6384 --- [servicio-tickets] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:12:16.307-04:00  INFO 6384 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782709936307 with initial instances count: 0
+2026-06-29T01:12:16.316-04:00  INFO 6384 --- [servicio-tickets] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-TICKETS with eureka with status UP
+2026-06-29T01:12:16.317-04:00  INFO 6384 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709936317, current=UP, previous=STARTING]
+2026-06-29T01:12:16.321-04:00  INFO 6384 --- [servicio-tickets] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-TICKETS/host.docker.internal:servicio-tickets:8101: registering service...
+2026-06-29T01:12:16.347-04:00  INFO 6384 --- [servicio-tickets] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8101 (http) with context path '/'
+2026-06-29T01:12:16.350-04:00  INFO 6384 --- [servicio-tickets] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8101
+2026-06-29T01:12:16.354-04:00  INFO 5236 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:16.357-04:00  INFO 5236 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:12:16.360-04:00  INFO 5236 --- [servicio-usuarios] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:12:16.363-04:00  INFO 5236 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782709936362 with initial instances count: 0
+2026-06-29T01:12:16.367-04:00  INFO 6384 --- [servicio-tickets] [main] ticketgol.tickets.TicketsApplication     : Started TicketsApplication in 6.44 seconds (process running for 9.147)
+2026-06-29T01:12:16.368-04:00  INFO 5236 --- [servicio-usuarios] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-USUARIOS with eureka with status UP
+2026-06-29T01:12:16.371-04:00  INFO 5236 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709936371, current=UP, previous=STARTING]
+2026-06-29T01:12:16.373-04:00  INFO 5236 --- [servicio-usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS/host.docker.internal:servicio-usuarios:8082: registering service...
+2026-06-29T01:12:16.393-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:16.397-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:12:16.400-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:12:16.402-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782709936401 with initial instances count: 0
+2026-06-29T01:12:16.407-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-USUARIOS-SANCIONADOS with eureka with status UP
+2026-06-29T01:12:16.408-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709936408, current=UP, previous=STARTING]
+2026-06-29T01:12:16.410-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS-SANCIONADOS/host.docker.internal:servicio-usuarios-sancionados:8081: registering service...
+2026-06-29T01:12:16.516-04:00  INFO 5236 --- [servicio-usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS/host.docker.internal:servicio-usuarios:8082 - registration status: 204
+2026-06-29T01:12:16.516-04:00  INFO 6384 --- [servicio-tickets] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-TICKETS/host.docker.internal:servicio-tickets:8101 - registration status: 204
+2026-06-29T01:12:16.516-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS-SANCIONADOS/host.docker.internal:servicio-usuarios-sancionados:8081 - registration status: 204
+2026-06-29T01:12:16.543-04:00  INFO 5236 --- [servicio-usuarios] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8082 (http)
+2026-06-29T01:12:16.545-04:00  INFO 5236 --- [servicio-usuarios] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-06-29T01:12:16.566-04:00  INFO 5236 --- [servicio-usuarios] [main] ticketgol.usuarios.UsuariosApplication   : Started UsuariosApplication in 6.417 seconds (process running for 10.701)
+2026-06-29T01:12:16.569-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8081 (http)
+2026-06-29T01:12:16.570-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2026-06-29T01:12:16.589-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [main] t.u.UsuariosSancionadosApplication       : Started UsuariosSancionadosApplication in 6.442 seconds (process running for 12.02)
+2026-06-29T01:12:16.690-04:00  INFO 18336 --- [servicio-eventos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:12:16.819-04:00  INFO 18336 --- [servicio-eventos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 1 JPA repository interface.
+2026-06-29T01:12:17.011-04:00  INFO 18336 --- [servicio-eventos] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f2de911c-96b2-30a9-89b0-1c73ffe6ce10
+2026-06-29T01:12:17.086-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:12:17.144-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:12:17.227-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:12:17.308-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:12:17.342-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] t.e.EstadioSeccionesApplication          : Starting EstadioSeccionesApplication using Java 25.0.3 with PID 27052 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\estadio_secciones\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:12:17.345-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] t.e.EstadioSeccionesApplication          : The following 1 profile is active: "dev"
+2026-06-29T01:12:17.361-04:00  WARN 29264 --- [servicio-merch-ordenes] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:12:17.389-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:12:17.412-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:12:17.418-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:12:17.429-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:17.429-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:17.429-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:17.429-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:17.429-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:17.429-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:12:17.429-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:17.439-04:00  INFO 18336 --- [servicio-eventos] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:12:17.487-04:00  INFO 18336 --- [servicio-eventos] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-29T01:12:17.620-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:17.621-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:12:17.622-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:12:17.623-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782709937623 with initial instances count: 0
+2026-06-29T01:12:17.625-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-MERCH-ORDENES with eureka with status UP
+2026-06-29T01:12:17.625-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709937625, current=UP, previous=STARTING]
+2026-06-29T01:12:17.627-04:00  INFO 29264 --- [servicio-merch-ordenes] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-MERCH-ORDENES/host.docker.internal:servicio-merch-ordenes:8112: registering service...
+2026-06-29T01:12:17.660-04:00  INFO 29264 --- [servicio-merch-ordenes] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-MERCH-ORDENES/host.docker.internal:servicio-merch-ordenes:8112 - registration status: 204
+2026-06-29T01:12:17.724-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8112 (http)
+2026-06-29T01:12:17.725-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8112
+2026-06-29T01:12:17.736-04:00  INFO 29264 --- [servicio-merch-ordenes] [main] t.merch_ordenes.MerchOrdenesApplication  : Started MerchOrdenesApplication in 6.271 seconds (process running for 6.848)
+2026-06-29T01:12:17.816-04:00  INFO 18336 --- [servicio-eventos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:12:17.843-04:00  INFO 18336 --- [servicio-eventos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:12:17.948-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:12:18.003-04:00  WARN 15960 --- [servicio-pasestemporadas] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:12:18.028-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:12:18.050-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:12:18.055-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:12:18.061-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:18.062-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:18.062-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:18.062-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:18.063-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:18.063-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:12:18.063-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:18.079-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:12:18.129-04:00  INFO 18336 --- [servicio-eventos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@749ee0e3
+2026-06-29T01:12:18.131-04:00  INFO 18336 --- [servicio-eventos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:12:18.171-04:00  WARN 18336 --- [servicio-eventos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:12:18.186-04:00  INFO 18336 --- [servicio-eventos] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_eventos?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_eventos/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:12:18.208-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 1 JPA repository interface.
+2026-06-29T01:12:18.354-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:18.356-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:12:18.357-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:12:18.358-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782709938358 with initial instances count: 0
+2026-06-29T01:12:18.362-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-PASESTEMPORADAS with eureka with status UP
+2026-06-29T01:12:18.362-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709938362, current=UP, previous=STARTING]
+2026-06-29T01:12:18.363-04:00  INFO 15960 --- [servicio-pasestemporadas] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-PASESTEMPORADAS/host.docker.internal:servicio-pasestemporadas:8102: registering service...
+2026-06-29T01:12:18.401-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2427ac97-3948-33cb-a962-4cc3736f057d
+2026-06-29T01:12:18.404-04:00  INFO 15960 --- [servicio-pasestemporadas] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-PASESTEMPORADAS/host.docker.internal:servicio-pasestemporadas:8102 - registration status: 204
+2026-06-29T01:12:18.469-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8102 (http)
+2026-06-29T01:12:18.470-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8102
+2026-06-29T01:12:18.484-04:00  INFO 15960 --- [servicio-pasestemporadas] [main] t.p.PasesTemporadaApplication            : Started PasesTemporadaApplication in 6.061 seconds (process running for 9.968)
+2026-06-29T01:12:18.711-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:12:18.743-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T01:12:18.875-04:00  INFO 18336 --- [servicio-eventos] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:12:18.913-04:00  INFO 18336 --- [servicio-eventos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:12:18.966-04:00  INFO 18336 --- [servicio-eventos] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:12:19.040-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:12:19.063-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:12:19.286-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@771afdd5
+2026-06-29T01:12:19.287-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:12:19.318-04:00  WARN 27052 --- [servicio-estadio-secciones] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:12:19.330-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_secciones?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_secciones/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:12:19.457-04:00  INFO 18336 --- [servicio-eventos] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:12:19.487-04:00  WARN 18336 --- [servicio-eventos] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:12:19.508-04:00  INFO 18336 --- [servicio-eventos] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:12:19.535-04:00  INFO 18336 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:12:19.537-04:00  INFO 18336 --- [servicio-eventos] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:12:19.543-04:00  INFO 18336 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:19.543-04:00  INFO 18336 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:19.543-04:00  INFO 18336 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:19.543-04:00  INFO 18336 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:19.543-04:00  INFO 18336 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:19.543-04:00  INFO 18336 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:12:19.543-04:00  INFO 18336 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:19.748-04:00  INFO 18336 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:19.749-04:00  INFO 18336 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:12:19.751-04:00  INFO 18336 --- [servicio-eventos] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:12:19.752-04:00  INFO 18336 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782709939752 with initial instances count: 0
+2026-06-29T01:12:19.755-04:00  INFO 18336 --- [servicio-eventos] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-EVENTOS with eureka with status UP
+2026-06-29T01:12:19.755-04:00  INFO 18336 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709939755, current=UP, previous=STARTING]
+2026-06-29T01:12:19.756-04:00  INFO 18336 --- [servicio-eventos] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-EVENTOS/host.docker.internal:servicio-eventos:8100: registering service...
+2026-06-29T01:12:19.781-04:00  INFO 18336 --- [servicio-eventos] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-EVENTOS/host.docker.internal:servicio-eventos:8100 - registration status: 204
+2026-06-29T01:12:19.835-04:00  INFO 18336 --- [servicio-eventos] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8100 (http)
+2026-06-29T01:12:19.835-04:00  INFO 18336 --- [servicio-eventos] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8100
+2026-06-29T01:12:19.845-04:00  INFO 18336 --- [servicio-eventos] [main] ticketgol.eventos.EventosApplication     : Started EventosApplication in 4.838 seconds (process running for 5.382)
+2026-06-29T01:12:19.892-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:12:19.925-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:12:19.999-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:12:20.467-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:12:20.497-04:00  WARN 27052 --- [servicio-estadio-secciones] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:12:20.518-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:12:20.546-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:12:20.549-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:12:20.554-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:20.554-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:20.554-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:20.555-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:20.555-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:20.555-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:12:20.555-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:20.752-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:20.753-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:12:20.755-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:12:20.756-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782709940755 with initial instances count: 0
+2026-06-29T01:12:20.757-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-ESTADIO-SECCIONES with eureka with status UP
+2026-06-29T01:12:20.758-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709940758, current=UP, previous=STARTING]
+2026-06-29T01:12:20.759-04:00  INFO 27052 --- [servicio-estadio-secciones] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-ESTADIO-SECCIONES/host.docker.internal:servicio-estadio-secciones:8091: registering service...
+2026-06-29T01:12:20.783-04:00  INFO 27052 --- [servicio-estadio-secciones] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-ESTADIO-SECCIONES/host.docker.internal:servicio-estadio-secciones:8091 - registration status: 204
+2026-06-29T01:12:20.839-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8091 (http)
+2026-06-29T01:12:20.840-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8091
+2026-06-29T01:12:20.851-04:00  INFO 27052 --- [servicio-estadio-secciones] [main] t.e.EstadioSeccionesApplication          : Started EstadioSeccionesApplication in 3.953 seconds (process running for 4.528)
+2026-06-29T01:12:46.304-04:00  INFO 6384 --- [servicio-tickets] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:46.304-04:00  INFO 6384 --- [servicio-tickets] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:46.304-04:00  INFO 6384 --- [servicio-tickets] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:46.305-04:00  INFO 6384 --- [servicio-tickets] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:46.305-04:00  INFO 6384 --- [servicio-tickets] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:46.305-04:00  INFO 6384 --- [servicio-tickets] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-06-29T01:12:46.305-04:00  INFO 6384 --- [servicio-tickets] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:46.320-04:00  INFO 6384 --- [servicio-tickets] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:46.358-04:00  INFO 5236 --- [servicio-usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:46.358-04:00  INFO 5236 --- [servicio-usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:46.358-04:00  INFO 5236 --- [servicio-usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:46.358-04:00  INFO 5236 --- [servicio-usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:46.358-04:00  INFO 5236 --- [servicio-usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:46.358-04:00  INFO 5236 --- [servicio-usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-06-29T01:12:46.358-04:00  INFO 5236 --- [servicio-usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:46.371-04:00  INFO 5236 --- [servicio-usuarios] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:46.397-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:46.397-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:46.397-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:46.397-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:46.397-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:46.397-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-06-29T01:12:46.397-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:46.411-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:47.621-04:00  INFO 29264 --- [servicio-merch-ordenes] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:47.621-04:00  INFO 29264 --- [servicio-merch-ordenes] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:47.621-04:00  INFO 29264 --- [servicio-merch-ordenes] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:47.621-04:00  INFO 29264 --- [servicio-merch-ordenes] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:47.621-04:00  INFO 29264 --- [servicio-merch-ordenes] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:47.621-04:00  INFO 29264 --- [servicio-merch-ordenes] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-06-29T01:12:47.621-04:00  INFO 29264 --- [servicio-merch-ordenes] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:47.636-04:00  INFO 29264 --- [servicio-merch-ordenes] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:48.357-04:00  INFO 15960 --- [servicio-pasestemporadas] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:48.357-04:00  INFO 15960 --- [servicio-pasestemporadas] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:48.357-04:00  INFO 15960 --- [servicio-pasestemporadas] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:48.357-04:00  INFO 15960 --- [servicio-pasestemporadas] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:48.357-04:00  INFO 15960 --- [servicio-pasestemporadas] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:48.357-04:00  INFO 15960 --- [servicio-pasestemporadas] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-06-29T01:12:48.357-04:00  INFO 15960 --- [servicio-pasestemporadas] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:48.371-04:00  INFO 15960 --- [servicio-pasestemporadas] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:49.750-04:00  INFO 18336 --- [servicio-eventos] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:49.751-04:00  INFO 18336 --- [servicio-eventos] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:49.751-04:00  INFO 18336 --- [servicio-eventos] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:49.751-04:00  INFO 18336 --- [servicio-eventos] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:49.751-04:00  INFO 18336 --- [servicio-eventos] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:49.751-04:00  INFO 18336 --- [servicio-eventos] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-06-29T01:12:49.751-04:00  INFO 18336 --- [servicio-eventos] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:49.767-04:00  INFO 18336 --- [servicio-eventos] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:49.796-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SERVICIO-USUARIOS-SANCIONADOS with eureka with status DOWN
+2026-06-29T01:12:49.796-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709969796, current=DOWN, previous=UP]
+2026-06-29T01:12:49.796-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS-SANCIONADOS/host.docker.internal:servicio-usuarios-sancionados:8081: registering service...
+2026-06-29T01:12:49.798-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29T01:12:49.799-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-06-29T01:12:49.800-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS-SANCIONADOS/host.docker.internal:servicio-usuarios-sancionados:8081 - registration status: 204
+2026-06-29T01:12:50.754-04:00  INFO 27052 --- [servicio-estadio-secciones] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:12:50.754-04:00  INFO 27052 --- [servicio-estadio-secciones] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:12:50.754-04:00  INFO 27052 --- [servicio-estadio-secciones] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:12:50.754-04:00  INFO 27052 --- [servicio-estadio-secciones] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:12:50.754-04:00  INFO 27052 --- [servicio-estadio-secciones] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:12:50.755-04:00  INFO 27052 --- [servicio-estadio-secciones] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2026-06-29T01:12:50.755-04:00  INFO 27052 --- [servicio-estadio-secciones] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:12:50.770-04:00  INFO 27052 --- [servicio-estadio-secciones] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:12:51.819-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:12:51.820-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T01:12:51.825-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T01:12:51.825-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-29T01:12:52.005-04:00  INFO 5236 --- [servicio-usuarios] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SERVICIO-USUARIOS with eureka with status DOWN
+2026-06-29T01:12:52.005-04:00  INFO 5236 --- [servicio-usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709972005, current=DOWN, previous=UP]
+2026-06-29T01:12:52.005-04:00  INFO 5236 --- [servicio-usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS/host.docker.internal:servicio-usuarios:8082: registering service...
+2026-06-29T01:12:52.007-04:00  INFO 5236 --- [servicio-usuarios] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29T01:12:52.008-04:00  INFO 5236 --- [servicio-usuarios] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-06-29T01:12:52.010-04:00  INFO 5236 --- [servicio-usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS/host.docker.internal:servicio-usuarios:8082 - registration status: 204
+2026-06-29T01:12:53.612-04:00  INFO 6384 --- [servicio-tickets] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SERVICIO-TICKETS with eureka with status DOWN
+2026-06-29T01:12:53.612-04:00  INFO 6384 --- [servicio-tickets] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709973612, current=DOWN, previous=UP]
+2026-06-29T01:12:53.613-04:00  INFO 6384 --- [servicio-tickets] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-TICKETS/host.docker.internal:servicio-tickets:8101: registering service...
+2026-06-29T01:12:53.615-04:00  INFO 6384 --- [servicio-tickets] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29T01:12:53.618-04:00  INFO 6384 --- [servicio-tickets] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-TICKETS/host.docker.internal:servicio-tickets:8101 - registration status: 204
+2026-06-29T01:12:53.621-04:00  INFO 6384 --- [servicio-tickets] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-06-29T01:12:53.623-04:00  INFO 6384 --- [servicio-tickets] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:12:53.625-04:00  INFO 6384 --- [servicio-tickets] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T01:12:53.628-04:00  INFO 6384 --- [servicio-tickets] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T01:12:53.629-04:00  INFO 6384 --- [servicio-tickets] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-29T01:12:54.027-04:00  INFO 5236 --- [servicio-usuarios] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:12:54.028-04:00  INFO 5236 --- [servicio-usuarios] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T01:12:54.032-04:00  INFO 5236 --- [servicio-usuarios] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T01:12:54.033-04:00  INFO 5236 --- [servicio-usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-29T01:12:54.826-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-29T01:12:54.832-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS-SANCIONADOS/host.docker.internal:servicio-usuarios-sancionados:8081 - deregister  status: 200
+2026-06-29T01:12:54.833-04:00  INFO 5432 --- [servicio-usuarios-sancionados] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-29T01:12:55.158-04:00  INFO 15960 --- [servicio-pasestemporadas] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SERVICIO-PASESTEMPORADAS with eureka with status DOWN
+2026-06-29T01:12:55.159-04:00  INFO 15960 --- [servicio-pasestemporadas] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709975159, current=DOWN, previous=UP]
+2026-06-29T01:12:55.159-04:00  INFO 15960 --- [servicio-pasestemporadas] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-PASESTEMPORADAS/host.docker.internal:servicio-pasestemporadas:8102: registering service...
+2026-06-29T01:12:55.162-04:00  INFO 15960 --- [servicio-pasestemporadas] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29T01:12:55.163-04:00  INFO 15960 --- [servicio-pasestemporadas] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-06-29T01:12:55.165-04:00  INFO 15960 --- [servicio-pasestemporadas] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-PASESTEMPORADAS/host.docker.internal:servicio-pasestemporadas:8102 - registration status: 204
+2026-06-29T01:12:56.592-04:00  INFO 29264 --- [servicio-merch-ordenes] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SERVICIO-MERCH-ORDENES with eureka with status DOWN
+2026-06-29T01:12:56.593-04:00  INFO 29264 --- [servicio-merch-ordenes] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709976593, current=DOWN, previous=UP]
+2026-06-29T01:12:56.593-04:00  INFO 29264 --- [servicio-merch-ordenes] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-MERCH-ORDENES/host.docker.internal:servicio-merch-ordenes:8112: registering service...
+2026-06-29T01:12:56.595-04:00  INFO 29264 --- [servicio-merch-ordenes] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29T01:12:56.597-04:00  INFO 29264 --- [servicio-merch-ordenes] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-06-29T01:12:56.598-04:00  INFO 29264 --- [servicio-merch-ordenes] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-MERCH-ORDENES/host.docker.internal:servicio-merch-ordenes:8112 - registration status: 204
+2026-06-29T01:12:56.631-04:00  INFO 6384 --- [servicio-tickets] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-29T01:12:56.637-04:00  INFO 6384 --- [servicio-tickets] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-TICKETS/host.docker.internal:servicio-tickets:8101 - deregister  status: 200
+2026-06-29T01:12:56.637-04:00  INFO 6384 --- [servicio-tickets] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-29T01:12:57.035-04:00  INFO 5236 --- [servicio-usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-29T01:12:57.041-04:00  INFO 5236 --- [servicio-usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS/host.docker.internal:servicio-usuarios:8082 - deregister  status: 200
+2026-06-29T01:12:57.042-04:00  INFO 5236 --- [servicio-usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-29T01:12:57.183-04:00  INFO 15960 --- [servicio-pasestemporadas] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:12:57.185-04:00  INFO 15960 --- [servicio-pasestemporadas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T01:12:57.189-04:00  INFO 15960 --- [servicio-pasestemporadas] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T01:12:57.189-04:00  INFO 15960 --- [servicio-pasestemporadas] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-29T01:12:58.368-04:00  INFO 18336 --- [servicio-eventos] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SERVICIO-EVENTOS with eureka with status DOWN
+2026-06-29T01:12:58.368-04:00  INFO 18336 --- [servicio-eventos] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709978368, current=DOWN, previous=UP]
+2026-06-29T01:12:58.369-04:00  INFO 18336 --- [servicio-eventos] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-EVENTOS/host.docker.internal:servicio-eventos:8100: registering service...
+2026-06-29T01:12:58.371-04:00  INFO 18336 --- [servicio-eventos] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29T01:12:58.372-04:00  INFO 18336 --- [servicio-eventos] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-06-29T01:12:58.373-04:00  INFO 18336 --- [servicio-eventos] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-EVENTOS/host.docker.internal:servicio-eventos:8100 - registration status: 204
+2026-06-29T01:12:58.617-04:00  INFO 29264 --- [servicio-merch-ordenes] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:12:58.627-04:00  INFO 29264 --- [servicio-merch-ordenes] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T01:12:58.631-04:00  INFO 29264 --- [servicio-merch-ordenes] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T01:12:58.631-04:00  INFO 29264 --- [servicio-merch-ordenes] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-29T01:12:59.544-04:00  INFO 27052 --- [servicio-estadio-secciones] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application SERVICIO-ESTADIO-SECCIONES with eureka with status DOWN
+2026-06-29T01:12:59.544-04:00  INFO 27052 --- [servicio-estadio-secciones] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709979544, current=DOWN, previous=UP]
+2026-06-29T01:12:59.544-04:00  INFO 27052 --- [servicio-estadio-secciones] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-ESTADIO-SECCIONES/host.docker.internal:servicio-estadio-secciones:8091: registering service...
+2026-06-29T01:12:59.547-04:00  INFO 27052 --- [servicio-estadio-secciones] [SpringApplicationShutdownHook] o.s.boot.reactor.netty.GracefulShutdown  : Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29T01:12:59.548-04:00  INFO 27052 --- [servicio-estadio-secciones] [netty-shutdown] o.s.boot.reactor.netty.GracefulShutdown  : Graceful shutdown complete
+2026-06-29T01:12:59.549-04:00  INFO 27052 --- [servicio-estadio-secciones] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-ESTADIO-SECCIONES/host.docker.internal:servicio-estadio-secciones:8091 - registration status: 204
+2026-06-29T01:13:00.191-04:00  INFO 15960 --- [servicio-pasestemporadas] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-29T01:13:00.196-04:00  INFO 15960 --- [servicio-pasestemporadas] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-PASESTEMPORADAS/host.docker.internal:servicio-pasestemporadas:8102 - deregister  status: 200
+2026-06-29T01:13:00.197-04:00  INFO 15960 --- [servicio-pasestemporadas] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-29T01:13:00.396-04:00  INFO 18336 --- [servicio-eventos] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:13:00.397-04:00  INFO 18336 --- [servicio-eventos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T01:13:00.401-04:00  INFO 18336 --- [servicio-eventos] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T01:13:00.401-04:00  INFO 18336 --- [servicio-eventos] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-29T01:13:01.568-04:00  INFO 27052 --- [servicio-estadio-secciones] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:13:01.570-04:00  INFO 27052 --- [servicio-estadio-secciones] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-29T01:13:01.573-04:00  INFO 27052 --- [servicio-estadio-secciones] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-29T01:13:01.573-04:00  INFO 27052 --- [servicio-estadio-secciones] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-29T01:13:01.632-04:00  INFO 29264 --- [servicio-merch-ordenes] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-29T01:13:01.638-04:00  INFO 29264 --- [servicio-merch-ordenes] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-MERCH-ORDENES/host.docker.internal:servicio-merch-ordenes:8112 - deregister  status: 200
+2026-06-29T01:13:01.638-04:00  INFO 29264 --- [servicio-merch-ordenes] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-29T01:13:03.403-04:00  INFO 18336 --- [servicio-eventos] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-29T01:13:03.408-04:00  INFO 18336 --- [servicio-eventos] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-EVENTOS/host.docker.internal:servicio-eventos:8100 - deregister  status: 200
+2026-06-29T01:13:03.408-04:00  INFO 18336 --- [servicio-eventos] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-29T01:13:04.575-04:00  INFO 27052 --- [servicio-estadio-secciones] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-29T01:13:04.581-04:00  INFO 27052 --- [servicio-estadio-secciones] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-ESTADIO-SECCIONES/host.docker.internal:servicio-estadio-secciones:8091 - deregister  status: 200
+2026-06-29T01:13:04.581-04:00  INFO 27052 --- [servicio-estadio-secciones] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-29T01:13:08.754-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] t.u.UsuariosSancionadosApplication       : Starting UsuariosSancionadosApplication using Java 25.0.3 with PID 1828 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\usuarios_sancionados\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:13:08.756-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] t.u.UsuariosSancionadosApplication       : The following 1 profile is active: "dev"
+2026-06-29T01:13:09.251-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:13:09.337-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interface.
+2026-06-29T01:13:09.445-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ac4415b0-3add-3675-aba7-e026a706e0cc
+2026-06-29T01:13:09.691-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:13:09.717-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T01:13:09.976-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:13:09.995-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:13:10.202-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@11b14ae3
+2026-06-29T01:13:10.203-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:13:10.232-04:00  WARN 1828 --- [servicio-usuarios-sancionados] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:13:10.242-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_sancionados?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_sancionados/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:13:10.776-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:13:10.809-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:13:10.919-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:13:11.357-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:13:11.384-04:00  WARN 1828 --- [servicio-usuarios-sancionados] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:13:11.400-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:13:11.414-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:13:11.417-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:13:11.422-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:13:11.422-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:13:11.422-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:13:11.422-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:13:11.422-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:13:11.422-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:13:11.423-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:13:11.622-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:13:11.623-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:13:11.624-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:13:11.625-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782709991625 with initial instances count: 6
+2026-06-29T01:13:11.627-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-USUARIOS-SANCIONADOS with eureka with status UP
+2026-06-29T01:13:11.628-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709991628, current=UP, previous=STARTING]
+2026-06-29T01:13:11.629-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS-SANCIONADOS/host.docker.internal:servicio-usuarios-sancionados:8081: registering service...
+2026-06-29T01:13:11.653-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS-SANCIONADOS/host.docker.internal:servicio-usuarios-sancionados:8081 - registration status: 204
+2026-06-29T01:13:11.710-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8081 (http)
+2026-06-29T01:13:11.711-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2026-06-29T01:13:11.721-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [main] t.u.UsuariosSancionadosApplication       : Started UsuariosSancionadosApplication in 3.286 seconds (process running for 3.637)
+2026-06-29T01:13:15.967-04:00  INFO 30196 --- [servicio-usuarios] [main] ticketgol.usuarios.UsuariosApplication   : Starting UsuariosApplication using Java 25.0.3 with PID 30196 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\usuarios\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:13:15.969-04:00  INFO 30196 --- [servicio-usuarios] [main] ticketgol.usuarios.UsuariosApplication   : The following 1 profile is active: "dev"
+2026-06-29T01:13:16.453-04:00  INFO 30196 --- [servicio-usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:13:16.531-04:00  INFO 30196 --- [servicio-usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 73 ms. Found 1 JPA repository interface.
+2026-06-29T01:13:16.655-04:00  INFO 30196 --- [servicio-usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6fa3ea02-f772-3fe4-88b8-1d86bf7dd7ad
+2026-06-29T01:13:16.893-04:00  INFO 30196 --- [servicio-usuarios] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:13:16.921-04:00  INFO 30196 --- [servicio-usuarios] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T01:13:17.188-04:00  INFO 30196 --- [servicio-usuarios] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:13:17.206-04:00  INFO 30196 --- [servicio-usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:13:17.417-04:00  INFO 30196 --- [servicio-usuarios] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4f356b98
+2026-06-29T01:13:17.418-04:00  INFO 30196 --- [servicio-usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:13:17.448-04:00  WARN 30196 --- [servicio-usuarios] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:13:17.459-04:00  INFO 30196 --- [servicio-usuarios] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_usuarios?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:13:17.992-04:00  INFO 30196 --- [servicio-usuarios] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:13:18.025-04:00  INFO 30196 --- [servicio-usuarios] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:13:18.097-04:00  INFO 30196 --- [servicio-usuarios] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:13:18.559-04:00  INFO 30196 --- [servicio-usuarios] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:13:18.587-04:00  WARN 30196 --- [servicio-usuarios] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:13:18.607-04:00  INFO 30196 --- [servicio-usuarios] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:13:18.622-04:00  INFO 30196 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:13:18.625-04:00  INFO 30196 --- [servicio-usuarios] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:13:18.630-04:00  INFO 30196 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:13:18.630-04:00  INFO 30196 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:13:18.631-04:00  INFO 30196 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:13:18.631-04:00  INFO 30196 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:13:18.631-04:00  INFO 30196 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:13:18.631-04:00  INFO 30196 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:13:18.631-04:00  INFO 30196 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:13:18.835-04:00  INFO 30196 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:13:18.836-04:00  INFO 30196 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:13:18.837-04:00  INFO 30196 --- [servicio-usuarios] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:13:18.838-04:00  INFO 30196 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782709998838 with initial instances count: 6
+2026-06-29T01:13:18.840-04:00  INFO 30196 --- [servicio-usuarios] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-USUARIOS with eureka with status UP
+2026-06-29T01:13:18.841-04:00  INFO 30196 --- [servicio-usuarios] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782709998841, current=UP, previous=STARTING]
+2026-06-29T01:13:18.842-04:00  INFO 30196 --- [servicio-usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS/host.docker.internal:servicio-usuarios:8082: registering service...
+2026-06-29T01:13:18.867-04:00  INFO 30196 --- [servicio-usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-USUARIOS/host.docker.internal:servicio-usuarios:8082 - registration status: 204
+2026-06-29T01:13:18.921-04:00  INFO 30196 --- [servicio-usuarios] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8082 (http)
+2026-06-29T01:13:18.922-04:00  INFO 30196 --- [servicio-usuarios] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2026-06-29T01:13:18.932-04:00  INFO 30196 --- [servicio-usuarios] [main] ticketgol.usuarios.UsuariosApplication   : Started UsuariosApplication in 3.288 seconds (process running for 3.649)
+2026-06-29T01:13:21.903-04:00  INFO 30280 --- [servicio-tickets] [main] ticketgol.tickets.TicketsApplication     : Starting TicketsApplication using Java 25.0.3 with PID 30280 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\tickets_M\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:13:21.907-04:00  INFO 30280 --- [servicio-tickets] [main] ticketgol.tickets.TicketsApplication     : The following 1 profile is active: "dev"
+2026-06-29T01:13:22.421-04:00  INFO 30280 --- [servicio-tickets] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:13:22.502-04:00  INFO 30280 --- [servicio-tickets] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interface.
+2026-06-29T01:13:22.634-04:00  INFO 30280 --- [servicio-tickets] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=18ff88c5-187c-35e5-bc9b-d322e3779ed8
+2026-06-29T01:13:22.845-04:00  INFO 30280 --- [servicio-tickets] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8101 (http)
+2026-06-29T01:13:22.853-04:00  INFO 30280 --- [servicio-tickets] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-29T01:13:22.853-04:00  INFO 30280 --- [servicio-tickets] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
+2026-06-29T01:13:22.895-04:00  INFO 30280 --- [servicio-tickets] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 959 ms
+2026-06-29T01:13:22.989-04:00  INFO 30280 --- [servicio-tickets] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:13:23.017-04:00  INFO 30280 --- [servicio-tickets] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T01:13:23.263-04:00  INFO 30280 --- [servicio-tickets] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:13:23.281-04:00  INFO 30280 --- [servicio-tickets] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:13:23.476-04:00  INFO 30280 --- [servicio-tickets] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6963b0bd
+2026-06-29T01:13:23.477-04:00  INFO 30280 --- [servicio-tickets] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:13:23.507-04:00  WARN 30280 --- [servicio-tickets] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:13:23.518-04:00  INFO 30280 --- [servicio-tickets] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_tickets?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_tickets/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:13:24.019-04:00  INFO 30280 --- [servicio-tickets] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:13:24.050-04:00  INFO 30280 --- [servicio-tickets] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:13:24.090-04:00  INFO 30280 --- [servicio-tickets] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:13:24.277-04:00  WARN 30280 --- [servicio-tickets] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-29T01:13:24.622-04:00  INFO 30280 --- [servicio-tickets] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:13:24.641-04:00  WARN 30280 --- [servicio-tickets] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:13:24.662-04:00  INFO 30280 --- [servicio-tickets] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:13:24.675-04:00  INFO 30280 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:13:24.677-04:00  INFO 30280 --- [servicio-tickets] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:13:24.684-04:00  INFO 30280 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:13:24.685-04:00  INFO 30280 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:13:24.685-04:00  INFO 30280 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:13:24.685-04:00  INFO 30280 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:13:24.685-04:00  INFO 30280 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:13:24.685-04:00  INFO 30280 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:13:24.685-04:00  INFO 30280 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:13:24.830-04:00  INFO 30280 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:13:24.831-04:00  INFO 30280 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:13:24.832-04:00  INFO 30280 --- [servicio-tickets] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:13:24.833-04:00  INFO 30280 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782710004833 with initial instances count: 6
+2026-06-29T01:13:24.836-04:00  INFO 30280 --- [servicio-tickets] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-TICKETS with eureka with status UP
+2026-06-29T01:13:24.836-04:00  INFO 30280 --- [servicio-tickets] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782710004836, current=UP, previous=STARTING]
+2026-06-29T01:13:24.837-04:00  INFO 30280 --- [servicio-tickets] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-TICKETS/host.docker.internal:servicio-tickets:8101: registering service...
+2026-06-29T01:13:24.849-04:00  INFO 30280 --- [servicio-tickets] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8101 (http) with context path '/'
+2026-06-29T01:13:24.850-04:00  INFO 30280 --- [servicio-tickets] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8101
+2026-06-29T01:13:24.859-04:00  INFO 30280 --- [servicio-tickets] [main] ticketgol.tickets.TicketsApplication     : Started TicketsApplication in 3.285 seconds (process running for 3.637)
+2026-06-29T01:13:24.864-04:00  INFO 30280 --- [servicio-tickets] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-TICKETS/host.docker.internal:servicio-tickets:8101 - registration status: 204
+2026-06-29T01:13:28.365-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] t.p.PasesTemporadaApplication            : Starting PasesTemporadaApplication using Java 25.0.3 with PID 5016 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\pases_temporada\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:13:28.368-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] t.p.PasesTemporadaApplication            : The following 1 profile is active: "dev"
+2026-06-29T01:13:28.898-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:13:28.980-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 76 ms. Found 1 JPA repository interface.
+2026-06-29T01:13:29.091-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8692c27b-58ae-335a-b08e-f9ef65214052
+2026-06-29T01:13:29.336-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:13:29.365-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-29T01:13:29.617-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:13:29.636-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:13:29.851-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@45b08b17
+2026-06-29T01:13:29.852-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:13:29.887-04:00  WARN 5016 --- [servicio-pasestemporadas] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:13:29.897-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_pasestemporadas?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_pasestemporadas/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:13:30.460-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:13:30.494-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:13:30.541-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:13:31.031-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:13:31.057-04:00  WARN 5016 --- [servicio-pasestemporadas] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:13:31.073-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:13:31.088-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:13:31.090-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:13:31.096-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:13:31.096-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:13:31.096-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:13:31.096-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:13:31.096-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:13:31.096-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:13:31.096-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:13:31.297-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:13:31.298-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:13:31.299-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:13:31.300-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782710011300 with initial instances count: 4
+2026-06-29T01:13:31.303-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-PASESTEMPORADAS with eureka with status UP
+2026-06-29T01:13:31.303-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782710011303, current=UP, previous=STARTING]
+2026-06-29T01:13:31.303-04:00  INFO 5016 --- [servicio-pasestemporadas] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-PASESTEMPORADAS/host.docker.internal:servicio-pasestemporadas:8102: registering service...
+2026-06-29T01:13:31.330-04:00  INFO 5016 --- [servicio-pasestemporadas] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-PASESTEMPORADAS/host.docker.internal:servicio-pasestemporadas:8102 - registration status: 204
+2026-06-29T01:13:31.382-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8102 (http)
+2026-06-29T01:13:31.383-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8102
+2026-06-29T01:13:31.393-04:00  INFO 5016 --- [servicio-pasestemporadas] [main] t.p.PasesTemporadaApplication            : Started PasesTemporadaApplication in 3.351 seconds (process running for 3.713)
+2026-06-29T01:13:34.112-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] t.merch_ordenes.MerchOrdenesApplication  : Starting MerchOrdenesApplication using Java 25.0.3 with PID 19320 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\merch_ordenes_M\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:13:34.114-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] t.merch_ordenes.MerchOrdenesApplication  : The following 1 profile is active: "dev"
+2026-06-29T01:13:34.603-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:13:34.691-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interface.
+2026-06-29T01:13:34.801-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=fba7a8af-c925-36d8-ba96-6aa40f6853f1
+2026-06-29T01:13:35.041-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:13:35.068-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T01:13:35.328-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:13:35.347-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:13:35.557-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7b423f90
+2026-06-29T01:13:35.558-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:13:35.587-04:00  WARN 19320 --- [servicio-merch-ordenes] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:13:35.597-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_merchordenes?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_merchordenes/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:13:36.129-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:13:36.170-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:13:36.215-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:13:36.731-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:13:36.757-04:00  WARN 19320 --- [servicio-merch-ordenes] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:13:36.777-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:13:36.792-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:13:36.794-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:13:36.800-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:13:36.800-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:13:36.800-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:13:36.800-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:13:36.800-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:13:36.800-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:13:36.800-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:13:36.928-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:13:36.929-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:13:36.930-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:13:36.931-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782710016930 with initial instances count: 4
+2026-06-29T01:13:36.933-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-MERCH-ORDENES with eureka with status UP
+2026-06-29T01:13:36.933-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782710016933, current=UP, previous=STARTING]
+2026-06-29T01:13:36.935-04:00  INFO 19320 --- [servicio-merch-ordenes] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-MERCH-ORDENES/host.docker.internal:servicio-merch-ordenes:8112: registering service...
+2026-06-29T01:13:36.960-04:00  INFO 19320 --- [servicio-merch-ordenes] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-MERCH-ORDENES/host.docker.internal:servicio-merch-ordenes:8112 - registration status: 204
+2026-06-29T01:13:37.017-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8112 (http)
+2026-06-29T01:13:37.018-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8112
+2026-06-29T01:13:37.029-04:00  INFO 19320 --- [servicio-merch-ordenes] [main] t.merch_ordenes.MerchOrdenesApplication  : Started MerchOrdenesApplication in 3.243 seconds (process running for 3.602)
+2026-06-29T01:13:47.608-04:00  INFO 8036 --- [servicio-eventos] [main] ticketgol.eventos.EventosApplication     : Starting EventosApplication using Java 25.0.3 with PID 8036 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\eventos\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:13:47.609-04:00  INFO 8036 --- [servicio-eventos] [main] ticketgol.eventos.EventosApplication     : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T01:13:48.134-04:00  INFO 8036 --- [servicio-eventos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:13:48.215-04:00  INFO 8036 --- [servicio-eventos] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 75 ms. Found 1 JPA repository interface.
+2026-06-29T01:13:48.333-04:00  INFO 8036 --- [servicio-eventos] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=f2de911c-96b2-30a9-89b0-1c73ffe6ce10
+2026-06-29T01:13:48.589-04:00  INFO 8036 --- [servicio-eventos] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:13:48.618-04:00  INFO 8036 --- [servicio-eventos] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-29T01:13:48.872-04:00  INFO 8036 --- [servicio-eventos] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:13:48.891-04:00  INFO 8036 --- [servicio-eventos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:13:49.100-04:00  INFO 8036 --- [servicio-eventos] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@749ee0e3
+2026-06-29T01:13:49.101-04:00  INFO 8036 --- [servicio-eventos] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:13:49.131-04:00  WARN 8036 --- [servicio-eventos] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:13:49.142-04:00  INFO 8036 --- [servicio-eventos] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_eventos?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_eventos/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:13:49.691-04:00  INFO 8036 --- [servicio-eventos] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:13:49.737-04:00  INFO 8036 --- [servicio-eventos] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:13:49.786-04:00  INFO 8036 --- [servicio-eventos] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:13:50.247-04:00  INFO 8036 --- [servicio-eventos] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:13:50.275-04:00  WARN 8036 --- [servicio-eventos] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:13:50.305-04:00  INFO 8036 --- [servicio-eventos] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:13:50.319-04:00  INFO 8036 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:13:50.321-04:00  INFO 8036 --- [servicio-eventos] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:13:50.327-04:00  INFO 8036 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:13:50.327-04:00  INFO 8036 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:13:50.327-04:00  INFO 8036 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:13:50.327-04:00  INFO 8036 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:13:50.327-04:00  INFO 8036 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:13:50.327-04:00  INFO 8036 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:13:50.327-04:00  INFO 8036 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:13:50.548-04:00  INFO 8036 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:13:50.549-04:00  INFO 8036 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:13:50.550-04:00  INFO 8036 --- [servicio-eventos] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:13:50.551-04:00  INFO 8036 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782710030551 with initial instances count: 4
+2026-06-29T01:13:50.554-04:00  INFO 8036 --- [servicio-eventos] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-EVENTOS with eureka with status UP
+2026-06-29T01:13:50.554-04:00  INFO 8036 --- [servicio-eventos] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782710030554, current=UP, previous=STARTING]
+2026-06-29T01:13:50.555-04:00  INFO 8036 --- [servicio-eventos] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-EVENTOS/host.docker.internal:servicio-eventos:8100: registering service...
+2026-06-29T01:13:50.577-04:00  INFO 8036 --- [servicio-eventos] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-EVENTOS/host.docker.internal:servicio-eventos:8100 - registration status: 204
+2026-06-29T01:13:50.628-04:00  INFO 8036 --- [servicio-eventos] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8100 (http)
+2026-06-29T01:13:50.629-04:00  INFO 8036 --- [servicio-eventos] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8100
+2026-06-29T01:13:50.638-04:00  INFO 8036 --- [servicio-eventos] [main] ticketgol.eventos.EventosApplication     : Started EventosApplication in 3.363 seconds (process running for 3.734)
+2026-06-29T01:13:54.942-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] t.e.EstadioSeccionesApplication          : Starting EstadioSeccionesApplication using Java 25.0.3 with PID 27712 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\estadio_secciones\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:13:54.943-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] t.e.EstadioSeccionesApplication          : The following 1 profile is active: "dev"
+2026-06-29T01:13:55.423-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:13:55.521-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 92 ms. Found 1 JPA repository interface.
+2026-06-29T01:13:55.643-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2427ac97-3948-33cb-a962-4cc3736f057d
+2026-06-29T01:13:55.890-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:13:55.917-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T01:13:56.186-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:13:56.203-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:13:56.413-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@683ed81b
+2026-06-29T01:13:56.415-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:13:56.452-04:00  WARN 27712 --- [servicio-estadio-secciones] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:13:56.462-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_secciones?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_secciones/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:13:56.999-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:13:57.034-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:13:57.110-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:13:57.571-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:13:57.607-04:00  WARN 27712 --- [servicio-estadio-secciones] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:13:57.627-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:13:57.641-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:13:57.643-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:13:57.649-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:13:57.650-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:13:57.650-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:13:57.650-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:13:57.650-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:13:57.650-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:13:57.650-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:13:57.851-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:13:57.852-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:13:57.854-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:13:57.855-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782710037854 with initial instances count: 4
+2026-06-29T01:13:57.857-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-ESTADIO-SECCIONES with eureka with status UP
+2026-06-29T01:13:57.857-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782710037857, current=UP, previous=STARTING]
+2026-06-29T01:13:57.858-04:00  INFO 27712 --- [servicio-estadio-secciones] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-ESTADIO-SECCIONES/host.docker.internal:servicio-estadio-secciones:8091: registering service...
+2026-06-29T01:13:57.883-04:00  INFO 27712 --- [servicio-estadio-secciones] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-ESTADIO-SECCIONES/host.docker.internal:servicio-estadio-secciones:8091 - registration status: 204
+2026-06-29T01:13:57.936-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8091 (http)
+2026-06-29T01:13:57.937-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8091
+2026-06-29T01:13:57.947-04:00  INFO 27712 --- [servicio-estadio-secciones] [main] t.e.EstadioSeccionesApplication          : Started EstadioSeccionesApplication in 3.32 seconds (process running for 3.679)
+2026-06-29T01:14:00.628-04:00  INFO 22244 --- [servicio-estadios] [main] ticketgol.estadios.EstadiosApplication   : Starting EstadiosApplication using Java 25.0.3 with PID 22244 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\estadios\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:14:00.631-04:00  INFO 22244 --- [servicio-estadios] [main] ticketgol.estadios.EstadiosApplication   : The following 1 profile is active: "dev"
+2026-06-29T01:14:01.182-04:00  INFO 22244 --- [servicio-estadios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:14:01.266-04:00  INFO 22244 --- [servicio-estadios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 78 ms. Found 1 JPA repository interface.
+2026-06-29T01:14:01.375-04:00  INFO 22244 --- [servicio-estadios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ace6d46d-fbdb-3f6a-b349-8c060c0e414f
+2026-06-29T01:14:01.612-04:00  INFO 22244 --- [servicio-estadios] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:14:01.639-04:00  INFO 22244 --- [servicio-estadios] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-29T01:14:01.893-04:00  INFO 22244 --- [servicio-estadios] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:14:01.912-04:00  INFO 22244 --- [servicio-estadios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:14:02.120-04:00  INFO 22244 --- [servicio-estadios] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@666b91db
+2026-06-29T01:14:02.121-04:00  INFO 22244 --- [servicio-estadios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:14:02.154-04:00  WARN 22244 --- [servicio-estadios] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:14:02.171-04:00  INFO 22244 --- [servicio-estadios] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_estadios?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_estadios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:14:02.715-04:00  INFO 22244 --- [servicio-estadios] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:14:02.751-04:00  INFO 22244 --- [servicio-estadios] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:14:02.799-04:00  INFO 22244 --- [servicio-estadios] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:14:03.289-04:00  INFO 22244 --- [servicio-estadios] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:14:03.317-04:00  WARN 22244 --- [servicio-estadios] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:14:03.345-04:00  INFO 22244 --- [servicio-estadios] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:14:03.359-04:00  INFO 22244 --- [servicio-estadios] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:14:03.361-04:00  INFO 22244 --- [servicio-estadios] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:14:03.367-04:00  INFO 22244 --- [servicio-estadios] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:14:03.367-04:00  INFO 22244 --- [servicio-estadios] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:14:03.367-04:00  INFO 22244 --- [servicio-estadios] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:14:03.367-04:00  INFO 22244 --- [servicio-estadios] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:14:03.367-04:00  INFO 22244 --- [servicio-estadios] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:14:03.367-04:00  INFO 22244 --- [servicio-estadios] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:14:03.367-04:00  INFO 22244 --- [servicio-estadios] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:14:03.585-04:00  INFO 22244 --- [servicio-estadios] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:14:03.586-04:00  INFO 22244 --- [servicio-estadios] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:14:03.587-04:00  INFO 22244 --- [servicio-estadios] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:14:03.589-04:00  INFO 22244 --- [servicio-estadios] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782710043588 with initial instances count: 9
+2026-06-29T01:14:03.591-04:00  INFO 22244 --- [servicio-estadios] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-ESTADIOS with eureka with status UP
+2026-06-29T01:14:03.591-04:00  INFO 22244 --- [servicio-estadios] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782710043591, current=UP, previous=STARTING]
+2026-06-29T01:14:03.592-04:00  INFO 22244 --- [servicio-estadios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-ESTADIOS/host.docker.internal:servicio-estadios:8090: registering service...
+2026-06-29T01:14:03.617-04:00  INFO 22244 --- [servicio-estadios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-ESTADIOS/host.docker.internal:servicio-estadios:8090 - registration status: 204
+2026-06-29T01:14:03.671-04:00  INFO 22244 --- [servicio-estadios] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8090 (http)
+2026-06-29T01:14:03.672-04:00  INFO 22244 --- [servicio-estadios] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8090
+2026-06-29T01:14:03.682-04:00  INFO 22244 --- [servicio-estadios] [main] ticketgol.estadios.EstadiosApplication   : Started EstadiosApplication in 3.392 seconds (process running for 3.751)
+2026-06-29T01:14:06.103-04:00  INFO 23136 --- [servicio-compras] [main] ticketgol.compras.ComprasApplication     : Starting ComprasApplication using Java 25.0.3 with PID 23136 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\compras\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:14:06.106-04:00  INFO 23136 --- [servicio-compras] [main] ticketgol.compras.ComprasApplication     : The following 1 profile is active: "dev"
+2026-06-29T01:14:06.630-04:00  INFO 23136 --- [servicio-compras] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:14:06.717-04:00  INFO 23136 --- [servicio-compras] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interface.
+2026-06-29T01:14:06.828-04:00  INFO 23136 --- [servicio-compras] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=adf93f1e-5212-39b2-9b61-4949063dfbe1
+2026-06-29T01:14:07.077-04:00  INFO 23136 --- [servicio-compras] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:14:07.106-04:00  INFO 23136 --- [servicio-compras] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-29T01:14:07.354-04:00  INFO 23136 --- [servicio-compras] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:14:07.371-04:00  INFO 23136 --- [servicio-compras] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:14:07.579-04:00  INFO 23136 --- [servicio-compras] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@127d2aee
+2026-06-29T01:14:07.580-04:00  INFO 23136 --- [servicio-compras] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:14:07.611-04:00  WARN 23136 --- [servicio-compras] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:14:07.621-04:00  INFO 23136 --- [servicio-compras] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_compras_test?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_compras_test/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:14:07.708-04:00  WARN 23136 --- [servicio-compras] [main] org.hibernate.orm.deprecation            : HHH90000033: Encountered use of deprecated annotation [interface jakarta.persistence.Temporal] at ticketgol.compras.Model.Compras.fechaCompra.
+2026-06-29T01:14:08.201-04:00  INFO 23136 --- [servicio-compras] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:14:08.262-04:00  INFO 23136 --- [servicio-compras] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:14:08.330-04:00  INFO 23136 --- [servicio-compras] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:14:09.005-04:00  INFO 23136 --- [servicio-compras] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:14:09.041-04:00  WARN 23136 --- [servicio-compras] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:14:09.066-04:00  INFO 23136 --- [servicio-compras] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:14:09.073-04:00  INFO 18228 --- [servicio-clubes] [main] ticketgol.clubes.ClubesApplication       : Starting ClubesApplication using Java 25.0.3 with PID 18228 (C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\clubes\target\classes started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol)
+2026-06-29T01:14:09.076-04:00  INFO 18228 --- [servicio-clubes] [main] ticketgol.clubes.ClubesApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-06-29T01:14:09.087-04:00  INFO 23136 --- [servicio-compras] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:14:09.090-04:00  INFO 23136 --- [servicio-compras] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:14:09.098-04:00  INFO 23136 --- [servicio-compras] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:14:09.098-04:00  INFO 23136 --- [servicio-compras] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:14:09.098-04:00  INFO 23136 --- [servicio-compras] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:14:09.098-04:00  INFO 23136 --- [servicio-compras] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:14:09.098-04:00  INFO 23136 --- [servicio-compras] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:14:09.098-04:00  INFO 23136 --- [servicio-compras] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:14:09.098-04:00  INFO 23136 --- [servicio-compras] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:14:09.337-04:00  INFO 23136 --- [servicio-compras] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:14:09.338-04:00  INFO 23136 --- [servicio-compras] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:14:09.339-04:00  INFO 23136 --- [servicio-compras] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:14:09.340-04:00  INFO 23136 --- [servicio-compras] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782710049340 with initial instances count: 9
+2026-06-29T01:14:09.343-04:00  INFO 23136 --- [servicio-compras] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-COMPRAS with eureka with status UP
+2026-06-29T01:14:09.343-04:00  INFO 23136 --- [servicio-compras] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782710049343, current=UP, previous=STARTING]
+2026-06-29T01:14:09.343-04:00  INFO 23136 --- [servicio-compras] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-COMPRAS/host.docker.internal:servicio-compras:8113: registering service...
+2026-06-29T01:14:09.369-04:00  INFO 23136 --- [servicio-compras] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-COMPRAS/host.docker.internal:servicio-compras:8113 - registration status: 204
+2026-06-29T01:14:09.425-04:00  INFO 23136 --- [servicio-compras] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8113 (http)
+2026-06-29T01:14:09.426-04:00  INFO 23136 --- [servicio-compras] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8113
+2026-06-29T01:14:09.437-04:00  INFO 23136 --- [servicio-compras] [main] ticketgol.compras.ComprasApplication     : Started ComprasApplication in 3.703 seconds (process running for 4.095)
+2026-06-29T01:14:09.636-04:00  INFO 18228 --- [servicio-clubes] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-29T01:14:09.723-04:00  INFO 18228 --- [servicio-clubes] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 83 ms. Found 1 JPA repository interface.
+2026-06-29T01:14:09.837-04:00  INFO 18228 --- [servicio-clubes] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=08cfda32-4337-356b-8846-dfe016274d7d
+2026-06-29T01:14:10.087-04:00  INFO 18228 --- [servicio-clubes] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-29T01:14:10.119-04:00  INFO 18228 --- [servicio-clubes] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-29T01:14:10.372-04:00  INFO 18228 --- [servicio-clubes] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-29T01:14:10.390-04:00  INFO 18228 --- [servicio-clubes] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-29T01:14:10.606-04:00  INFO 18228 --- [servicio-clubes] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@118e2487
+2026-06-29T01:14:10.607-04:00  INFO 18228 --- [servicio-clubes] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-29T01:14:10.636-04:00  WARN 18228 --- [servicio-clubes] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-29T01:14:10.647-04:00  INFO 18228 --- [servicio-clubes] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_clubes?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_clubes/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-29T01:14:11.224-04:00  INFO 18228 --- [servicio-clubes] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-29T01:14:11.260-04:00  INFO 18228 --- [servicio-clubes] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29T01:14:11.308-04:00  INFO 18228 --- [servicio-clubes] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-29T01:14:11.748-04:00  INFO 18228 --- [servicio-clubes] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-29T01:14:11.775-04:00  WARN 18228 --- [servicio-clubes] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-29T01:14:11.796-04:00  INFO 18228 --- [servicio-clubes] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-29T01:14:11.809-04:00  INFO 18228 --- [servicio-clubes] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-29T01:14:11.811-04:00  INFO 18228 --- [servicio-clubes] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:14:11.817-04:00  INFO 18228 --- [servicio-clubes] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-29T01:14:11.817-04:00  INFO 18228 --- [servicio-clubes] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-29T01:14:11.817-04:00  INFO 18228 --- [servicio-clubes] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-29T01:14:11.817-04:00  INFO 18228 --- [servicio-clubes] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-29T01:14:11.817-04:00  INFO 18228 --- [servicio-clubes] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-29T01:14:11.818-04:00  INFO 18228 --- [servicio-clubes] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-29T01:14:11.818-04:00  INFO 18228 --- [servicio-clubes] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-29T01:14:12.028-04:00  INFO 18228 --- [servicio-clubes] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-29T01:14:12.029-04:00  INFO 18228 --- [servicio-clubes] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-29T01:14:12.031-04:00  INFO 18228 --- [servicio-clubes] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-29T01:14:12.032-04:00  INFO 18228 --- [servicio-clubes] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782710052031 with initial instances count: 9
+2026-06-29T01:14:12.033-04:00  INFO 18228 --- [servicio-clubes] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application SERVICIO-CLUBES with eureka with status UP
+2026-06-29T01:14:12.035-04:00  INFO 18228 --- [servicio-clubes] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782710052035, current=UP, previous=STARTING]
+2026-06-29T01:14:12.036-04:00  INFO 18228 --- [servicio-clubes] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-CLUBES/host.docker.internal:servicio-clubes:8110: registering service...
+2026-06-29T01:14:12.060-04:00  INFO 18228 --- [servicio-clubes] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_SERVICIO-CLUBES/host.docker.internal:servicio-clubes:8110 - registration status: 204
+2026-06-29T01:14:12.109-04:00  INFO 18228 --- [servicio-clubes] [main] o.s.boot.reactor.netty.NettyWebServer    : Netty started on port 8110 (http)
+2026-06-29T01:14:12.111-04:00  INFO 18228 --- [servicio-clubes] [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8110
+2026-06-29T01:14:12.121-04:00  INFO 18228 --- [servicio-clubes] [main] ticketgol.clubes.ClubesApplication       : Started ClubesApplication in 3.432 seconds (process running for 3.822)
+2026-06-29T01:18:11.434-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:18:18.645-04:00  INFO 30196 --- [servicio-usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:18:24.704-04:00  INFO 30280 --- [servicio-tickets] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:18:31.105-04:00  INFO 5016 --- [servicio-pasestemporadas] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:18:36.813-04:00  INFO 19320 --- [servicio-merch-ordenes] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:18:50.335-04:00  INFO 8036 --- [servicio-eventos] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:18:57.652-04:00  INFO 27712 --- [servicio-estadio-secciones] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:19:03.384-04:00  INFO 22244 --- [servicio-estadios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:19:09.099-04:00  INFO 23136 --- [servicio-compras] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:19:11.825-04:00  INFO 18228 --- [servicio-clubes] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:19:26.192-04:00  INFO 18228 --- [servicio-clubes] [reactor-http-nio-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 289 ms
+2026-06-29T01:22:40.180-04:00  INFO 5016 --- [servicio-pasestemporadas] [reactor-http-nio-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 379 ms
+2026-06-29T01:22:56.724-04:00  INFO 30196 --- [servicio-usuarios] [reactor-http-nio-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 266 ms
+2026-06-29T01:23:11.452-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:23:18.657-04:00  INFO 30196 --- [servicio-usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:23:24.718-04:00  INFO 30280 --- [servicio-tickets] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:23:26.079-04:00  INFO 23136 --- [servicio-compras] [reactor-http-nio-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 200 ms
+2026-06-29T01:23:27.097-04:00  INFO 27712 --- [servicio-estadio-secciones] [reactor-http-nio-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 257 ms
+2026-06-29T01:23:27.563-04:00  INFO 22244 --- [servicio-estadios] [reactor-http-nio-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 233 ms
+2026-06-29T01:23:28.202-04:00  INFO 8036 --- [servicio-eventos] [reactor-http-nio-5] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 266 ms
+2026-06-29T01:23:28.995-04:00  INFO 19320 --- [servicio-merch-ordenes] [reactor-http-nio-2] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 269 ms
+2026-06-29T01:23:30.279-04:00  INFO 30280 --- [servicio-tickets] [http-nio-8101-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-29T01:23:30.279-04:00  INFO 30280 --- [servicio-tickets] [http-nio-8101-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-29T01:23:30.281-04:00  INFO 30280 --- [servicio-tickets] [http-nio-8101-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-06-29T01:23:30.697-04:00  INFO 30280 --- [servicio-tickets] [http-nio-8101-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 270 ms
+2026-06-29T01:23:31.123-04:00  INFO 5016 --- [servicio-pasestemporadas] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:23:31.373-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [reactor-http-nio-3] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 267 ms
+2026-06-29T01:23:36.826-04:00  INFO 19320 --- [servicio-merch-ordenes] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:23:50.351-04:00  INFO 8036 --- [servicio-eventos] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:23:57.655-04:00  INFO 27712 --- [servicio-estadio-secciones] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:24:03.396-04:00  INFO 22244 --- [servicio-estadios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:24:09.109-04:00  INFO 23136 --- [servicio-compras] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:24:11.838-04:00  INFO 18228 --- [servicio-clubes] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:28:11.456-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:28:18.670-04:00  INFO 30196 --- [servicio-usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:28:24.730-04:00  INFO 30280 --- [servicio-tickets] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:28:31.138-04:00  INFO 5016 --- [servicio-pasestemporadas] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:28:36.832-04:00  INFO 19320 --- [servicio-merch-ordenes] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:28:50.368-04:00  INFO 8036 --- [servicio-eventos] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:28:57.658-04:00  INFO 27712 --- [servicio-estadio-secciones] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:29:03.431-04:00  INFO 22244 --- [servicio-estadios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:29:09.120-04:00  INFO 23136 --- [servicio-compras] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:29:11.847-04:00  INFO 18228 --- [servicio-clubes] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:33:11.467-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:33:18.673-04:00  INFO 30196 --- [servicio-usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:33:24.737-04:00  INFO 30280 --- [servicio-tickets] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:33:31.151-04:00  INFO 5016 --- [servicio-pasestemporadas] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:33:36.835-04:00  INFO 19320 --- [servicio-merch-ordenes] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:33:50.385-04:00  INFO 8036 --- [servicio-eventos] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:33:57.672-04:00  INFO 27712 --- [servicio-estadio-secciones] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:34:03.435-04:00  INFO 22244 --- [servicio-estadios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:34:09.294-04:00  INFO 23136 --- [servicio-compras] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:34:11.852-04:00  INFO 18228 --- [servicio-clubes] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:38:11.471-04:00  INFO 1828 --- [servicio-usuarios-sancionados] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-29T01:38:18.678-04:00  INFO 30196 --- [servicio-usuarios] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

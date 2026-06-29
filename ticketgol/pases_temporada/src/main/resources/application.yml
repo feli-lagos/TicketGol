@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: servicio-pasestemporadas
+  profiles:
+    active: dev
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/db_ticketgol_pasestemporadas?createDatabaseIfNotExist=true
+    username: root
+    password: ""
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+server:
+  port: 8102
+
+logging:
+  file:
+    name: application.log
+
+usuario-service:
+  url: http://localhost:8082/api/v1/usuarios
+
+eureka:
+  client:
+    enabled: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /doc/swagger-ui.html
