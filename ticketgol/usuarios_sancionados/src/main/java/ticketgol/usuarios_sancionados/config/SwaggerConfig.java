@@ -14,6 +14,6 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("API 2026 Usuarios Sancionados")
                         .version("1.0")
-                        .description("Documentación de la API para el sistema de reserva de salas"));
+                        .description("Documentación de la API para el detector de usuarios sancionados"));
     }
 }

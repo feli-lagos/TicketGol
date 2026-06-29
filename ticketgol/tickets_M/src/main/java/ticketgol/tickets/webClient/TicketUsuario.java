@@ -20,7 +20,7 @@ public class TicketUsuario {
 
     public TicketUsuario() {
         this.restClient = RestClient.builder()
-                .baseUrl("http://localhost:8080/api/v1/usuarios")
+                .baseUrl("http://localhost:8082/api/v1/usuarios")
                 .build();
     }
 

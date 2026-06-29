@@ -1,5 +1,6 @@
 package ticketgol.merch_ordenes;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -9,83 +10,354 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import ticketgol.merch_ordenes.model.MerchOrden;
 import ticketgol.merch_ordenes.repository.MerchRepository;
 import ticketgol.merch_ordenes.service.MerchOrdenService;
+import ticketgol.merch_ordenes.webClient.MerchClient;
 
-import java.time.LocalDateTime;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
+
 @ExtendWith(MockitoExtension.class)
 class MerchOrdenTestService {
 
+
     @Mock
-    private MerchRepository merchRepository;
+    private MerchRepository repository;
+
+
+    @Mock
+    private MerchClient merchandiseClient;
+
 
     @InjectMocks
     private MerchOrdenService merchOrdenService;
 
-    @Test
-    @DisplayName("Debe retornar una lista de órdenes cuando existen registros en la BD")
-    void shouldReturnOrdenListWhenOrdenesExist() {
 
-        // --- GIVEN (Arrange) ---
-        // Creamos la primera orden ficticia simulando tus atributos reales
-        MerchOrden orden1 = new MerchOrden();
-        orden1.setId(1L);
-        orden1.setCantidad(2);
-        orden1.setPrecioUnitario(5000);
-        orden1.setPrecioTotal(10000);
-        orden1.setFechaOrden(LocalDateTime.now());
-        orden1.setStatus(true);
-        orden1.setMerchandiseId(101L);
-        orden1.setUserId(55L);
 
-        // Creamos la segunda orden ficticia
-        MerchOrden orden2 = new MerchOrden();
-        orden2.setId(2L);
-        orden2.setCantidad(1);
-        orden2.setPrecioUnitario(15000);
-        orden2.setPrecioTotal(15000);
-        orden2.setFechaOrden(LocalDateTime.now());
-        orden2.setStatus(true);
-        orden2.setMerchandiseId(102L);
-        orden2.setUserId(56L);
+    private MerchOrden orden;
 
-        // Simulamos el comportamiento del repositorio
-        when(merchRepository.findAll()).thenReturn(Arrays.asList(orden1, orden2));
 
-        // --- WHEN (Act) ---
-        List<MerchOrden> resultado = merchOrdenService.findAllOrdenes();
 
-        // --- THEN (Assert) ---
-        assertNotNull(resultado, "La lista de órdenes no debería ser nula");
-        assertEquals(2, resultado.size(), "Deberían retornar exactamente 2 órdenes");
+    @BeforeEach
+    void setUp(){
 
-        // Verificaciones específicas basadas en tu modelo
-        assertEquals(2, resultado.get(0).getCantidad(), "La cantidad de la primera orden debe ser 2");
-        assertEquals(10000, resultado.get(0).getPrecioTotal(), "El precio total debe ser 10000");
-        assertEquals(55L, resultado.get(0).getUserId(), "El ID de usuario debe ser 55");
-        assertTrue(resultado.get(0).isStatus(), "El estado de la orden debe ser true (activa)");
+        orden = new MerchOrden();
 
-        verify(merchRepository, times(1)).findAll();
+        orden.setId(1L);
+        orden.setCantidad(2);
+        orden.setPrecioUnitario(5000);
+        orden.setPrecioTotal(10000);
+        orden.setMerchandiseId(101L);
+        orden.setUserId(55L);
+        orden.setStatus(true);
     }
 
+
+
     @Test
-    @DisplayName("Debe lanzar una excepción cuando se busca una orden por un ID que no existe")
-    void shouldThrowExceptionWhenOrdenNotFound() {
+    @DisplayName("Debe retornar todas las órdenes")
+    void shouldReturnAllOrdenes(){
 
-        // --- GIVEN (Arrange) ---
-        Long idInexistente = 999L;
-        when(merchRepository.findById(idInexistente)).thenReturn(Optional.empty());
 
-        // --- WHEN & THEN (Act & Assert) ---
-        assertThrows(RuntimeException.class, () -> {
-            merchOrdenService.getOrdenById(idInexistente);
-        });
+        when(repository.findAll())
+                .thenReturn(Arrays.asList(orden));
 
-        verify(merchRepository, times(1)).findById(idInexistente);
+
+        List<MerchOrden> resultado =
+                merchOrdenService.findAllOrdenes();
+
+
+
+        System.out.println("TEST FIND ALL");
+        System.out.println("Órdenes encontradas: " + resultado.size());
+
+
+        assertNotNull(resultado);
+
+        assertEquals(1, resultado.size());
+
+
+        verify(repository)
+                .findAll();
+
     }
+
+
+
+
+
+    @Test
+    @DisplayName("Debe retornar una orden por ID")
+    void shouldReturnOrdenById(){
+
+
+        when(repository.findById(1L))
+                .thenReturn(Optional.of(orden));
+
+
+
+        MerchOrden resultado =
+                merchOrdenService.getOrdenById(1L);
+
+
+
+        System.out.println("TEST FIND BY ID");
+
+        System.out.println(
+                "Orden encontrada ID: "
+                        + resultado.getId()
+        );
+
+
+
+        assertNotNull(resultado);
+
+        assertEquals(1L, resultado.getId());
+
+
+
+        verify(repository)
+                .findById(1L);
+
+    }
+
+
+
+
+
+    @Test
+    @DisplayName("Debe mostrar mensaje cuando la orden no existe")
+    void shouldThrowExceptionWhenOrdenNotFound(){
+
+
+        when(repository.findById(999L))
+                .thenReturn(Optional.empty());
+
+
+
+        RuntimeException exception =
+                assertThrows(
+                        RuntimeException.class,
+                        () -> merchOrdenService.getOrdenById(999L)
+                );
+
+
+
+        System.out.println("ERROR CONTROLADO:");
+
+        System.out.println(exception.getMessage());
+
+
+
+        verify(repository)
+                .findById(999L);
+
+    }
+
+
+
+
+
+    @Test
+    @DisplayName("Debe crear una orden correctamente")
+    void shouldCreateOrden(){
+
+
+        Map<String,Object> producto = new HashMap<>();
+
+        producto.put("id",101L);
+
+
+
+        when(merchandiseClient.getMerchandise(101L))
+                .thenReturn(producto);
+
+
+
+        when(repository.save(any(MerchOrden.class)))
+                .thenReturn(orden);
+
+
+
+        MerchOrden resultado =
+                merchOrdenService.crearOrden(orden);
+
+
+
+        System.out.println("TEST CREAR ORDEN");
+
+        System.out.println(
+                "Orden creada ID: " + resultado.getId()
+        );
+
+        System.out.println(
+                "Precio total calculado: "
+                        + resultado.getPrecioTotal()
+        );
+
+
+
+        assertNotNull(resultado);
+
+        assertEquals(10000, resultado.getPrecioTotal());
+
+
+
+        verify(merchandiseClient)
+                .getMerchandise(101L);
+
+
+        verify(repository)
+                .save(orden);
+
+    }
+
+
+
+
+
+    @Test
+    @DisplayName("No debe crear orden si merchandise no existe")
+    void shouldNotCreateWhenMerchNotFound(){
+
+
+        when(merchandiseClient.getMerchandise(101L))
+                .thenReturn(Collections.emptyMap());
+
+
+
+        RuntimeException exception =
+                assertThrows(
+                        RuntimeException.class,
+                        () -> merchOrdenService.crearOrden(orden)
+                );
+
+
+
+        System.out.println("ERROR CONTROLADO:");
+
+        System.out.println(exception.getMessage());
+
+
+
+        verify(repository, never())
+                .save(any());
+
+    }
+
+
+
+
+
+    @Test
+    @DisplayName("Debe actualizar una orden existente")
+    void shouldUpdateOrden(){
+
+
+        MerchOrden nueva = new MerchOrden();
+
+
+        nueva.setCantidad(5);
+
+        nueva.setPrecioUnitario(3000);
+
+
+
+        when(repository.findById(1L))
+                .thenReturn(Optional.of(orden));
+
+
+
+        when(repository.save(any(MerchOrden.class)))
+                .thenReturn(orden);
+
+
+
+        MerchOrden resultado =
+                merchOrdenService.updateOrden(1L,nueva);
+
+
+
+        System.out.println("TEST UPDATE");
+
+        System.out.println(
+                "Nuevo total: " + resultado.getPrecioTotal()
+        );
+
+
+
+        assertNotNull(resultado);
+
+
+
+        verify(repository)
+                .save(orden);
+
+    }
+
+
+
+
+
+    @Test
+    @DisplayName("Debe eliminar una orden existente")
+    void shouldDeleteOrden(){
+
+
+        when(repository.existsById(1L))
+                .thenReturn(true);
+
+
+
+        assertDoesNotThrow(() ->
+                merchOrdenService.deleteOrden(1L)
+        );
+
+
+
+        System.out.println(
+                "Orden eliminada correctamente ID: 1"
+        );
+
+
+
+        verify(repository)
+                .deleteById(1L);
+
+    }
+
+
+
+
+
+    @Test
+    @DisplayName("Debe mostrar error al eliminar orden inexistente")
+    void shouldFailDeleteOrden(){
+
+
+        when(repository.existsById(999L))
+                .thenReturn(false);
+
+
+
+        RuntimeException exception =
+                assertThrows(
+                        RuntimeException.class,
+                        () -> merchOrdenService.deleteOrden(999L)
+                );
+
+
+
+        System.out.println("ERROR CONTROLADO:");
+
+        System.out.println(exception.getMessage());
+
+
+
+        verify(repository, never())
+                .deleteById(anyLong());
+
+    }
+
 }

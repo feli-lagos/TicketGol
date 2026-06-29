@@ -23,8 +23,8 @@
         <module name="tickets_M" />
         <module name="eventos" />
         <module name="estadio_secciones" />
-        <module name="usuarios" />
         <module name="merch_ordenes_m" />
+        <module name="usuarios" />
         <module name="clubes" />
         <module name="pases_temporada" />
         <module name="estadios" />

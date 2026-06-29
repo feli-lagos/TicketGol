@@ -13,6 +13,6 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("API 2026 Tickets")
                         .version("1.0")
-                        .description("Documentación de la API para la creación de Clubes"));
+                        .description("Documentación de la API para la creación de Tickets"));
     }
 }

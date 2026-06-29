@@ -11,8 +11,8 @@ public class SwaggerConfig {
     public OpenAPI customOpenAPI() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("API 2026 Clubes")
+                        .title("API 2026 Merch-órdenes")
                         .version("1.0")
-                        .description("Documentación de la API para la creación de Clubes"));
+                        .description("Documentación de la API para la creación de Merch-órdenes"));
     }
 }

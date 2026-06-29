@@ -3,7 +3,6 @@ package ticketgol.compras;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -31,95 +30,164 @@ public class ComprasServiceTest {
     @Mock
     private WebClient webClient;
 
-    @InjectMocks
     private ComprasService comprasService;
+
 
     @BeforeEach
     void setUp() {
 
-        lenient().when(webClientBuilder.build()).thenReturn(webClient);
-        comprasService = new ComprasService(repositorio, webClientBuilder);
+        when(webClientBuilder.build()).thenReturn(webClient);
+
+        comprasService = new ComprasService(
+                repositorio,
+                webClientBuilder
+        );
     }
+
 
     @Test
     void testObtenerTodos_DeberiaRetornarListaDeCompras() {
-        // Arrange (Preparar)
+
         Compras compra1 = new Compras();
         compra1.setId(1L);
+
         Compras compra2 = new Compras();
         compra2.setId(2L);
 
-        when(repositorio.findAll()).thenReturn(Arrays.asList(compra1, compra2));
+
+        when(repositorio.findAll())
+                .thenReturn(Arrays.asList(compra1, compra2));
 
 
         List<Compras> resultado = comprasService.obtenerTodos();
 
 
+        System.out.println("TEST obtenerTodos: Compras encontradas = " + resultado.size());
+
+
         assertNotNull(resultado);
         assertEquals(2, resultado.size());
-        verify(repositorio, times(1)).findAll();
+
+        verify(repositorio).findAll();
     }
+
 
     @Test
     void testObtenerPorId_CuandoCompraExiste_DeberiaRetornarCompra() {
-        // Arrange
+
         Long compraId = 1L;
+
+
         Compras compraMock = new Compras();
         compraMock.setId(compraId);
         compraMock.setUsuarioId("usuario_test");
 
-        when(repositorio.findById(compraId)).thenReturn(Optional.of(compraMock));
+
+        when(repositorio.findById(compraId))
+                .thenReturn(Optional.of(compraMock));
 
 
         Compras resultado = comprasService.obtenerPorId(compraId);
 
+
+        System.out.println(
+                "TEST obtenerPorId: Compra encontrada ID = "
+                        + resultado.getId()
+        );
+
+
         assertNotNull(resultado);
         assertEquals(compraId, resultado.getId());
         assertEquals("usuario_test", resultado.getUsuarioId());
-        verify(repositorio, times(1)).findById(compraId);
+
+
+        verify(repositorio).findById(compraId);
     }
+
 
     @Test
     void testObtenerPorId_CuandoCompraNoExiste_DeberiaLanzarExcepcion() {
-        // Arrange
+
         Long compraId = 99L;
-        when(repositorio.findById(compraId)).thenReturn(Optional.empty());
 
 
-        assertThrows(ComprasNotFoundException.class, () -> {
-            comprasService.obtenerPorId(compraId);
-        });
+        when(repositorio.findById(compraId))
+                .thenReturn(Optional.empty());
 
-        verify(repositorio, times(1)).findById(compraId);
+
+        ComprasNotFoundException exception = assertThrows(
+                ComprasNotFoundException.class,
+                () -> comprasService.obtenerPorId(compraId)
+        );
+
+
+        System.out.println(
+                "ERROR esperado obtenerPorId: "
+                        + exception.getMessage()
+        );
+
+
+        verify(repositorio).findById(compraId);
     }
+
 
     @Test
     void testEliminar_CuandoCompraExiste_DeberiaEliminarCorrectamente() {
 
         Long compraId = 1L;
-        when(repositorio.existsById(compraId)).thenReturn(true);
-        doNothing().when(repositorio).deleteById(compraId);
 
 
-        assertDoesNotThrow(() -> comprasService.eliminar(compraId));
+        when(repositorio.existsById(compraId))
+                .thenReturn(true);
 
 
-        verify(repositorio, times(1)).existsById(compraId);
-        verify(repositorio, times(1)).deleteById(compraId);
+        doNothing()
+                .when(repositorio)
+                .deleteById(compraId);
+
+
+        assertDoesNotThrow(() ->
+                comprasService.eliminar(compraId)
+        );
+
+
+        System.out.println(
+                "TEST eliminar: Compra eliminada correctamente ID = "
+                        + compraId
+        );
+
+
+        verify(repositorio).existsById(compraId);
+        verify(repositorio).deleteById(compraId);
     }
+
 
     @Test
     void testEliminar_CuandoCompraNoExiste_DeberiaLanzarExcepcion() {
 
         Long compraId = 99L;
-        when(repositorio.existsById(compraId)).thenReturn(false);
 
 
-        assertThrows(ComprasNotFoundException.class, () -> {
-            comprasService.eliminar(compraId);
-        });
+        when(repositorio.existsById(compraId))
+                .thenReturn(false);
 
-        verify(repositorio, times(1)).existsById(compraId);
-        verify(repositorio, never()).deleteById(anyLong());
+
+        ComprasNotFoundException exception = assertThrows(
+                ComprasNotFoundException.class,
+                () -> comprasService.eliminar(compraId)
+        );
+
+
+        System.out.println(
+                "ERROR esperado eliminar: "
+                        + exception.getMessage()
+        );
+
+
+        verify(repositorio).existsById(compraId);
+
+
+        verify(repositorio, never())
+                .deleteById(anyLong());
     }
 }

@@ -1,18 +1,21 @@
 package ticketgol.usuarios;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ResponseStatusException;
+
 import ticketgol.usuarios.dto.UsuarioSancionadoDTO;
 import ticketgol.usuarios.model.Usuario;
 import ticketgol.usuarios.repository.UsuarioRepository;
@@ -24,26 +27,26 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.*;
+import static org.mockito.Mockito.*;
 
-@SpringBootTest
-@ActiveProfiles("test")
-public class UsuarioServiceTest {
+@ExtendWith(MockitoExtension.class)
+class UsuarioServiceTest {
 
-    @Autowired
-    private UsuarioService usuarioService;
-
-    @MockitoBean
+    @Mock
     private UsuarioRepository usuarioRepository;
 
-    @MockitoBean
+    @Mock
     private RestTemplate restTemplate;
+
+    @InjectMocks
+    private UsuarioService usuarioService;
 
     private Usuario usuarioMock;
 
     @BeforeEach
-    public void setUp() {
+    void setUp() {
+
         ReflectionTestUtils.setField(usuarioService, "restTemplate", restTemplate);
 
         usuarioMock = new Usuario();
@@ -56,54 +59,85 @@ public class UsuarioServiceTest {
     }
 
     @Test
-    public void testFindAll() {
-        Mockito.when(usuarioRepository.findAll()).thenReturn(Arrays.asList(usuarioMock));
+    @DisplayName("Debe retornar todos los usuarios cuando existen registros")
+    void shouldReturnAllUsers() {
 
-        Mockito.when(restTemplate.getForEntity(anyString(), any()))
+
+        when(usuarioRepository.findAll()).thenReturn(Arrays.asList(usuarioMock));
+
+        when(restTemplate.getForEntity(anyString(), eq(UsuarioSancionadoDTO.class)))
                 .thenThrow(new HttpClientErrorException(HttpStatus.NOT_FOUND));
 
-        List<Usuario> usuarios = usuarioService.findAll();
 
-        assertNotNull(usuarios);
-        assertEquals(1, usuarios.size());
+        List<Usuario> resultado = usuarioService.findAll();
+
+
+        assertNotNull(resultado);
+        assertEquals(1, resultado.size());
+        assertEquals("Juan Pérez", resultado.get(0).getNombreVisible());
+
+        verify(usuarioRepository, times(1)).findAll();
     }
 
     @Test
-    public void testFindById_Exitoso() {
-        Mockito.when(usuarioRepository.findById(1L)).thenReturn(Optional.of(usuarioMock));
+    @DisplayName("Debe retornar un usuario sancionado cuando existe una sanción vigente")
+    void shouldReturnSanctionedUser() {
 
-        UsuarioSancionadoDTO sancionDTO = new UsuarioSancionadoDTO();
-        sancionDTO.setFechaExpiracion(LocalDate.now().plusDays(5));
+        // GIVEN
+        when(usuarioRepository.findById(1L)).thenReturn(Optional.of(usuarioMock));
 
-        Mockito.when(restTemplate.getForEntity(anyString(), any()))
-                .thenReturn(new ResponseEntity(sancionDTO, HttpStatus.OK));
+        UsuarioSancionadoDTO dto = new UsuarioSancionadoDTO();
+        dto.setFechaExpiracion(LocalDate.now().plusDays(5));
 
-        Usuario encontrado = usuarioService.findById(1L);
+        when(restTemplate.getForEntity(anyString(), eq(UsuarioSancionadoDTO.class)))
+                .thenReturn(new ResponseEntity<>(dto, HttpStatus.OK));
 
-        assertNotNull(encontrado);
-        assertEquals("SANCIONADO", encontrado.getEstadoSancion());
+        // WHEN
+        Usuario resultado = usuarioService.findById(1L);
+
+        // THEN
+        assertNotNull(resultado);
+        assertEquals("SANCIONADO", resultado.getEstadoSancion());
+
+        verify(usuarioRepository, times(1)).findById(1L);
     }
 
     @Test
-    public void testFindById_NoEncontrado() {
-        Mockito.when(usuarioRepository.findById(99L)).thenReturn(Optional.empty());
+    @DisplayName("Debe lanzar excepción cuando el usuario no existe")
+    void shouldThrowExceptionWhenUserDoesNotExist() {
 
-        assertThrows(ResponseStatusException.class, () -> {
-            usuarioService.findById(99L);
-        });
+        // GIVEN
+        when(usuarioRepository.findById(99L)).thenReturn(Optional.empty());
+
+        // WHEN & THEN
+        assertThrows(ResponseStatusException.class,
+                () -> usuarioService.findById(99L));
+
+        verify(usuarioRepository, times(1)).findById(99L);
     }
 
     @Test
-    public void testGuardar_Exitoso() {
-        Mockito.when(usuarioRepository.existsByRut(usuarioMock.getRut())).thenReturn(false);
-        Mockito.when(usuarioRepository.existsByCorreo(usuarioMock.getCorreo())).thenReturn(false);
-        Mockito.when(usuarioRepository.save(any(Usuario.class))).thenReturn(usuarioMock);
-        Mockito.when(restTemplate.getForEntity(anyString(), any()))
+    @DisplayName("Debe guardar un usuario cuando no existe otro con el mismo rut o correo")
+    void shouldSaveUserSuccessfully() {
+
+        // GIVEN
+        when(usuarioRepository.existsByRut(usuarioMock.getRut())).thenReturn(false);
+        when(usuarioRepository.existsByCorreo(usuarioMock.getCorreo())).thenReturn(false);
+
+        when(usuarioRepository.save(any(Usuario.class))).thenReturn(usuarioMock);
+
+        when(restTemplate.getForEntity(anyString(), eq(UsuarioSancionadoDTO.class)))
                 .thenThrow(new HttpClientErrorException(HttpStatus.NOT_FOUND));
 
-        Usuario guardado = usuarioService.save(usuarioMock);
+        // WHEN
+        Usuario resultado = usuarioService.save(usuarioMock);
 
-        assertNotNull(guardado);
-        assertEquals("juan.perez@duocuc.cl", guardado.getCorreo());
+        // THEN
+        assertNotNull(resultado);
+        assertEquals(usuarioMock.getCorreo(), resultado.getCorreo());
+
+        verify(usuarioRepository, times(1)).existsByRut(usuarioMock.getRut());
+        verify(usuarioRepository, times(1)).existsByCorreo(usuarioMock.getCorreo());
+        verify(usuarioRepository, times(1)).save(any(Usuario.class));
     }
 }

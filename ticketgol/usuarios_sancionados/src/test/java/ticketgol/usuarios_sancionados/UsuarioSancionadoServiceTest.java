@@ -1,15 +1,20 @@
 package ticketgol.usuarios_sancionados;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.bean.override.mockito.MockitoBean;
+import org.mockito.junit.jupiter.MockitoExtension;
+
 import org.springframework.test.util.ReflectionTestUtils;
 import org.springframework.web.reactive.function.client.WebClient;
+
 import reactor.core.publisher.Mono;
+
 import ticketgol.usuarios_sancionados.dto.UsuarioDTO;
 import ticketgol.usuarios_sancionados.exception.UsuarioAlreadyExistsException;
 import ticketgol.usuarios_sancionados.exception.UsuarioSancionadoNotFoundException;
@@ -25,35 +30,21 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.Mockito.*;
 
-@SpringBootTest
-@ActiveProfiles("test")
-public class UsuarioSancionadoServiceTest {
+@ExtendWith(MockitoExtension.class)
+class UsuarioSancionadoServiceTest {
 
-    @Autowired
-    private UsuarioSancionadoService usuarioSancionadoService;
-
-    @MockitoBean
+    @Mock
     private UsuarioSancionadoRepository usuarioSancionadoRepository;
+
+    @InjectMocks
+    private UsuarioSancionadoService usuarioSancionadoService;
 
     private UsuarioSancionado sancionMock;
 
     @BeforeEach
-    public void setUp() {
-        WebClient webClientMock = Mockito.mock(WebClient.class);
-        WebClient.RequestHeadersUriSpec requestHeadersUriSpec = Mockito.mock(WebClient.RequestHeadersUriSpec.class);
-        WebClient.RequestHeadersSpec requestHeadersSpec = Mockito.mock(WebClient.RequestHeadersSpec.class);
-        WebClient.ResponseSpec responseSpec = Mockito.mock(WebClient.ResponseSpec.class);
-
-        UsuarioDTO usuarioDTOMock = Mockito.mock(UsuarioDTO.class);
-
-        Mockito.doReturn(requestHeadersUriSpec).when(webClientMock).get();
-        Mockito.doReturn(requestHeadersSpec).when(requestHeadersUriSpec).uri(anyString());
-        Mockito.doReturn(responseSpec).when(requestHeadersSpec).retrieve();
-        Mockito.doReturn(responseSpec).when(responseSpec).onStatus(any(), any());
-        Mockito.doReturn(Mono.just(usuarioDTOMock)).when(responseSpec).bodyToMono(UsuarioDTO.class);
-
-        ReflectionTestUtils.setField(usuarioSancionadoService, "webClient", webClientMock);
+    void setUp() {
 
         sancionMock = new UsuarioSancionado();
         sancionMock.setId(1L);
@@ -63,53 +54,106 @@ public class UsuarioSancionadoServiceTest {
         sancionMock.setFechaExpiracion(LocalDate.now().plusDays(5));
     }
 
+    private void mockWebClient() {
+
+        WebClient webClientMock = Mockito.mock(WebClient.class);
+
+        WebClient.RequestHeadersUriSpec<?> requestHeadersUriSpec =
+                Mockito.mock(WebClient.RequestHeadersUriSpec.class);
+
+        WebClient.RequestHeadersSpec<?> requestHeadersSpec =
+                Mockito.mock(WebClient.RequestHeadersSpec.class);
+
+        WebClient.ResponseSpec responseSpec =
+                Mockito.mock(WebClient.ResponseSpec.class);
+
+        UsuarioDTO usuarioDTO =
+                new UsuarioDTO(1L, "11111111-1", "correo@test.cl", "Juan");
+
+        doReturn(requestHeadersUriSpec).when(webClientMock).get();
+        doReturn(requestHeadersSpec).when(requestHeadersUriSpec).uri(anyString());
+        doReturn(responseSpec).when(requestHeadersSpec).retrieve();
+        doReturn(responseSpec).when(responseSpec).onStatus(any(), any());
+        doReturn(Mono.just(usuarioDTO)).when(responseSpec).bodyToMono(UsuarioDTO.class);
+
+        ReflectionTestUtils.setField(usuarioSancionadoService, "webClient", webClientMock);
+    }
+
     @Test
-    public void testFindAll() {
-        Mockito.when(usuarioSancionadoRepository.findAll()).thenReturn(Arrays.asList(sancionMock));
+    @DisplayName("Debe retornar todas las sanciones cuando existen registros")
+    void shouldReturnAllSanctions() {
+
+        when(usuarioSancionadoRepository.findAll()).thenReturn(Arrays.asList(sancionMock));
 
         List<UsuarioSancionado> resultado = usuarioSancionadoService.findAll();
 
         assertNotNull(resultado);
         assertEquals(1, resultado.size());
         assertEquals("Falta Grave", resultado.get(0).getMotivo());
+
+        verify(usuarioSancionadoRepository).findAll();
     }
 
     @Test
-    public void testFindById_Success() {
-        Mockito.when(usuarioSancionadoRepository.findById(1L)).thenReturn(Optional.of(sancionMock));
+    @DisplayName("Debe retornar una sanción cuando el ID existe")
+    void shouldReturnSanctionWhenIdExists() {
 
-        UsuarioSancionado encontrado = usuarioSancionadoService.findById(1L);
+        when(usuarioSancionadoRepository.findById(1L)).thenReturn(Optional.of(sancionMock));
 
-        assertNotNull(encontrado);
-        assertEquals("11111111-1", encontrado.getRut());
+        UsuarioSancionado resultado = usuarioSancionadoService.findById(1L);
+
+        assertNotNull(resultado);
+        assertEquals("11111111-1", resultado.getRut());
+
+        verify(usuarioSancionadoRepository).findById(1L);
     }
 
     @Test
-    public void testFindById_NotFound() {
-        Mockito.when(usuarioSancionadoRepository.findById(99L)).thenReturn(Optional.empty());
+    @DisplayName("Debe lanzar excepción cuando la sanción no existe")
+    void shouldThrowExceptionWhenSanctionNotFound() {
 
-        assertThrows(UsuarioSancionadoNotFoundException.class, () -> {
-            usuarioSancionadoService.findById(99L);
-        });
+        when(usuarioSancionadoRepository.findById(99L)).thenReturn(Optional.empty());
+
+        assertThrows(
+                UsuarioSancionadoNotFoundException.class,
+                () -> usuarioSancionadoService.findById(99L)
+        );
+
+        verify(usuarioSancionadoRepository).findById(99L);
     }
 
     @Test
-    public void testSave_Success() {
-        Mockito.when(usuarioSancionadoRepository.existsByRut(sancionMock.getRut())).thenReturn(false);
-        Mockito.when(usuarioSancionadoRepository.save(any(UsuarioSancionado.class))).thenReturn(sancionMock);
+    @DisplayName("Debe guardar una sanción cuando el usuario no tiene una sanción registrada")
+    void shouldSaveSanctionSuccessfully() {
 
-        UsuarioSancionado guardado = usuarioSancionadoService.save(sancionMock);
+        mockWebClient();
 
-        assertNotNull(guardado);
-        assertEquals("11111111-1", guardado.getRut());
+        when(usuarioSancionadoRepository.existsByRut(sancionMock.getRut())).thenReturn(false);
+        when(usuarioSancionadoRepository.save(any(UsuarioSancionado.class))).thenReturn(sancionMock);
+
+        UsuarioSancionado resultado = usuarioSancionadoService.save(sancionMock);
+
+        assertNotNull(resultado);
+        assertEquals("11111111-1", resultado.getRut());
+
+        verify(usuarioSancionadoRepository).existsByRut(sancionMock.getRut());
+        verify(usuarioSancionadoRepository).save(any(UsuarioSancionado.class));
     }
 
     @Test
-    public void testSave_AlreadyExists_ThrowsException() {
-        Mockito.when(usuarioSancionadoRepository.existsByRut(sancionMock.getRut())).thenReturn(true);
+    @DisplayName("Debe lanzar excepción cuando ya existe una sanción para el RUT")
+    void shouldThrowExceptionWhenSanctionAlreadyExists() {
 
-        assertThrows(UsuarioAlreadyExistsException.class, () -> {
-            usuarioSancionadoService.save(sancionMock);
-        });
+        mockWebClient();
+
+        when(usuarioSancionadoRepository.existsByRut(sancionMock.getRut())).thenReturn(true);
+
+        assertThrows(
+                UsuarioAlreadyExistsException.class,
+                () -> usuarioSancionadoService.save(sancionMock)
+        );
+
+        verify(usuarioSancionadoRepository).existsByRut(sancionMock.getRut());
+        verify(usuarioSancionadoRepository, never()).save(any(UsuarioSancionado.class));
     }
 }
