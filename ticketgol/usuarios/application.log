@@ -1,0 +1,195 @@
+2026-06-28T23:44:24.251-04:00  INFO 6448 --- [ticketgol.usuarios] [main] ticketgol.usuarios.UsuarioServiceTest    : Starting UsuarioServiceTest using Java 25.0.3 with PID 6448 (started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\usuarios)
+2026-06-28T23:44:24.252-04:00  INFO 6448 --- [ticketgol.usuarios] [main] ticketgol.usuarios.UsuarioServiceTest    : The following 1 profile is active: "test"
+2026-06-28T23:44:24.833-04:00  INFO 6448 --- [ticketgol.usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28T23:44:24.939-04:00  INFO 6448 --- [ticketgol.usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99 ms. Found 1 JPA repository interface.
+2026-06-28T23:44:25.101-04:00  INFO 6448 --- [ticketgol.usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c0f057b4-bdaf-378f-808b-db43eee800fe
+2026-06-28T23:44:26.084-04:00  INFO 6448 --- [ticketgol.usuarios] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-28T23:44:26.135-04:00  INFO 6448 --- [ticketgol.usuarios] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-28T23:44:26.407-04:00  INFO 6448 --- [ticketgol.usuarios] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-28T23:44:26.429-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-28T23:44:26.692-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67b1c3af
+2026-06-28T23:44:26.695-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-28T23:44:26.737-04:00  WARN 6448 --- [ticketgol.usuarios] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-28T23:44:26.753-04:00  INFO 6448 --- [ticketgol.usuarios] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_usuarios?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-28T23:44:27.294-04:00  INFO 6448 --- [ticketgol.usuarios] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-28T23:44:27.333-04:00  INFO 6448 --- [ticketgol.usuarios] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28T23:44:28.052-04:00  INFO 6448 --- [ticketgol.usuarios] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-28T23:44:28.089-04:00  WARN 6448 --- [ticketgol.usuarios] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-28T23:44:28.113-04:00  INFO 6448 --- [ticketgol.usuarios] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-28T23:44:28.132-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-28T23:44:28.134-04:00  INFO 6448 --- [ticketgol.usuarios] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T23:44:28.141-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-28T23:44:28.142-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-28T23:44:28.142-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-28T23:44:28.142-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-28T23:44:28.142-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-28T23:44:28.142-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-28T23:44:28.142-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-28T23:44:28.386-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-28T23:44:28.388-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-28T23:44:28.389-04:00  INFO 6448 --- [ticketgol.usuarios] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-28T23:44:28.392-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782704668390 with initial instances count: 11
+2026-06-28T23:44:28.394-04:00  INFO 6448 --- [ticketgol.usuarios] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TICKETGOL.USUARIOS with eureka with status UP
+2026-06-28T23:44:28.395-04:00  INFO 6448 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782704668395, current=UP, previous=STARTING]
+2026-06-28T23:44:28.396-04:00  INFO 6448 --- [ticketgol.usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082: registering service...
+2026-06-28T23:44:28.402-04:00  INFO 6448 --- [ticketgol.usuarios] [main] ticketgol.usuarios.UsuarioServiceTest    : Started UsuarioServiceTest in 4.439 seconds (process running for 5.572)
+2026-06-28T23:44:28.429-04:00  INFO 6448 --- [ticketgol.usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082 - registration status: 204
+2026-06-28T23:44:28.484-04:00  INFO 6448 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Solicitud para registrar nuevo usuario. RUT: 12345678-9, Correo: [juan.perez@duocuc.cl]
+2026-06-28T23:44:28.489-04:00 ERROR 6448 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Falla de comunicación con el servicio de sanciones para el RUT 12345678-9: 404 NOT_FOUND
+2026-06-28T23:44:28.489-04:00  INFO 6448 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Usuario creado exitosamente. ID generado: 1, Estado Inicial: [ERROR_DESCONOCIDO]
+2026-06-28T23:44:28.511-04:00  INFO 6448 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Procesando estado de sanciones para 1 usuarios encontrados
+2026-06-28T23:44:28.512-04:00 ERROR 6448 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Falla de comunicación con el servicio de sanciones para el RUT 12345678-9: 404 NOT_FOUND
+2026-06-28T23:44:28.519-04:00  WARN 6448 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Usuario RUT 12345678-9 detectado como SANCIONADO hasta el 2026-07-03
+2026-06-28T23:44:28.525-04:00 ERROR 6448 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Búsqueda fallida: No se encontró ningún usuario con ID: 99
+2026-06-28T23:44:28.536-04:00  INFO 6448 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TICKETGOL.USUARIOS with eureka with status DOWN
+2026-06-28T23:44:28.537-04:00  INFO 6448 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782704668537, current=DOWN, previous=UP]
+2026-06-28T23:44:28.537-04:00  INFO 6448 --- [ticketgol.usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082: registering service...
+2026-06-28T23:44:28.541-04:00  INFO 6448 --- [ticketgol.usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082 - registration status: 204
+2026-06-28T23:44:28.554-04:00  INFO 6448 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28T23:44:28.556-04:00  INFO 6448 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-28T23:44:28.562-04:00  INFO 6448 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-28T23:44:28.563-04:00  INFO 6448 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-28T23:44:31.564-04:00  INFO 6448 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-28T23:44:31.569-04:00  INFO 6448 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082 - deregister  status: 200
+2026-06-28T23:44:31.569-04:00  INFO 6448 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-28T23:47:20.890-04:00  INFO 14820 --- [ticketgol.usuarios] [main] ticketgol.usuarios.UsuarioServiceTest    : Starting UsuarioServiceTest using Java 25.0.3 with PID 14820 (started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\usuarios)
+2026-06-28T23:47:20.891-04:00  INFO 14820 --- [ticketgol.usuarios] [main] ticketgol.usuarios.UsuarioServiceTest    : The following 1 profile is active: "test"
+2026-06-28T23:47:21.476-04:00  INFO 14820 --- [ticketgol.usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28T23:47:21.579-04:00  INFO 14820 --- [ticketgol.usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 1 JPA repository interface.
+2026-06-28T23:47:21.745-04:00  INFO 14820 --- [ticketgol.usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c0f057b4-bdaf-378f-808b-db43eee800fe
+2026-06-28T23:47:22.646-04:00  INFO 14820 --- [ticketgol.usuarios] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-28T23:47:22.694-04:00  INFO 14820 --- [ticketgol.usuarios] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-28T23:47:22.954-04:00  INFO 14820 --- [ticketgol.usuarios] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-28T23:47:22.980-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-28T23:47:23.245-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@49b6373f
+2026-06-28T23:47:23.247-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-28T23:47:23.285-04:00  WARN 14820 --- [ticketgol.usuarios] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-28T23:47:23.298-04:00  INFO 14820 --- [ticketgol.usuarios] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_usuarios?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-28T23:47:23.841-04:00  INFO 14820 --- [ticketgol.usuarios] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-28T23:47:23.881-04:00  INFO 14820 --- [ticketgol.usuarios] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28T23:47:24.611-04:00  INFO 14820 --- [ticketgol.usuarios] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-28T23:47:24.671-04:00  WARN 14820 --- [ticketgol.usuarios] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-28T23:47:24.707-04:00  INFO 14820 --- [ticketgol.usuarios] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-28T23:47:24.741-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-28T23:47:24.744-04:00  INFO 14820 --- [ticketgol.usuarios] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T23:47:24.753-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-28T23:47:24.753-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-28T23:47:24.753-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-28T23:47:24.753-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-28T23:47:24.753-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-28T23:47:24.753-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-28T23:47:24.754-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-28T23:47:25.012-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-28T23:47:25.013-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-28T23:47:25.014-04:00  INFO 14820 --- [ticketgol.usuarios] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-28T23:47:25.017-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782704845015 with initial instances count: 12
+2026-06-28T23:47:25.019-04:00  INFO 14820 --- [ticketgol.usuarios] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TICKETGOL.USUARIOS with eureka with status UP
+2026-06-28T23:47:25.020-04:00  INFO 14820 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782704845020, current=UP, previous=STARTING]
+2026-06-28T23:47:25.021-04:00  INFO 14820 --- [ticketgol.usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082: registering service...
+2026-06-28T23:47:25.025-04:00  INFO 14820 --- [ticketgol.usuarios] [main] ticketgol.usuarios.UsuarioServiceTest    : Started UsuarioServiceTest in 4.387 seconds (process running for 5.488)
+2026-06-28T23:47:25.051-04:00  INFO 14820 --- [ticketgol.usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082 - registration status: 204
+2026-06-28T23:47:25.094-04:00  INFO 14820 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Solicitud para registrar nuevo usuario. RUT: 12345678-9, Correo: [juan.perez@duocuc.cl]
+2026-06-28T23:47:25.098-04:00 ERROR 14820 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Falla de comunicación con el servicio de sanciones para el RUT 12345678-9: 404 NOT_FOUND
+2026-06-28T23:47:25.098-04:00  INFO 14820 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Usuario creado exitosamente. ID generado: 1, Estado Inicial: [ERROR_DESCONOCIDO]
+2026-06-28T23:47:25.117-04:00  INFO 14820 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Procesando estado de sanciones para 1 usuarios encontrados
+2026-06-28T23:47:25.118-04:00 ERROR 14820 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Falla de comunicación con el servicio de sanciones para el RUT 12345678-9: 404 NOT_FOUND
+2026-06-28T23:47:25.127-04:00  WARN 14820 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Usuario RUT 12345678-9 detectado como SANCIONADO hasta el 2026-07-03
+2026-06-28T23:47:25.134-04:00 ERROR 14820 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Búsqueda fallida: No se encontró ningún usuario con ID: 99
+2026-06-28T23:47:25.144-04:00  INFO 14820 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TICKETGOL.USUARIOS with eureka with status DOWN
+2026-06-28T23:47:25.144-04:00  INFO 14820 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782704845144, current=DOWN, previous=UP]
+2026-06-28T23:47:25.144-04:00  INFO 14820 --- [ticketgol.usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082: registering service...
+2026-06-28T23:47:25.147-04:00  INFO 14820 --- [ticketgol.usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082 - registration status: 204
+2026-06-28T23:47:25.157-04:00  INFO 14820 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28T23:47:25.160-04:00  INFO 14820 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-28T23:47:25.165-04:00  INFO 14820 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-28T23:47:25.166-04:00  INFO 14820 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-28T23:47:28.167-04:00  INFO 14820 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-28T23:47:28.173-04:00  INFO 14820 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082 - deregister  status: 200
+2026-06-28T23:47:28.173-04:00  INFO 14820 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2026-06-28T23:51:06.790-04:00  INFO 9672 --- [ticketgol.usuarios] [main] ticketgol.usuarios.UsuarioServiceTest    : Starting UsuarioServiceTest using Java 25.0.3 with PID 9672 (started by Pipe in C:\Users\Pipe\Desktop\easyRSA\ticketgol\ticketgol\usuarios)
+2026-06-28T23:51:06.791-04:00  INFO 9672 --- [ticketgol.usuarios] [main] ticketgol.usuarios.UsuarioServiceTest    : The following 1 profile is active: "test"
+2026-06-28T23:51:07.379-04:00  INFO 9672 --- [ticketgol.usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28T23:51:07.480-04:00  INFO 9672 --- [ticketgol.usuarios] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90 ms. Found 1 JPA repository interface.
+2026-06-28T23:51:07.632-04:00  INFO 9672 --- [ticketgol.usuarios] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=c0f057b4-bdaf-378f-808b-db43eee800fe
+2026-06-28T23:51:08.574-04:00  INFO 9672 --- [ticketgol.usuarios] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-28T23:51:08.632-04:00  INFO 9672 --- [ticketgol.usuarios] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.12.Final
+2026-06-28T23:51:08.880-04:00  INFO 9672 --- [ticketgol.usuarios] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-28T23:51:08.904-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-28T23:51:09.156-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2f51b100
+2026-06-28T23:51:09.157-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-28T23:51:09.196-04:00  WARN 9672 --- [ticketgol.usuarios] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-28T23:51:09.211-04:00  INFO 9672 --- [ticketgol.usuarios] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/db_ticketgol_usuarios?createDatabaseIfNotExist=true]
+	Database driver: MySQL Connector/J
+	Database dialect: MySQLDialect
+	Database version: 8.4.3
+	Default catalog/schema: db_ticketgol_usuarios/undefined
+	Autocommit mode: undefined/unknown
+	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-28T23:51:09.743-04:00  INFO 9672 --- [ticketgol.usuarios] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-28T23:51:09.784-04:00  INFO 9672 --- [ticketgol.usuarios] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28T23:51:10.537-04:00  INFO 9672 --- [ticketgol.usuarios] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestClient.
+2026-06-28T23:51:10.584-04:00  WARN 9672 --- [ticketgol.usuarios] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-06-28T23:51:10.608-04:00  INFO 9672 --- [ticketgol.usuarios] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-06-28T23:51:10.645-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-06-28T23:51:10.648-04:00  INFO 9672 --- [ticketgol.usuarios] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-06-28T23:51:10.654-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-06-28T23:51:10.655-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-06-28T23:51:10.655-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-06-28T23:51:10.655-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-06-28T23:51:10.655-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-06-28T23:51:10.655-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-06-28T23:51:10.655-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-06-28T23:51:10.886-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-06-28T23:51:10.888-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-06-28T23:51:10.889-04:00  INFO 9672 --- [ticketgol.usuarios] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-06-28T23:51:10.891-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1782705070890 with initial instances count: 12
+2026-06-28T23:51:10.893-04:00  INFO 9672 --- [ticketgol.usuarios] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application TICKETGOL.USUARIOS with eureka with status UP
+2026-06-28T23:51:10.894-04:00  INFO 9672 --- [ticketgol.usuarios] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782705070894, current=UP, previous=STARTING]
+2026-06-28T23:51:10.895-04:00  INFO 9672 --- [ticketgol.usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082: registering service...
+2026-06-28T23:51:10.899-04:00  INFO 9672 --- [ticketgol.usuarios] [main] ticketgol.usuarios.UsuarioServiceTest    : Started UsuarioServiceTest in 4.396 seconds (process running for 5.447)
+2026-06-28T23:51:10.923-04:00  INFO 9672 --- [ticketgol.usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082 - registration status: 204
+2026-06-28T23:51:10.966-04:00  INFO 9672 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Solicitud para registrar nuevo usuario. RUT: 12345678-9, Correo: [juan.perez@duocuc.cl]
+2026-06-28T23:51:10.970-04:00 ERROR 9672 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Falla de comunicación con el servicio de sanciones para el RUT 12345678-9: 404 NOT_FOUND
+2026-06-28T23:51:10.970-04:00  INFO 9672 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Usuario creado exitosamente. ID generado: 1, Estado Inicial: [ERROR_DESCONOCIDO]
+2026-06-28T23:51:10.990-04:00  INFO 9672 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Procesando estado de sanciones para 1 usuarios encontrados
+2026-06-28T23:51:10.991-04:00 ERROR 9672 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Falla de comunicación con el servicio de sanciones para el RUT 12345678-9: 404 NOT_FOUND
+2026-06-28T23:51:10.999-04:00  WARN 9672 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Usuario RUT 12345678-9 detectado como SANCIONADO hasta el 2026-07-03
+2026-06-28T23:51:11.005-04:00 ERROR 9672 --- [ticketgol.usuarios] [main] t.usuarios.service.UsuarioService        : Búsqueda fallida: No se encontró ningún usuario con ID: 99
+2026-06-28T23:51:11.017-04:00  INFO 9672 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application TICKETGOL.USUARIOS with eureka with status DOWN
+2026-06-28T23:51:11.018-04:00  INFO 9672 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1782705071018, current=DOWN, previous=UP]
+2026-06-28T23:51:11.018-04:00  INFO 9672 --- [ticketgol.usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082: registering service...
+2026-06-28T23:51:11.021-04:00  INFO 9672 --- [ticketgol.usuarios] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082 - registration status: 204
+2026-06-28T23:51:11.032-04:00  INFO 9672 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28T23:51:11.034-04:00  INFO 9672 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-06-28T23:51:11.041-04:00  INFO 9672 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-06-28T23:51:11.042-04:00  INFO 9672 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2026-06-28T23:51:14.044-04:00  INFO 9672 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2026-06-28T23:51:14.049-04:00  INFO 9672 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_TICKETGOL.USUARIOS/host.docker.internal:ticketgol.usuarios:8082 - deregister  status: 200
+2026-06-28T23:51:14.050-04:00  INFO 9672 --- [ticketgol.usuarios] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

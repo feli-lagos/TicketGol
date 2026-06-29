@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="006d0c22-195a-4fa6-8e36-bbcd471fe5e8" name="Changes" comment="Se agregan Swaggers">
+      <change afterPath="$PROJECT_DIR$/ticketgol/api-gateway/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/api-gateway/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/api-gateway/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/api-gateway/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/api-gateway/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/api-gateway/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/api-gateway/src/test/java/ticketgol/api_gateway/ApiGatewayApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/estadio_secciones/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/estadio_secciones/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/estadio_secciones/src/test/java/ticketgol/estadio_secciones/EstadioSeccionServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/estadios/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/estadios/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/estadios/src/test/java/ticketgol/estadios/EstadioServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/eureka-server/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/eureka-server/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/eureka-server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/eureka-server/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/eureka-server/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/eureka-server/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/eureka-server/src/main/java/ticketgol/eureka_server/EurekaServerApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/eureka-server/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/eureka-server/src/test/java/ticketgol/eureka_server/EurekaServerApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/usuarios/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/usuarios/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/usuarios/src/test/java/ticketgol/usuarios/UsuarioServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/usuarios_sancionados/src/main/resources/application-dev.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/usuarios_sancionados/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ticketgol/usuarios_sancionados/src/test/java/ticketgol/usuarios_sancionados/UsuarioSancionadoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/estadio_secciones/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/estadio_secciones/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/estadio_secciones/src/main/java/ticketgol/estadio_secciones/model/EstadioSeccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/estadio_secciones/src/main/java/ticketgol/estadio_secciones/model/EstadioSeccion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/estadio_secciones/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/estadio_secciones/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/estadio_secciones/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/estadio_secciones/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/estadio_secciones/target/classes/ticketgol/estadio_secciones/controller/EstadioSeccionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/estadio_secciones/target/classes/ticketgol/estadio_secciones/controller/EstadioSeccionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/estadio_secciones/target/classes/ticketgol/estadio_secciones/model/EstadioSeccion.class" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/estadio_secciones/target/classes/ticketgol/estadio_secciones/model/EstadioSeccion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/estadios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/estadios/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/estadios/src/main/java/ticketgol/estadios/model/Estadio.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/estadios/src/main/java/ticketgol/estadios/model/Estadio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/estadios/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/estadios/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/estadios/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/estadios/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/estadios/target/classes/ticketgol/estadios/controller/EstadioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/estadios/target/classes/ticketgol/estadios/controller/EstadioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/estadios/target/classes/ticketgol/estadios/model/Estadio.class" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/estadios/target/classes/ticketgol/estadios/model/Estadio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/usuarios/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/usuarios/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/usuarios/src/main/java/ticketgol/usuarios/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/usuarios/src/main/java/ticketgol/usuarios/model/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/usuarios/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/usuarios/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/usuarios/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/usuarios/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/usuarios/target/classes/ticketgol/usuarios/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/usuarios/target/classes/ticketgol/usuarios/controller/UsuarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/usuarios/target/classes/ticketgol/usuarios/model/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/usuarios/target/classes/ticketgol/usuarios/model/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/usuarios_sancionados/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/usuarios_sancionados/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/usuarios_sancionados/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/usuarios_sancionados/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/usuarios_sancionados/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/usuarios_sancionados/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketgol/usuarios_sancionados/target/classes/ticketgol/usuarios_sancionados/controller/UsuarioSancionadoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/ticketgol/usuarios_sancionados/target/classes/ticketgol/usuarios_sancionados/controller/UsuarioSancionadoController.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="origin/Martin" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;feli-lagos&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/feli-lagos/TicketGol.git&quot;,
+    &quot;accountId&quot;: &quot;5b8965c5-34f0-4d70-84fd-a3dd1a241a2f&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3Eh2xwjSDweM4Z8xLCGQOfSwzmz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.pases_temporada [clean].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.ClubesApplication.executor": "Run",
+    "Spring Boot.ComprasApplication.executor": "Run",
+    "Spring Boot.EstadioSeccionesApplication.executor": "Run",
+    "Spring Boot.EstadiosApplication.executor": "Run",
+    "Spring Boot.EventosApplication.executor": "Run",
+    "Spring Boot.GuardiasApplication.executor": "Run",
+    "Spring Boot.MerchApplication.executor": "Run",
+    "Spring Boot.MerchOrdenesApplication.executor": "Run",
+    "Spring Boot.PasesTemporadaApplication.executor": "Run",
+    "Spring Boot.RegistroAccesosApplication.executor": "Run",
+    "Spring Boot.TicketsApplication.executor": "Run",
+    "Spring Boot.UsuariosApplication.executor": "Run",
+    "Spring Boot.UsuariosSancionadosApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "Felipe",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Pipe/Desktop/easyRSA/ticketgol",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pipe\Desktop\wetransfer_escaner_20240214-2-png_2024-02-15_0312\TicketGol\TicketGol\TicketGol\ticketgol\estadio_secciones\src\main\java\ticketgol\estadio_secciones" />
+      <recent name="C:\Users\Pipe\Desktop\wetransfer_escaner_20240214-2-png_2024-02-15_0312\TicketGol\TicketGol\TicketGol\ticketgol\estadios\src\main\java\ticketgol\estadios" />
+      <recent name="C:\Users\Pipe\Desktop\wetransfer_escaner_20240214-2-png_2024-02-15_0312\TicketGol\TicketGol\TicketGol\ticketgol\usuarios\src\main\java\ticketgol\usuarios" />
+      <recent name="C:\Users\Duoc\Documents\GitHub\TicketGol\ticketgol" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Duoc\Documents\GitHub\TicketGol\ticketgol" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="SpringBootApplicationConfigurationType">
+          <value>
+            <map>
+              <entry key="ClubesApplication" value="STOPPED" />
+              <entry key="ComprasApplication" value="STOPPED" />
+              <entry key="EstadioSeccionesApplication" value="STOPPED" />
+              <entry key="EstadiosApplication" value="STOPPED" />
+              <entry key="EventosApplication" value="STOPPED" />
+              <entry key="GuardiasApplication" value="STOPPED" />
+              <entry key="MerchApplication" value="STOPPED" />
+              <entry key="MerchOrdenesApplication" value="STOPPED" />
+              <entry key="PasesTemporadaApplication" value="STOPPED" />
+              <entry key="RegistroAccesosApplication" value="STOPPED" />
+              <entry key="TicketsApplication" value="STOPPED" />
+              <entry key="UsuariosApplication" value="STOPPED" />
+              <entry key="UsuariosSancionadosApplication" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.EstadiosApplication">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ClubesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="clubes" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ticketgol.clubes.ClubesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ComprasApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="compras" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ticketgol.compras.ComprasApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EstadioSeccionesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="estadio_secciones" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ticketgol.estadio_secciones.EstadioSeccionesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EstadiosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="estadios" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ticketgol.estadios.EstadiosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EventosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="eventos" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ticketgol.eventos.EventosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GuardiasApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="guardias" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ticketgol.guardias.GuardiasApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MerchApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="merch" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ticketgol.merch.MerchApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MerchOrdenesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="merch_ordenes_m" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ticketgol.merch_ordenes.MerchOrdenesApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PasesTemporadaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="pases_temporada" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ticketgol.pases_temporada.PasesTemporadaApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistroAccesosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="registro_accesos" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ticketgol.registro_accesos.RegistroAccesosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="tickets_M" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ticketgol.tickets.TicketsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsuariosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="usuarios" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ticketgol.usuarios.UsuariosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsuariosSancionadosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="usuarios_sancionados" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="ticketgol.usuarios_sancionados.UsuariosSancionadosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.33514.17" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.33514.17" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="006d0c22-195a-4fa6-8e36-bbcd471fe5e8" name="Changes" comment="" />
+      <created>1780616734110</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780616734110</updated>
+      <workItem from="1780616735425" duration="365000" />
+      <workItem from="1780617124404" duration="4000" />
+      <workItem from="1780617174110" duration="3729000" />
+      <workItem from="1781133578261" duration="1279000" />
+      <workItem from="1781134868324" duration="72000" />
+      <workItem from="1781134947875" duration="2662000" />
+    </task>
+    <task id="LOCAL-00001" summary="Se agregan Swaggers">
+      <option name="closed" value="true" />
+      <created>1781882017206</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1781882017206</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.validation:jakarta.validation-api" />
+    <option featureType="dependencySupport" implementationName="java:io.projectreactor:reactor-core" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="java:org.hibernate.validator:hibernate-validator" />
+    <option featureType="dependencySupport" implementationName="executable:az" />
+    <option featureType="dependencySupport" implementationName="executable:terraform" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Se agregan Swaggers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregan Swaggers" />
+  </component>
+</project>
