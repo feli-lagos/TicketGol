@@ -3,7 +3,7 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Annotation profile for usuarios" enabled="true">
+      <profile name="Annotation profile for usuarios_sancionados" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -12,8 +12,8 @@
         </processorPath>
         <module name="usuarios_sancionados" />
         <module name="eventos" />
-        <module name="estadio_secciones" />
         <module name="registro_accesos" />
+        <module name="estadio_secciones" />
         <module name="usuarios" />
         <module name="merch" />
         <module name="compras" />
@@ -21,8 +21,8 @@
         <module name="guardias" />
         <module name="merch_ordenes_m" />
         <module name="clubes" />
-        <module name="estadios" />
         <module name="pases_temporada" />
+        <module name="estadios" />
       </profile>
     </annotationProcessing>
   </component>

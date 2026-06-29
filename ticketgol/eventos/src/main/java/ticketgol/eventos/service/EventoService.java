@@ -1,15 +1,17 @@
 package ticketgol.eventos.service;
 
-import java.util.List;
-import java.util.stream.Collectors;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 import ticketgol.eventos.dto.EventoDTO;
+import ticketgol.eventos.exception.EventoNotFoundException;
 import ticketgol.eventos.model.Evento;
 import ticketgol.eventos.repository.EventoRepository;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -23,11 +25,27 @@ public class EventoService {
         this.restTemplate = restTemplate;
     }
 
+    public List<EventoDTO> obtenerTodosLosEventos() {
+        log.info("Consultando todos los eventos en la base de datos");
+        return eventoRepository.findAll().stream()
+                .map(this::convertirADto)
+                .collect(Collectors.toList());
+    }
+
+    public EventoDTO buscarPorId(Long id) {
+        log.info("Buscando evento con ID: {}", id);
+        Evento evento = eventoRepository.findById(id)
+                .orElseThrow(() -> {
+                    log.error("Error en búsqueda: No se encontró el evento con ID {}", id);
+                    return new EventoNotFoundException("No se encontró el evento con el ID: " + id);
+                });
+        return convertirADto(evento);
+    }
+
     public EventoDTO guardarEvento(EventoDTO eventoDto) {
         log.info("Iniciando registro de evento. Club Local ID: {}, Club Visitante ID: {}",
                 eventoDto.getClubLocalId(), eventoDto.getClubVisitanteId());
 
-        // Validación de existencia de ambos clubes en el microservicio externo
         validarClubExistente(eventoDto.getClubLocalId());
         validarClubExistente(eventoDto.getClubVisitanteId());
 
@@ -38,13 +56,49 @@ public class EventoService {
         return convertirADto(eventoGuardado);
     }
 
-    public List<EventoDTO> obtenerTodosLosEventos() {
-        log.info("Consultando todos los eventos en la base de datos");
-        List<Evento> eventos = eventoRepository.findAll();
-        return eventos.stream()
-                .map(this::convertirADto)
-                .collect(Collectors.toList());
+    public EventoDTO actualizarEvento(Long id, EventoDTO eventoDto) {
+        log.info("Intentando actualizar evento con ID: {}", id);
+
+        Evento eventoExistente = eventoRepository.findById(id)
+                .orElseThrow(() -> {
+                    log.error("Error al actualizar: No se encontró el evento con ID {}", id);
+                    return new EventoNotFoundException("No se encontró el evento con el ID: " + id);
+                });
+
+        if (!eventoExistente.getClubLocalId().equals(eventoDto.getClubLocalId())) {
+            log.info("El Club Local ID fue modificado. Iniciando validación...");
+            validarClubExistente(eventoDto.getClubLocalId());
+        }
+        if (!eventoExistente.getClubVisitanteId().equals(eventoDto.getClubVisitanteId())) {
+            log.info("El Club Visitante ID fue modificado. Iniciando validación...");
+            validarClubExistente(eventoDto.getClubVisitanteId());
+        }
+
+        eventoExistente.setClubLocalId(eventoDto.getClubLocalId());
+        eventoExistente.setClubVisitanteId(eventoDto.getClubVisitanteId());
+        eventoExistente.setEstadioId(eventoDto.getEstadioId());
+        eventoExistente.setFechaEvento(eventoDto.getFechaEvento());
+        eventoExistente.setEstado(eventoDto.getEstado());
+
+        Evento eventoGuardado = eventoRepository.save(eventoExistente);
+        log.info("Evento con ID: {} actualizado correctamente", id);
+
+        return convertirADto(eventoGuardado);
     }
+
+    public void eliminarEvento(Long id) {
+        log.info("Intentando eliminar evento con ID: {}", id);
+
+        if (!eventoRepository.existsById(id)) {
+            log.error("Error al eliminar: No se encontró el evento con ID {}", id);
+            throw new EventoNotFoundException("No se encontró el evento con el ID: " + id);
+        }
+
+        eventoRepository.deleteById(id);
+        log.info("Evento con ID: {} eliminado exitosamente de la base de datos", id);
+    }
+
+    // --- MÉTODOS PRIVADOS ---
 
     private void validarClubExistente(Long clubId) {
         String urlClubes = "http://localhost:8110/api/clubes/" + clubId;
@@ -53,14 +107,12 @@ public class EventoService {
             restTemplate.getForEntity(urlClubes, Object.class);
         } catch (HttpClientErrorException.NotFound ex) {
             log.error("Validación fallida: El microservicio de Clubes confirmó que el ID {} no existe.", clubId);
-            throw new RuntimeException("El club con ID " + clubId + " no existe en el sistema.");
+            throw new EventoNotFoundException("El club con ID " + clubId + " no existe en el sistema.");
         } catch (ResourceAccessException ex) {
             log.error("Error de red: El microservicio de Clubes (puerto 8110) se encuentra fuera de línea o inaccesible.");
             throw new RuntimeException("Error de conexión: El microservicio de Clubes (Puerto 8110) no está respondiendo.");
         }
     }
-
-    // --- Métodos de Mapeo ---
 
     private EventoDTO convertirADto(Evento evento) {
         return new EventoDTO(
@@ -75,7 +127,9 @@ public class EventoService {
 
     private Evento convertirAEntidad(EventoDTO dto) {
         Evento evento = new Evento();
-        evento.setId(dto.getId());
+        if (dto.getId() != null) {
+            evento.setId(dto.getId());
+        }
         evento.setClubLocalId(dto.getClubLocalId());
         evento.setClubVisitanteId(dto.getClubVisitanteId());
         evento.setEstadioId(dto.getEstadioId());

@@ -1,5 +1,6 @@
 package ticketgol.usuarios_sancionados.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -20,6 +21,7 @@ public class UsuarioSancionado {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY) //así no sale en el Swagger
     private Long id;
 
     @NotBlank(message = "El RUT es obligatorio")

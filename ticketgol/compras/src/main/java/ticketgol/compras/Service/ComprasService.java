@@ -1,53 +1,79 @@
 package ticketgol.compras.Service;
 
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
+import org.springframework.web.server.ResponseStatusException;
 import ticketgol.compras.Model.Compras;
 import ticketgol.compras.Repository.ComprasRepository;
 import ticketgol.compras.Exception.ComprasNotFoundException;
-
 import java.util.List;
 
-@Slf4j // para activar log
+@Slf4j
 @Service
 public class ComprasService {
 
-    @Autowired
-    private ComprasRepository repositorio;
+    private final ComprasRepository repositorio;
+    private final WebClient webClient;
+
+    public ComprasService(ComprasRepository repositorio, WebClient.Builder webClientBuilder) {
+        this.repositorio = repositorio;
+        this.webClient = webClientBuilder.build();
+    }
 
     public List<Compras> obtenerTodos() {
-        log.info("Solicitando la lista de todas las compras realizadas.");
+        log.info("Solicitando todas las compras.");
         return repositorio.findAll();
     }
 
     public Compras obtenerPorId(Long id) {
         return repositorio.findById(id)
-                .orElseThrow(() -> {
-
-                    log.warn("Intento fallido de buscar compra. La compra con ID: " + id + " no existe.");
-                    return new ComprasNotFoundException("La compra con ID " + id + " no existe.");
-                });
-    }
-
-    public Compras guardar(Compras compras) {
-        Compras compraGuardada = repositorio.save(compras);
-        log.info("Compra creada con éxito. ID de la compra: " + compraGuardada.getId() + " para el usuario: " + compraGuardada.getUsuarioId());
-        return compraGuardada;
+                .orElseThrow(() -> new ComprasNotFoundException("La compra con ID " + id + " no existe."));
     }
 
     public List<Compras> obtenerPorUsuario(String usuarioId) {
-        log.info("Buscando el historial de compras para el usuario con ID: " + usuarioId);
         return repositorio.findByUsuarioId(usuarioId);
     }
 
     public void eliminar(Long id) {
         if (!repositorio.existsById(id)) {
-            log.error("Error al intentar eliminar. No existe ninguna compra con el ID: " + id);
-            throw new ComprasNotFoundException("No se puede eliminar. La compra con ID " + id + " no existe.");
+            throw new ComprasNotFoundException("La compra con ID " + id + " no existe.");
+        }
+        repositorio.deleteById(id);
+    }
+
+    public Compras guardar(Compras compras) {
+        log.info("Iniciando validación para usuario: {}", compras.getUsuarioId());
+
+
+        Boolean existeUsuario = webClient.get()
+                .uri("http://localhost:8087/api/v1/usuarios/" + compras.getUsuarioId())
+                .retrieve().toBodilessEntity().map(r -> r.getStatusCode().is2xxSuccessful())
+                .onErrorReturn(false).block();
+
+        if (existeUsuario == null || !existeUsuario) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Usuario inexistente.");
         }
 
-        repositorio.deleteById(id);
-        log.info("Compra con ID: " + id + " fue eliminada correctamente del sistema.");
+        Boolean estaSancionado = webClient.get()
+                .uri("http://localhost:8085/api/v1/usuarios-sancionados/" + compras.getUsuarioId())
+                .retrieve().toBodilessEntity().map(r -> r.getStatusCode().is2xxSuccessful())
+                .onErrorReturn(false).block();
+
+        if (estaSancionado != null && estaSancionado) {
+            throw new ResponseStatusException(HttpStatus.FORBIDDEN, "Usuario sancionado. Compra denegada.");
+        }
+
+        Boolean existeTicket = webClient.get()
+                .uri("http://localhost:8089/api/v1/tickets/" + compras.getTicketId())
+                .retrieve().toBodilessEntity().map(r -> r.getStatusCode().is2xxSuccessful())
+                .onErrorReturn(false).block();
+
+        if (existeTicket == null || !existeTicket) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Ticket inválido.");
+        }
+
+        return repositorio.save(compras);
     }
 }

@@ -1,5 +1,6 @@
 package ticketgol.clubes.service;
 
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import ticketgol.clubes.dto.ClubDTO;
@@ -59,5 +60,36 @@ public class ClubServices {
         club.setDivision(dto.getDivision());
         club.setCorreo(dto.getCorreo());
         return club;
+    }
+
+    public ClubDTO actualizarClub(Long id, ClubDTO clubDto) {
+        log.info("Intentando actualizar club con ID: {}", id);
+
+        Club clubExistente = clubRepository.findById(id)
+                .orElseThrow(() -> {
+                    log.error("Error al actualizar: No se encontró el club con ID {}", id);
+                    return new ClubNotFoundException("No se encontró el club con el ID: " + id);
+                });
+
+        clubExistente.setNombre(clubDto.getNombre());
+        clubExistente.setDivision(clubDto.getDivision());
+        clubExistente.setCorreo(clubDto.getCorreo());
+
+        Club clubGuardado = clubRepository.save(clubExistente);
+        log.info("Club con ID: {} actualizado correctamente", id);
+
+        return convertirADto(clubGuardado);
+    }
+
+    public void eliminarClub(Long id) {
+        log.info("Intentando eliminar club con ID: {}", id);
+
+        if (!clubRepository.existsById(id)) {
+            log.error("Error al eliminar: No se encontró el club con ID {}", id);
+            throw new ClubNotFoundException("No se encontró el club con el ID: " + id);
+        }
+
+        clubRepository.deleteById(id);
+        log.info("Club con ID: {} eliminado exitosamente de la base de datos", id);
     }
 }

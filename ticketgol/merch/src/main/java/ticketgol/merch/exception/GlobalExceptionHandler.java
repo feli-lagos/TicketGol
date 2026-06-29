@@ -15,8 +15,8 @@ import java.util.Map;
 public class GlobalExceptionHandler {
 
     // Intercepta los errores generados al validar la existencia del club en el puerto 8110
-    @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<Map<String, Object>> handleRuntimeException(RuntimeException ex) {
+    @ExceptionHandler(MerchandiseNotFoundException.class)
+    public ResponseEntity<Map<String, Object>> handleMerchandiseNotFound(MerchandiseNotFoundException ex) {
         Map<String, Object> response = new HashMap<>();
         response.put("timestamp", LocalDateTime.now());
         response.put("status", HttpStatus.NOT_FOUND.value());

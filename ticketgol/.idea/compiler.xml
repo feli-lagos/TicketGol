@@ -7,6 +7,8 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="api-gateway" />
+        <module name="eureka-server" />
         <module name="compras" />
       </profile>
       <profile name="Annotation profile for pases_temporada" enabled="true">
@@ -16,41 +18,34 @@
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
         </processorPath>
-        <module name="pases_temporada" />
-      </profile>
-      <profile name="Annotation profile for usuarios_sancionados" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.46/lombok-1.18.46.jar" />
-        </processorPath>
         <module name="merch" />
         <module name="usuarios_sancionados" />
         <module name="tickets_M" />
         <module name="eventos" />
-        <module name="registro_accesos" />
-        <module name="guardias" />
         <module name="estadio_secciones" />
         <module name="usuarios" />
         <module name="merch_ordenes_m" />
         <module name="clubes" />
+        <module name="pases_temporada" />
         <module name="estadios" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="guardias" target="25" />
       <module name="merch_ordenes" target="25" />
       <module name="pases_temporada_M" target="25" />
+      <module name="registro_accesos" target="25" />
       <module name="tickets" target="25" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-gateway" options="-parameters" />
       <module name="clubes" options="-parameters" />
       <module name="compras" options="-parameters" />
       <module name="estadio_secciones" options="-parameters" />
       <module name="estadios" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
       <module name="eventos" options="-parameters" />
       <module name="guardias" options="-parameters" />
       <module name="merch" options="-parameters" />

@@ -1,4 +1,4 @@
-package ticketgol.compras.DTO;
+package ticketgol.compras.Dto;
 
 import lombok.Data;
 import java.util.Date;

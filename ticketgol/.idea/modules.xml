@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/clubes/clubes.iml" filepath="$PROJECT_DIR$/clubes/clubes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eventos/eventos.iml" filepath="$PROJECT_DIR$/eventos/eventos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/merch/merch.iml" filepath="$PROJECT_DIR$/merch/merch.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/ticketgol.iml" filepath="$PROJECT_DIR$/.idea/ticketgol.iml" />
     </modules>
   </component>

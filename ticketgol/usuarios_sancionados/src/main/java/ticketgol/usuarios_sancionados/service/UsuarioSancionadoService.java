@@ -29,7 +29,7 @@ public class UsuarioSancionadoService {
     private UsuarioSancionadoRepository usuarioSancionadoRepository;
 
     private final WebClient webClient = WebClient.builder()
-            .baseUrl("http://localhost:8080/api/v1/usuarios")
+            .baseUrl("http://localhost:8082/api/v1/usuarios")
             .build();
 
     private Mono<UsuarioDTO> validarUsuarioExternoPorRut(String rut) {

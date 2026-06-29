@@ -7,9 +7,7 @@
         <option value="$PROJECT_DIR$/merch/pom.xml" />
         <option value="$PROJECT_DIR$/clubes/pom.xml" />
         <option value="$PROJECT_DIR$/compras/pom.xml" />
-        <option value="$PROJECT_DIR$/eventos/pom.xml" />
         <option value="$PROJECT_DIR$/tickets/pom.xml" />
-        <option value="$PROJECT_DIR$/estadios/pom.xml" />
         <option value="$PROJECT_DIR$/guardias/pom.xml" />
         <option value="$PROJECT_DIR$/usuarios/pom.xml" />
         <option value="$PROJECT_DIR$/merch_ordenes/pom.xml" />
@@ -21,11 +19,17 @@
         <option value="$PROJECT_DIR$/merch_ordenes_M/pom.xml" />
         <option value="$PROJECT_DIR$/tickets_M/pom.xml" />
         <option value="$PROJECT_DIR$/pases_temporada/pases_temporada/pom.xml" />
+        <option value="$PROJECT_DIR$/api-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/estadios/pom.xml" />
+        <option value="$PROJECT_DIR$/eventos/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
       <set>
+        <option value="$PROJECT_DIR$/guardias/pom.xml" />
         <option value="$PROJECT_DIR$/pases_temporada_M/pom.xml" />
+        <option value="$PROJECT_DIR$/registro_accesos/pom.xml" />
       </set>
     </option>
   </component>

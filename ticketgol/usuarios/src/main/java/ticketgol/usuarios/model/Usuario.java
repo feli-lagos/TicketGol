@@ -1,5 +1,6 @@
 package ticketgol.usuarios.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -19,6 +20,7 @@ public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY) //así no sale en el Swagger
     private Long id;
 
     @NotBlank(message = "El RUT es obligatorio")
@@ -44,13 +46,14 @@ public class Usuario {
     private String hashClave;
 
     @Column(nullable = false, updatable = false)
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY) //así no sale en el Swagger
     private LocalDateTime fechaCreacion;
-
     @PrePersist
     public void createdAt() {
         this.fechaCreacion = LocalDateTime.now();
     }
 
     @Transient
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY) //así no sale en el Swagger
     private String estadoSancion;
 }

@@ -1,5 +1,6 @@
 package ticketgol.estadio_secciones.model;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -15,6 +16,7 @@ public class EstadioSeccion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Schema(accessMode = Schema.AccessMode.READ_ONLY) //así no sale en el Swagger
     private Long id;
 
     @NotNull(message = "El ID del estadio es obligatorio")
